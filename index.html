@@ -117,41 +117,54 @@
  </section>
 
 <section class="tab" id="projets" style="display:none">
-    <h1>Mon Portfolio</h1>
+    <h1>Mes Projets</h1>
     <p>Présentation de mes projets — sites HTML/CSS/JS, sites CMS, et projets JavaFX.</p>
 
-    <!-- Projet BTS -->
-    <div class="card muted clickable" onclick="goTo('projet-immosync.html')"> 
-        Projet Oral BTS : Création d'une application pour une entreprise immobilière fictive IMMOSYNC
-    </div>
+   <div class="filters">
+  <button class="filter-btn" data-filter="all">Tous</button>
+  <button class="filter-btn" data-filter="cms">CMS</button>
+  <button class="filter-btn" data-filter="web">Projet Web</button>
+  <button class="filter-btn" data-filter="javafx">JavaFX</button>
+</div>
 
-    <!-- Projet JavaFX -->
-    <div class="card muted clickable" onclick="goTo('projets-javafx.html')"> 
-        Projet en JavaFX de fin d'année : Création d'un jeu en Java/JavaFx
-    </div>
+<!-- Modifie chaque carte pour ajouter data-type -->
+<div class="card muted clickable" data-type="bts" onclick="goTo('projet-immosync.html')"> 
+  Projet Oral BTS : Création d'une application pour une entreprise immobilière fictive IMMOSYNC
+</div>
 
-    <!-- Projet CMS -->
-    <div class="card muted clickable" onclick="goTo('projets-cms.html')"> 
-        Site en no-code : Site Wordpress pour un client réalisant des clips de musique
-    </div>
+<div class="card muted clickable" data-type="javafx" onclick="goTo('projets-javafx.html')"> 
+  Projet en JavaFX de fin d'année : Création d'un jeu en Java/JavaFx
+</div>
 
-    <!-- Projet Web : Harry Potter + API -->
-    <div class="card muted clickable" onclick="goTo('projets-web.html')"> 
-        Site lié à une API : Site sur l'univers d'Harry Potter en HTML/CSS/JS
-    </div>
+<div class="card muted clickable" data-type="cms" onclick="goTo('projets-cms.html')"> 
+  Site en no-code : Site Wordpress pour un client réalisant des clips de musique
+</div>
 
-    <!-- Projet Web : Tacos -->
-    <div class="card muted clickable" onclick="goTo('projets-web.html')"> 
-        Site vitrine : Marque fictive vendant des tacos
-    </div>
+<div class="card muted clickable" data-type="web" onclick="goTo('projets-web.html')"> 
+  Site lié à une API : Site sur l'univers d'Harry Potter en HTML/CSS/JS
+</div>
+
+<div class="card muted clickable" data-type="web" onclick="goTo('projets-web.html')"> 
+  Site vitrine : Marque fictive vendant des tacos
+</div>
+
+
+
+
+
 </section>
 
         <section class="tab" id="stages" style="display:none">
-          <h2>Stages</h2>
-          <div class="card muted">
-            Stage de fin de 1ère année : Réalisation d'un site web pour le linge de maison avec le cms wix
-          </div>
-        </section>
+  <h1>Stages</h1>
+  <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
+
+  <div class="card muted clickable" data-type="dev" onclick="goTo('stage-dev-1.html')">
+    Stage développement : Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
+  </div>
+
+ 
+</section>
+
         <section class="tab" id="competences" style="display:none">
           <h2>Compétences</h2>
           <ul class="muted">

@@ -65,6 +65,8 @@ nav.tabs {
   cursor: pointer;
   transition: all .2s ease;
 }
+
+
 .tab-btn:hover { background: rgba(255,255,255,0.05); color: var(--accent); }
 .tab-btn.active {
   background: linear-gradient(90deg, rgba(62,166,255,0.15), rgba(123,196,255,0.1));
@@ -189,3 +191,75 @@ table th { color: var(--accent-soft); }
   color: var(--accent);
   border-color: rgba(62,166,255,0.2);
 }
+
+/* Harmoniser .filter-btn avec .tab-btn / .mini-btn */
+.filter-btn {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all .2s ease;
+  margin: 6px 6px 12px 0;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* hover identique */
+.filter-btn:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--accent);
+}
+
+/* état actif identique */
+.filter-btn.active {
+  background: linear-gradient(90deg, rgba(62,166,255,0.15), rgba(123,196,255,0.1));
+  color: var(--accent);
+  border-color: rgba(62,166,255,0.2);
+}
+
+/* --- Intro : forcer centrage plein écran --- */
+#intro {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: radial-gradient(circle at center, #0c1118 0%, #0a0e13 100%) !important;
+  color: var(--accent-soft) !important;
+  font-family: var(--mono) !important;
+  z-index: 9999 !important;
+  transition: opacity .35s ease, visibility .35s ease !important;
+  pointer-events: auto !important;
+}
+
+/* Conteneur texte */
+#intro .term {
+  width: min(880px, 92%) !important;
+  max-width: 92% !important;
+  box-sizing: border-box !important;
+  border: 1px solid var(--border) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  background: rgba(255,255,255,0.02) !important;
+  box-shadow: 0 20px 50px var(--shadow) !important;
+  margin: 0 !important;
+  text-align: left; /* change en center si tu veux centrer le texte */
+}
+
+/* assure que les lignes restent lisibles */
+#intro .line { white-space: pre-wrap; line-height: 1.5; font-size: 15px; }
+
+/* masquer proprement */
+#intro[style*="display: none"], #intro[aria-hidden="true"] {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+

@@ -1,6 +1,7 @@
-// --- INTRO ANIMATION ---
+// --- INTRO ANIMATION (session-aware) ---
 const intro = document.getElementById('intro');
 const introLinesContainer = document.getElementById('intro-lines');
+const app = document.getElementById('app');
 const lines = [
   '> System startup sequence initialized...',
   '> Loading portfolio environment...',
@@ -9,7 +10,12 @@ const lines = [
   '> Environment ready ✅'
 ];
 
-function typeLine(text, container, delay = 12) {
+// utilitaires
+function safeGet(id) { return document.getElementById(id); }
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function typeLine(text, container, delay = 12) {
+  if (!container) return;
   return new Promise(resolve => {
     const line = document.createElement('div');
     line.className = 'line';
@@ -25,78 +31,117 @@ function typeLine(text, container, delay = 12) {
   });
 }
 
-async function runIntro() {
+async function playIntro() {
+  if (!intro || !introLinesContainer || !app) {
+    // pas d'éléments, on affiche l'app directement
+    if (app) app.style.opacity = 1;
+    if (intro) intro.style.display = 'none';
+    return;
+  }
+
+  intro.style.display = 'block';
+  intro.style.opacity = '1';
+  introLinesContainer.innerHTML = '';
+
   for (const l of lines) {
     await typeLine(l, introLinesContainer, 15);
-    await new Promise(r => setTimeout(r, 250));
+    await sleep(250);
   }
-  await new Promise(r => setTimeout(r, 600));
+  await sleep(600);
   intro.style.opacity = '0';
   setTimeout(() => {
     intro.style.display = 'none';
-    document.getElementById('app').style.opacity = 1;
+    app.style.opacity = 1;
+    try { sessionStorage.setItem('introShown', 'true'); } catch (e) {}
   }, 450);
 }
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Enter') {
-    intro.style.opacity = '0';
-    setTimeout(() => {
-      intro.style.display = 'none';
-      document.getElementById('app').style.opacity = 1;
-    }, 200);
-  }
-});
+function showAppImmediately() {
+  if (intro) intro.style.display = 'none';
+  if (app) app.style.opacity = 1;
+}
 
-runIntro();
+// Gestion du raccourci Entrée pour passer l'intro
+function setupSkipShortcut() {
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      if (intro && intro.style.display !== 'none') {
+        intro.style.opacity = '0';
+        setTimeout(() => {
+          if (intro) intro.style.display = 'none';
+          if (app) app.style.opacity = 1;
+          try { sessionStorage.setItem('introShown', 'true'); } catch (e) {}
+        }, 200);
+      }
+    }
+  });
+}
 
-// --- TABS (navigation principale) ---
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabs = document.querySelectorAll('.tab');
-tabBtns.forEach(btn =>
-  btn.addEventListener('click', () => {
-    const target = btn.dataset.tab;
-    tabBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    tabs.forEach(t => (t.style.display = t.id === target ? 'block' : 'none'));
-  })
-);
-
-// --- BOUTONS SECONDAIRES (Présentation / Parcours / SISR / SLAM) ---
+// --- INIT (attendre DOMContentLoaded pour être sûr que tout est présent) ---
 document.addEventListener('DOMContentLoaded', () => {
-  const btnBts = document.getElementById('btn-bts');
-  const btnParcours = document.getElementById('btn-parcours');
-  const btsText = document.getElementById('bts-text');
-  const parcoursText = document.getElementById('parcours-text');
+  setupSkipShortcut();
+
+  const introShown = (() => {
+    try { return sessionStorage.getItem('introShown') === 'true'; } catch (e) { return false; }
+  })();
+
+  if (introShown) {
+    showAppImmediately();
+  } else {
+    playIntro();
+  }
+
+  // --- TABS (navigation principale) ---
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabs = document.querySelectorAll('.tab');
+  tabBtns.forEach(btn =>
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      tabs.forEach(t => (t.style.display = t.id === target ? 'block' : 'none'));
+    })
+  );
+
+  // --- BOUTONS SECONDAIRES (Présentation / Parcours / SISR / SLAM) ---
+  const btnBts = safeGet('btn-bts');
+  const btnParcours = safeGet('btn-parcours');
+  const btsText = safeGet('bts-text');
+  const parcoursText = safeGet('parcours-text');
 
   function toggleSection(button, section, others = []) {
+    if (!button || !section) return;
     const isVisible = section.style.display === 'block';
     section.style.display = isVisible ? 'none' : 'block';
     button.classList.toggle('active', !isVisible);
     others.forEach(o => {
-      o.section.style.display = 'none';
-      o.button.classList.remove('active');
+      if (o.section) o.section.style.display = 'none';
+      if (o.button) o.button.classList.remove('active');
     });
   }
 
-  btnBts.addEventListener('click', () => {
-    toggleSection(btnBts, btsText, [{ button: btnParcours, section: parcoursText }]);
-  });
+  if (btnBts) {
+    btnBts.addEventListener('click', () => {
+      toggleSection(btnBts, btsText, [{ button: btnParcours, section: parcoursText }]);
+    });
+  }
 
-  btnParcours.addEventListener('click', () => {
-    toggleSection(btnParcours, parcoursText, [{ button: btnBts, section: btsText }]);
-    const sisrText = document.getElementById('sisr-text');
-    const slamText = document.getElementById('slam-text');
-    if (sisrText) sisrText.style.display = 'none';
-    if (slamText) slamText.style.display = 'none';
-  });
+  if (btnParcours) {
+    btnParcours.addEventListener('click', () => {
+      toggleSection(btnParcours, parcoursText, [{ button: btnBts, section: btsText }]);
+      const sisrText = safeGet('sisr-text');
+      const slamText = safeGet('slam-text');
+      if (sisrText) sisrText.style.display = 'none';
+      if (slamText) slamText.style.display = 'none';
+    });
+  }
 
   document.addEventListener('click', e => {
     if (e.target.id === 'btn-sisr' || e.target.id === 'btn-slam') {
-      const btnSisr = document.getElementById('btn-sisr');
-      const btnSlam = document.getElementById('btn-slam');
-      const sisrText = document.getElementById('sisr-text');
-      const slamText = document.getElementById('slam-text');
+      const btnSisr = safeGet('btn-sisr');
+      const btnSlam = safeGet('btn-slam');
+      const sisrText = safeGet('sisr-text');
+      const slamText = safeGet('slam-text');
 
       if (e.target.id === 'btn-sisr') {
         toggleSection(btnSisr, sisrText, [{ button: btnSlam, section: slamText }]);
@@ -105,11 +150,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-});
-// Navigation helper utilisé par les cartes
-function goTo(page) {
-  window.location.href = page;
-}
 
-// Si tu as des fonctions init ou autre dans l'ancien script, elles restent ; ce fichier n'écrase rien d'autre.
-// Exemple : si tu veux ouvrir un projet dans une modale plutôt qu'une page, tu peux remplacer goTo.
+  // Navigation helper utilisé par les cartes
+  window.goTo = function(page) { window.location.href = page; };
+
+  // --- FILTRES PROJETS (délégué) ---
+  document.addEventListener('click', function(e){
+    if (!e.target.matches('.filter-btn')) return;
+    const filter = e.target.getAttribute('data-filter');
+    // visuel simple pour boutons
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === e.target));
+    document.querySelectorAll('#projets .card').forEach(card => {
+      const type = card.getAttribute('data-type') || '';
+      card.style.display = (filter === 'all' || type === filter) ? '' : 'none';
+    });
+  });
+
+});
