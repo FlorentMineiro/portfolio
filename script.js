@@ -106,3 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// Navigation helper utilisé par les cartes
+function goTo(page) {
+  window.location.href = page;
+}
+
+// Si tu as des fonctions init ou autre dans l'ancien script, elles restent ; ce fichier n'écrase rien d'autre.
+// Exemple : si tu veux ouvrir un projet dans une modale plutôt qu'une page, tu peux remplacer goTo.
