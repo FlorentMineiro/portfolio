@@ -269,7 +269,7 @@ table th { color: var(--accent-soft); }
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* gère automatiquement l'espace entre chaque projet */
+  gap: 80px; /* gère automatiquement l'espace entre chaque projet */
 }
 
 

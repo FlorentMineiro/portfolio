@@ -167,3 +167,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// Récupère le paramètre dans l’URL
+const params = new URLSearchParams(window.location.search);
+const selected = params.get("projet");
+
+// Si un projet est demandé, on masque les autres
+if (selected) {
+  document.querySelectorAll(".project-card").forEach(card => {
+    if (card.id !== selected) {
+      card.style.display = "none";
+    }
+  });
+}
+
+

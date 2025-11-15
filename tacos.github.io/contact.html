@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Royal Tacos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styles de l'arrière-plan */
+        body {
+            background-color: #f8f9fa;
+        }
+        .contact-header {
+            background-image: url('tacos.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .contact-header h1 {
+            font-size: 3em;
+        }
+        .contact-form-container {
+            margin-top: -50px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            padding: 20px;
+        }
+        .contact-info h3, .contact-info p {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête de la page de contact -->
+    <div class="contact-header">
+        <h1>Contactez Royal Tacos</h1>
+        <p>Avez-vous des questions ou des commentaires? Nous aimerions avoir de vos nouvelles !</p>
+    </div>
+
+    <!-- Section de contact et formulaire -->
+    <div class="container contact-form-container">
+        <div class="row">
+            <!-- Informations de contact -->
+            <div class="col-md-6 contact-info">
+                <h3>Nos informations de contact</h3>
+                <p><strong>Adresse :</strong> 123 Rue des Tacos, Paris, France</p>
+                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                <p><strong>Email :</strong> contact@royaltacos.fr</p>
+                <p><strong>Horaires :</strong> Lundi - Dimanche : 11h - 23h</p>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="col-md-6">
+                <form action="envoyer_contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input type="text" class="form-control" id="sujet" name="sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+   
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
