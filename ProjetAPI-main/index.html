@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter World</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Harry Potter World</h1>
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#characters">Personnages</a></li>
+          <li><a href="#spells">Sorts</a></li>
+          <li><a href="#houses">Maisons</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      
+      <section id="introduction">
+        <h2>Bienvenue dans l'univers magique de Harry Potter</h2>
+        <p>
+          Explorez le monde fascinant de la saga Harry Potter ! Que vous soyez
+          un Gryffondor courageux, un Serpentard ambitieux, un Serdaigle
+          intelligent ou un Poufsouffle loyal, il y a quelque chose pour chaque
+          fan. Ce site est dédié à tous ceux qui souhaitent plonger dans
+          l'univers magique de J.K. Rowling. Vous pourrez découvrir les
+          personnages emblématiques, les sorts puissants, et bien sûr, les
+          maisons de Poudlard.
+        </p>
+        <p>
+          Que vous soyez un magicien en herbe ou un expert en sortilèges, ce
+          site vous offre tout ce que vous devez savoir sur le monde de Harry
+          Potter.
+        </p>
+      </section>
+
+      <section id="characters">
+        <h2>Personnages</h2>
+        <input
+          type="text"
+          id="search"
+          placeholder="Rechercher un personnage..."
+        />
+        <select id="filter-house">
+          <option value="">Toutes les maisons</option>
+          <option value="Gryffindor">Gryffondor</option>
+          <option value="Slytherin">Serpentard</option>
+          <option value="Ravenclaw">Serdaigle</option>
+          <option value="Hufflepuff">Poufsouffle</option>
+        </select>
+        <div id="character-list"></div>
+      </section>
+
+      <section id="spells">
+        <h2>Sorts</h2>
+        <input type="text" id="search-spells" placeholder="Rechercher un sort...">
+        <div id="spell-list"></div>
+      </section>
+
+      <section id="houses">
+        <h2>Maisons</h2>
+        <div id="house-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
