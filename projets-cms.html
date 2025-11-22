@@ -3,46 +3,169 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projets CMS</title>
-  <link rel="stylesheet" href="style.css">
+  <title>DirtyByPlay — Projets CMS</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="media-slider.css">
 </head>
 <body>
-  <header class="header small">
+  <header class="header">
     <a href="index.html" class="back-button">⟵ Retour</a>
-
-<style>
-.back-button {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 15px;
-    background: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.2s;
-}
-.back-button:hover {
-    background: #555;
-}
-</style>
-
-    <h1>Projets No-Code (CMS)</h1>
+    <div>
+      <h1>Projets No-Code (CMS)</h1>
+      <div class="meta">Fiche projet — DirtyByPlay</div>
+    </div>
   </header>
 
   <main class="container">
-    <section class="projects-list">
-      <article class="project-card">
-        <img class="thumb" src="images/dirtybyplay.png" alt="DirtyByPlay">
-        <div class="project-content">
-          <h2>DirtyByPlay</h2>
-          <p>Site réalisé via CMS pour un client — intégration de template et personnalisation.</p>
-          <a class="btn" href="#" onclick="alert('Ouvrir DirtyByPlay - remplacer par lien de preview')">Voir le projet</a>
-        </div>
-      </article>
-    </section>
-  </main>
+    <article class="project-card">
+      <div class="thumb-wrap">
+        <img class="thumb" src="images/RealbyDirty.png" alt="Real By Dirty — logo">
+      </div>
 
-  <script src="script.js"></script>
+      <div>
+        <div class="project-header">
+          <div class="title-block">
+            <h2>DirtyByPlay</h2>
+            <div class="meta">Site portfolio pour un réalisateur de clip de rap — design & intégration WordPress</div>
+          </div>
+          <a class="btn" href="https://sio2026-wp-fmyo.sio1-2lerebours.org/wordpress/" target="_blank" rel="noopener">Voir le projet</a>
+        </div>
+
+        <div class="project-section">
+          <div class="kicker">Décrire le projet</div>
+          <p class="lead">
+            Ce site sert à présenter un réalisateur de clip de rap. Il met en valeur son univers visuel, sa filmographie,
+            des extraits vidéo et une galerie d’images issues de ses tournages tout en offrant un moyen professionnel de contact.
+          </p>
+          <p class="muted">Orientation : portfolio visuel, mise en avant des prestations audiovisuelles et facilitation des prises de contact professionnelles.</p>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="project-section">
+          <div class="kicker">Ce que j'ai fait</div>
+          <p class="muted">
+           Dans le cadre d'un projet en classe j'ai réalisé avec un binôme un site sur une de ces connaissance réalisant des clips de rap.
+           Ce site sert à le présenter , à présenter son travail et à faciliter la prise de contact avec lui.
+           Dans le cadre de sa présentation j'ai créer plusieurs page une page d'accueil avec différentes pages (Learn More , ses différentes projets , ses différentes collaborations, Pour plus de Contenus)
+           Learn More : Permet de présenter notre client
+           Ses Différents Projets : Permet de présenter ses différents projets
+           Ses Différentes collaborations : Permet de présenter les artistes avec qui il a collaboré
+           Pour plus de Contenu : Donne des moyens de le contacter
+           Dans chacun de ses onglets il y a l'un des plus gros projets de notre client
+          </p>
+
+          <!-- Début du slider -->
+<div class="media-slider" aria-roledescription="carousel" aria-label="Galerie projet">
+  <button class="ms-btn ms-prev" aria-label="Slide précédent">&larr;</button>
+
+  <div class="ms-track" role="list">
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <img src="Cms/PageOuverture.png" alt="Page d'ouverture">
+        <div class="media-caption">Page d'ouverture et permet de présenter les autres onglets</div>
+      </div>
+    </div>
+
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <img src="Cms/PrésentationOnglet.png" alt="Présentation onglet">
+        <div class="media-caption">Permet de présenter les autres onglets</div>
+      </div>
+    </div>
+
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <video controls src="Cms/DJB-94VAL.mp4" aria-label="Extrait vidéo 1"></video>
+        <div class="media-caption">Gros Projet du réalisateur</div>
+      </div>
+    </div>
+
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <img src="Cms/LearnMore.png" alt="Learn More">
+        <div class="media-caption">Partie de la page Learn More</div>
+      </div>
+    </div>
+
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <img src="Cms/DifferentsProjets.png" alt="Les différents projets">
+        <div class="media-caption">Page les différents projets</div>
+      </div>
+    </div>
+
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <img src="Cms/DifferentesCollaborations.png" alt="Différentes collaborations">
+        <div class="media-caption">Présentation des différentes collaborations</div>
+      </div>
+    </div>
+
+    <div class="ms-slide" role="listitem">
+      <div class="media-card">
+        <img src="Cms/Contact.png" alt="Contact">
+        <div class="media-caption">Présentation de ses contacts</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="ms-btn ms-next" aria-label="Slide suivant">&rarr;</button>
+
+  <div class="ms-dots" role="tablist" aria-label="Pagination"></div>
+</div>
+<!-- Fin du slider -->
+
+
+        <div class="hr"></div>
+
+        <div class="project-section">
+          <div class="kicker">Compétences développées</div>
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-title">WordPress / CMS</div>
+              <div class="skill-desc">Installation, configuration du thème, création de Custom Post Types et taxonomies pour structurer les clips.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Intégration multimédia</div>
+              <div class="skill-desc">Optimisation d'images, gestion de galeries responsives et intégration de vidéos (hébergement local et embeds YouTube/Vimeo).</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">HTML / CSS</div>
+              <div class="skill-desc">Personnalisation du thème via CSS, responsive design, gestion des grilles et adaptabilité mobile.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">PHP / Thème enfant</div>
+              <div class="skill-desc">Création d'un thème enfant, ajout de champs personnalisés (ACF ou meta), templates pour les fiches clip.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">SEO & Performance</div>
+              <div class="skill-desc">Compression des médias, lazy-loading, balises meta et microdata pour une meilleure indexation.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Sécurité & Maintenance</div>
+              <div class="skill-desc">Gestion des rôles, mises à jour, sauvegardes et rédaction d'une documentation de maintenance.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-row">
+          <div>Année : 2025</div>
+          <div>•</div>
+          <div>Stack : WordPress, PHP, HTML/CSS, JS, MySQL</div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="media-slider.js" defer></script>
+
 </body>
 </html>
