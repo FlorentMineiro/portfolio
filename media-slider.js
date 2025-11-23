@@ -15,11 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const next = slider.querySelector('.ms-next');
   const dotsContainer = slider.querySelector('.ms-dots');
 
-  console.log('Track:', track);
-  console.log('Nombre de slides:', slides.length);
-  console.log('Bouton prev:', prev);
-  console.log('Bouton next:', next);
-
   if (!track || slides.length === 0 || !prev || !next || !dotsContainer) {
     console.error('Éléments manquants dans le slider');
     return;
@@ -40,18 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
     dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
     dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
     dot.addEventListener('click', () => {
-      console.log('Clic sur dot', i);
       goTo(i);
     });
     dotsContainer.appendChild(dot);
   });
   const dots = Array.from(dotsContainer.children);
 
-  console.log('Dots créés:', dots.length);
-
   function update() {
     const width = track.clientWidth;
-    console.log('Update: index =', index, ', width =', width);
     track.style.transition = 'transform 0.45s cubic-bezier(0.22, 0.9, 0.2, 1)';
     track.style.transform = `translateX(${-index * width}px)`;
     dots.forEach((d, i) => d.setAttribute('aria-selected', i === index ? 'true' : 'false'));
@@ -59,29 +50,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function goTo(i) {
     index = Math.max(0, Math.min(i, slides.length - 1));
-    console.log('GoTo:', index);
     update();
   }
 
   // Événements des boutons
   prev.addEventListener('click', () => {
-    console.log('Clic sur prev');
     goTo(index - 1);
   });
 
   next.addEventListener('click', () => {
-    console.log('Clic sur next');
     goTo(index + 1);
   });
 
   // Navigation clavier
   slider.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') {
-      console.log('Touche gauche');
       goTo(index - 1);
     }
     if (e.key === 'ArrowRight') {
-      console.log('Touche droite');
       goTo(index + 1);
     }
   });
@@ -105,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
       slider.classList.add('grabbing');
       prevTranslate = currentTranslate;
       animationID = requestAnimationFrame(animation);
-      console.log('Drag start');
     };
   }
 
@@ -124,8 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
     slider.classList.remove('grabbing');
     const width = track.clientWidth;
     const movedBy = currentTranslate + index * width;
-    
-    console.log('Drag end, movedBy:', movedBy);
     
     if (movedBy < -80) goTo(index + 1);
     else if (movedBy > 80) goTo(index - 1);
@@ -147,12 +130,10 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-      console.log('Resize detected');
       update();
     }, 120);
   });
 
   // Initialisation
-  console.log('Initialisation du slider');
   update();
 });

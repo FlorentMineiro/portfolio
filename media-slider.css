@@ -60,10 +60,12 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 
 .container { max-width: 1100px; margin: 0 auto; }
 
-/* Card principal */
+/* ==========================================
+   CARD PRINCIPALE (GRILLE)
+   ========================================== */
 .project-card {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 320px 1fr; /* Colonne image fixe, colonne contenu flexible */
   gap: 28px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
   padding: 26px;
@@ -74,7 +76,20 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   max-width: 100%;
   overflow: hidden;
 }
-@media (max-width: 860px) { .project-card { grid-template-columns: 1fr; } }
+
+/* CONTENEUR DE DROITE : CORRECTION DES DÉBORDEMENTS */
+.project-content {
+  min-width: 0; /* Indispensable pour empêcher le contenu d'élargir la page */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive : passage en une seule colonne sur mobile */
+@media (max-width: 860px) { 
+  .project-card { grid-template-columns: 1fr; } 
+  .thumb-wrap { margin: 0 auto; } /* Centre l'image en mode mobile */
+}
 
 /* Logo container */
 .thumb-wrap {
@@ -88,6 +103,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.03);
+  flex-shrink: 0; /* L'image ne rétrécit pas */
 }
 .thumb {
   width: 84%;
@@ -104,6 +120,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   align-items: start;
   gap: 12px;
   margin-bottom: 8px;
+  width: 100%;
 }
 .title-block h2 { margin: 0; font-size: 22px; letter-spacing: 0.2px; color: #f8fbff; }
 .meta { color: var(--muted); font-size: 13px; margin-top: 6px; }
@@ -118,30 +135,31 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   border: 0;
   box-shadow: 0 8px 30px rgba(30, 144, 255, 0.12);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  white-space: nowrap;
 }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 18px 48px rgba(30, 144, 255, 0.18); }
 
-.project-section { margin-top: 14px; }
+.project-section { margin-top: 14px; width: 100%; }
 .kicker { font-size: 12px; text-transform: uppercase; color: var(--muted); letter-spacing: 0.9px; font-weight: 700; }
 .lead { color: #eaf6ff; font-weight: 500; margin: 10px 0 0; }
 .muted { color: var(--muted); font-size: 14px; }
-.hr { height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); margin: 16px 0; border-radius: 2px; }
+.hr { width: 100%; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); margin: 16px 0; border-radius: 2px; }
 
-/* Skills */
+/* ==========================================
+   SKILLS (Centrage corrigé)
+   ========================================== */
 .skills {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 12px;
-  max-width: 100%;
-  justify-items: start; /* aligner à gauche */
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: 16px;
+  margin: 20px auto; /* "auto" sur les côtés force le centrage */
+  width: 100%;
+  max-width: 90%; /* Garde une petite marge de sécurité */
 }
 @media (max-width: 760px) {
-  .skills {
-    grid-template-columns: 1fr;
-    justify-items: stretch; /* en mobile, pleine largeur */
-  }
+  .skills { grid-template-columns: 1fr; }
 }
+
 .skill {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius: 10px;
@@ -152,16 +170,16 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .skill:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(10,30,60,0.5); border-color: rgba(30,144,255,0.5); }
 .skill-title { font-weight: 700; margin: 0 0 6px; color: #eaf6ff; }
 .skill-desc { margin: 0; color: var(--muted); font-size: 14px; }
-.meta-row { display: flex; gap: 10px; align-items: center; margin-top: 14px; color: var(--muted); font-size: 13px; }
+.meta-row { display: flex; gap: 10px; align-items: center; margin-top: 14px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
 
 /* ========================================
-   MEDIA SLIDER - AVEC WRAPPER
+   MEDIA SLIDER (Centrage corrigé)
    ======================================== */
 .media-slider {
   position: relative;
-  width: 100%;            /* corrigé */
-  max-width: 1000px;      /* limite optionnelle */
-  margin: 30px auto 60px auto;
+  width: 100%;
+  max-width: 800px; /* Limite la largeur pour l'aspect visuel */
+  margin: 60px auto 30px auto; /* CENTRAGE DU SLIDER */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,23 +190,23 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .ms-track-wrapper {
   flex: 1;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* Empêche le contenu de sortir */
   border-radius: 12px;
   position: relative;
   margin: 0 auto;
 }
 
-/* Track : aligne horizontalement */
+/* Track */
 .ms-track {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;     /* pas de wrap vertical */
+  flex-wrap: nowrap;
   align-items: stretch;
   width: 100%;
   will-change: transform;
 }
 
-/* Chaque slide = 100% de la largeur visible */
+/* Slides */
 .ms-slide {
   flex: 0 0 100%;
   min-width: 100%;
@@ -215,7 +233,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .media-card video {
   width: 100%;
   height: auto;
-  min-height: 400px;
+  min-height: 300px; /* Réduit un peu pour ne pas être trop grand */
   max-height: 500px;
   object-fit: contain;
   display: block;
@@ -235,15 +253,15 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   background: rgba(30, 144, 255, 0.15);
   border: 2px solid rgba(30, 144, 255, 0.3);
   color: var(--accent);
-  width: 50px;
-  height: 50px;
+  width: 44px; /* Légèrement plus petit */
+  height: 44px;
   border-radius: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   transition: all 0.2s;
   flex-shrink: 0;
   position: relative;
@@ -256,7 +274,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 /* Dots de navigation */
 .ms-dots {
   position: absolute;
-  bottom: -45px;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -265,7 +283,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   z-index: 10;
 }
 .ms-dot {
-  width: 12px; height: 12px; border-radius: 50%;
+  width: 10px; height: 10px; border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.3);
   cursor: pointer; transition: all 0.3s; padding: 0;
@@ -273,23 +291,8 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .ms-dot:hover { background: rgba(255,255,255,0.4); transform: scale(1.2); }
 .ms-dot[aria-selected="true"] { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 12px rgba(30,144,255,0.6); transform: scale(1.3); }
 
-/* Curseur pendant le drag */
-.media-slider.grabbing { cursor: grabbing; }
-.media-slider .ms-slide { cursor: grab; }
-.media-slider.grabbing .ms-slide { cursor: grabbing; }
-
-/* Responsive */
-@media (max-width: 860px) {
-  .media-card img, .media-card video { min-height: 300px; max-height: 400px; }
-  .ms-btn { width: 42px; height: 42px; font-size: 20px; }
-  .media-slider { gap: 12px; }
-}
+/* Responsive spécifique au slider */
 @media (max-width: 520px) {
-  body { padding: 16px; }
-  .thumb-wrap { height: 260px; }
-  .media-slider { gap: 8px; margin-bottom: 50px; }
-  .ms-btn { width: 36px; height: 36px; font-size: 18px; }
-  .media-card img, .media-card video { min-height: 250px; max-height: 350px; }
-  .ms-dots { bottom: -35px; }
-  .ms-dot { width: 10px; height: 10px; }
+  .ms-btn { display: none; } /* Cache les flèches sur mobile pour gagner de la place */
+  .media-slider { gap: 0; margin-bottom: 40px; }
 }
