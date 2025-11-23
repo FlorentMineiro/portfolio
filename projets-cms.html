@@ -58,60 +58,66 @@
            Dans chacun de ses onglets il y a l'un des plus gros projets de notre client
           </p>
 
-          <!-- Début du slider -->
+         <!-- Remplacez votre slider actuel par celui-ci -->
+
+<!-- Début du slider CORRIGÉ -->
 <div class="media-slider" aria-roledescription="carousel" aria-label="Galerie projet">
   <button class="ms-btn ms-prev" aria-label="Slide précédent">&larr;</button>
 
-  <div class="ms-track" role="list">
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <img src="Cms/PageOuverture.png" alt="Page d'ouverture">
-        <div class="media-caption">Page d'ouverture et permet de présenter les autres onglets</div>
+  <!-- AJOUT : Wrapper pour gérer l'overflow proprement -->
+  <div class="ms-track-wrapper">
+    <div class="ms-track" role="list">
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <img src="Cms/PageOuverture.png" alt="Page d'ouverture">
+          <div class="media-caption">Page d'ouverture et permet de présenter les autres onglets</div>
+        </div>
       </div>
-    </div>
 
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <img src="Cms/PrésentationOnglet.png" alt="Présentation onglet">
-        <div class="media-caption">Permet de présenter les autres onglets</div>
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <img src="Cms/PrésentationOnglet.png" alt="Présentation onglet">
+          <div class="media-caption">Permet de présenter les autres onglets</div>
+        </div>
       </div>
-    </div>
 
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <video controls src="Cms/DJB-94VAL.mp4" aria-label="Extrait vidéo 1"></video>
-        <div class="media-caption">Gros Projet du réalisateur</div>
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <video controls src="Cms/DJB-94VAL .mp4" aria-label="Extrait vidéo 1"></video>
+          <div class="media-caption">Gros Projet du réalisateur</div>
+        </div>
       </div>
-    </div>
 
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <img src="Cms/LearnMore.png" alt="Learn More">
-        <div class="media-caption">Partie de la page Learn More</div>
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <img src="Cms/LearnMore.png" alt="Learn More">
+          <div class="media-caption">Partie de la page Learn More</div>
+        </div>
       </div>
-    </div>
 
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <img src="Cms/DifferentsProjets.png" alt="Les différents projets">
-        <div class="media-caption">Page les différents projets</div>
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <img src="Cms/DifferentsProjets.png" alt="Les différents projets">
+          <div class="media-caption">Page les différents projets</div>
+        </div>
       </div>
-    </div>
 
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <img src="Cms/DifferentesCollaborations.png" alt="Différentes collaborations">
-        <div class="media-caption">Présentation des différentes collaborations</div>
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <img src="Cms/DifferentesCollaborations.png" alt="Différentes collaborations">
+          <div class="media-caption">Présentation des différentes collaborations</div>
+        </div>
       </div>
-    </div>
 
-    <div class="ms-slide" role="listitem">
-      <div class="media-card">
-        <img src="Cms/Contact.png" alt="Contact">
-        <div class="media-caption">Présentation de ses contacts</div>
+      <div class="ms-slide" role="listitem">
+        <div class="media-card">
+          <img src="Cms/Contact.png" alt="Contact">
+          <div class="media-caption">Présentation de ses contacts</div>
+        </div>
       </div>
     </div>
   </div>
+  <!-- FIN du wrapper -->
 
   <button class="ms-btn ms-next" aria-label="Slide suivant">&rarr;</button>
 
