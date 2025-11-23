@@ -296,3 +296,72 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   .ms-btn { display: none; } /* Cache les flèches sur mobile pour gagner de la place */
   .media-slider { gap: 0; margin-bottom: 40px; }
 }
+/* --- Styles pour la présentation structurée des pages (Améliorés) --- */
+
+.sub-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent); /* Utilise la couleur d'accent */
+  margin: 20px 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.project-structure-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 14px;
+  border-radius: var(--radius); /* Coins arrondis pour le tableau */
+  overflow: hidden; /* Assure que les coins arrondis sont appliqués */
+}
+
+.project-structure-table th, 
+.project-structure-table td {
+  padding: 14px 18px; /* Plus d'espace pour la lisibilité */
+  text-align: left;
+}
+
+/* Tête du tableau (Titre) */
+.project-structure-table thead {
+    background-color: var(--accent); /* Fond accentué pour les titres */
+    color: var(--bg-900); /* Texte très sombre pour un fort contraste */
+}
+.project-structure-table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Corps du tableau */
+.project-structure-table td {
+  color: var(--muted);
+  background-color: var(--panel);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Ligne de séparation fine */
+}
+
+/* Lignes alternées (Stripe effect) */
+.project-structure-table tbody tr:nth-child(even) td {
+  background-color: var(--card); /* Utilise la couleur card pour alterner */
+}
+
+/* Mise en évidence des noms de sections */
+.project-structure-table td strong {
+    color: #eaf6ff; /* Texte blanc clair pour les noms de pages */
+    font-weight: 600;
+}
+
+/* Effet au survol (Feedback visuel) */
+.project-structure-table tbody tr:hover td {
+  background-color: rgba(30, 144, 255, 0.15); /* Bleu très léger au survol */
+  color: #f8fbff;
+  transform: scale(1.005); /* Léger effet 3D */
+  transition: all 0.2s ease-out;
+}
+
+.small-note {
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 15px;
+  color: var(--muted);
+}
