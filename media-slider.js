@@ -239,5 +239,4 @@ window.debugSlider = function() {
 };
 
 // Pour débugger dans la console : debugSlider()
-//bonjout
-// vzsqcqsqsc aq
+
