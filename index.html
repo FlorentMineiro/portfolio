@@ -1,280 +1,118 @@
-
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr" class="hp-page">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Florent Mineiro (Cybersécurité)</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Harry Potter — Projet Web (API)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="media-slider.css">
 </head>
-<body>
-  <div id="intro"><div class="term"><div id="intro-lines"></div><div style="height:10px"></div><div class="muted" style="font-size:12px">Appuyez sur Entrée pour passer</div></div></div>
-  <div class="frame" id="app" style="opacity:0;transition:all .4s ease">
-    <header class="top">
-      <div class="logo">FM</div>
-      <h1> 
-        Portfolio — Florent Mineiro
-      </h1>
-      <nav class="tabs">
-        <button class="tab-btn active" data-tab="presentation">Présentation</button>
-        <button class="tab-btn" data-tab="projets">Projets</button>
-        <button class="tab-btn" data-tab="stages">Stages</button>
-        <button class="tab-btn" data-tab="competences">Compétences</button>
-        <button class="tab-btn" data-tab="synthese">Tableau synthèse</button>
-        <button class="tab-btn" data-tab="veille">Veille technologique</button>
-      </nav>
-    </header>
-    <div class="container">
-      <aside class="profile">
-        <div class="avatar">FM</div>
-        <div><strong>Florent Mineiro</strong><br><span class="muted">Développeur / Cybersécurité</span></div>
-        <div class="card" style="margin-top:16px;">
-          <div style="font-weight:700;">Sujet de veille</div>
-          <div class="muted">Avantages du Cloud Computing pour les entreprises </div>
+<body class="hp-page">
+  <header class="header">
+    <a href="index.html#projets" class="back-button">⟵ Retour à la liste Projets</a> 
+    <div>
+      <h1>Projet Web (HTML/CSS/JS)</h1>
+      <div class="meta">Fiche projet — Harry Potter</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="project-card">
+      <div class="thumb-wrap">
+        <img class="thumb" src="images/Harry_Potter_wordmark.jpg" alt="Harry Potter logo">
+      </div>
+
+      <div class="project-content">
+        <div class="project-header">
+          <div class="title-block">
+            <h2>Le Monde de Harry Potter</h2>
+            <div class="meta">Site thématique réalisé en HTML, CSS, JavaScript — Intégration d'une API.</div>
+          </div>
+          <a href="ProjetAPI-main/index.html" target="_blank" class="btn">Voir le site</a>
         </div>
-      </aside>
-      <main class="content">
-       <section class="tab" id="presentation">
-  <h2>Présentation</h2>
-  <h3>Qui suis-je ?</h3>
-  <div class="card muted">
-    Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
-    au lycée Le Rebours à Paris (75013).
-    <br><br>
-    Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
-    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-      <button id="btn-bts" class="mini-btn">Présentation du BTS</button>
-      <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
-    </div>
-  </div>
 
-  <!-- Texte BTS -->
-  <div id="bts-text" class="card muted" style="display: none; margin-top: 10px;">
-    Le BTS SIO (Services Informatiques aux Organisations) forme les étudiants aux métiers de l’informatique dans deux spécialités :
-    <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux) et
-    <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).
-    <br><br>
-    Mon option <strong>SLAM</strong> m’a permis d’approfondir mes compétences en développement, conception d’applications et sécurité logicielle.
+        <div class="lead">
+          Ce projet est un site thématique entièrement codé à la main (HTML/CSS/JS) autour de l'univers de Harry Potter.
+          L'objectif était d'utiliser une API pour récupérer dynamiquement des données (personnages, sorts, écoles) et les afficher avec une interface moderne.
+        </div>
 
-    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-      <button id="btn-sisr" class="mini-btn">Option SISR</button>
-      <button id="btn-slam" class="mini-btn">Option SLAM</button>
-    </div>
-
-    <div id="sisr-text" class="card muted" style="display: none; margin-top: 10px;">
-      <strong>Option SISR (Solutions d’Infrastructure, Systèmes et Réseaux)</strong>
-      <br><br>
-      Cette option forme aux métiers liés à la gestion et la sécurisation des infrastructures réseaux et systèmes :
-      <ul>
-        <li>Installation, configuration et maintenance des serveurs (Windows/Linux)</li>
-        <li>Gestion des réseaux locaux et sécurité informatique</li>
-        <li>Déploiement de solutions virtualisées ou cloud</li>
-        <li>Supervision et assistance technique</li>
-      </ul>
-      <br>
-      Projets possibles :
-      <ul>
-        <li>Création d’un serveur web ou d’une infrastructure réseau d’entreprise</li>
-        <li>Déploiement d’un VPN, pare-feu ou serveur d’authentification</li>
-        <li>Mise en place d’une supervision réseau (Zabbix, Nagios...)</li>
-      </ul>
-    </div>
-
-    <div id="slam-text" class="card muted" style="display: none; margin-top: 10px;">
-      <strong>Option SLAM (Solutions Logicielles et Applications Métiers)</strong>
-      <br><br>
-      Cette option forme aux métiers du développement et de la programmation :
-      <ul>
-        <li>Analyse des besoins clients et conception d’applications métiers</li>
-        <li>Développement web, mobile et logiciel (HTML, CSS, JS, PHP, Java...)</li>
-        <li>Gestion de bases de données (SQL, phpMyAdmin)</li>
-        <li>Sécurisation des applications et bonnes pratiques</li>
-      </ul>
-      <br>
-      Projets possibles :
-      <ul>
-        <li>Création d’un site web dynamique pour une entreprise</li>
-        <li>Développement d’une application de gestion interne (JavaFX, Symfony...)</li>
-        <li>Intégration d’API ou d’un système d’authentification sécurisé</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Texte parcours -->
-  <div id="parcours-text" class="card muted" style="display: none; margin-top: 10px;">
-    2024–2026 : BTS SIO option SLAM au lycée Le Rebours.
-    <br><br>
-    2022–2024 : Années sabbatiques durant lesquelles j’ai occupé différents emplois (hôte de caisse, vendeur indépendant, etc.) et cherché ma voie de réorientation.
-    <br><br>
-    2020–2022 : L2 Mathématiques à l’UPEC (Université Paris-Est Créteil)
-    <br><br>
-    2019–2020 : L1 Mathématiques à l’UPEC (Université Paris-Est Créteil)
-    <br><br>
-    2019 : Obtention du Baccalauréat Scientifique (S) option Mathématiques au lycée Théillard de Chardin.
-    <br><br>
-    Ce parcours m’a permis d’acquérir des bases solides en développement, logique et sécurité.
-  </div>
- </section>
-
-
-
-<!-- Modifie chaque carte pour ajouter data-type -->
-<section class="tab" id="projets" style="display:none">
-    <h1>Mes Projets</h1>
-    <p>Présentation de mes projets — sites HTML/CSS/JS, sites CMS, et projets JavaFX.</p>
-
-   <div class="filters">
-  <button class="filter-btn" data-filter="all">Tous</button>
-  <button class="filter-btn" data-filter="cms">CMS</button>
-  <button class="filter-btn" data-filter="web">Projet Web</button>
-  <button class="filter-btn" data-filter="javafx">JavaFX</button>
-</div>
-
-<div class="card muted clickable" data-type="bts" onclick="goTo('projet-immosync.html')"> 
-  Projet Oral BTS : Création d'une application pour une entreprise immobilière fictive IMMOSYNC
-</div>
-
-<div class="card muted clickable" data-type="javafx" onclick="goTo('projets-javafx.html')"> 
-  Projet en JavaFX de fin d'année : Création d'un jeu en Java/JavaFx
-</div>
-
-<div class="card muted clickable" data-type="cms" onclick="goTo('projets-cms.html')"> 
-  Site en no-code : Site Wordpress pour un client réalisant des clips de musique
-</div>
-
-<div class="card muted clickable" data-type="web" onclick="goTo('projet-harrypotter.html')">
-  Site lié à une API : Site sur l'univers d'Harry Potter en HTML/CSS/JS
-</div>
-
-
-<div class="card muted clickable" data-type="web" onclick="goTo('projet-tacos.html')">
-  Site vitrine : Marque fictive vendant des tacos
-</div>
-
-</section>
-
-        <section class="tab" id="stages" style="display:none">
-  <h1>Stages</h1>
-  <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
-
-  <div class="card muted clickable" data-type="dev" onclick="goTo('stage-dev-1.html')">
-    Stage développement : Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
-  </div>
-
- 
-</section>
-
-        <section class="tab" id="competences" style="display:none">
-          <h2>Compétences</h2>
-          <ul class="muted">
-            <li>Développement web: JavaScript, HTML ,CSS</li>
-            <li>Languages de programmation: Java/JavaFX,PHP,Python</li>
-            <li>Systèmes: Linux, Windows, commandes Shell, adressage IP,DHCP </li>
-            <li>Outils et Logiciels:Visual Studio Code, GitHub, XAMPP, Docker,
-                                    Warp, VirtualBox, VMWare Workstation, Scene Builder </li>
-            <li>Base de données: SQL et phpMyAdminet API</li>
-            <li>CMS et Framework: WordPress, Symfony,Wix</li>
-            <li>Autres Outils: Trello, Canva</li>
-          </ul>
-        </section>
-        <section class="tab" id="synthese" style="display:none">
-          <h2>Tableau de synthèse</h2>
-          <table>
-            
+        <div class="block">
+          <h3>Architecture & Objectifs</h3>
+          <table class="project-structure-table">
+            <thead>
+              <tr>
+                <th>Composant</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Consommation d'API</strong></td>
+                <td>Requêtes <code>fetch()</code> asynchrones pour récupérer des données JSON externes et les intégrer dans les différentes pages du site.</td>
+              </tr>
+              <tr>
+                <td><strong>HTML / CSS / JavaScript</strong></td>
+                <td>Construction d’une interface moderne : structure HTML, mise en forme CSS, interactivité via JavaScript (modals, filtres, interactions dynamiques).</td>
+              </tr>
+            </tbody>
           </table>
-        </section>
-        <section class="tab" id="veille" style="display:none">
+        </div>
 
-  <h2>Veille technologique</h2>
+        <div class="block">
+          <h3>Galerie & Démonstration</h3>
+          <div class="media-slider">
+            <div class="ms-track">
+              <div class="ms-slide"><img src="ProjetAPI-main/pageAccueil.png" alt="Page d'accueil"></div>
+              <div class="ms-slide"><img src="ProjetAPI-main/pagePersonnage.png" alt="Page personnages"></div>
+              <div class="ms-slide"><img src="ProjetAPI-main/pageSort.png" alt="Page sorts"></div>
+            </div>
+            <button class="ms-prev">❮</button>
+            <button class="ms-next">❯</button>
+            <div class="ms-dots"></div>
+          </div>
+        </div>
 
-  <!-- Définition de la veille -->
-  <div class="card muted">
-    <h3>Qu’est-ce qu’une veille technologique ?</h3>
-    La veille technologique consiste à surveiller les nouveautés, innovations et évolutions d’un domaine informatique.
-    Elle permet d’anticiper les changements, d’adapter ses compétences et d’aider une entreprise à faire de meilleurs choix stratégiques.
-    <br><br>
-    Dans mon cas, j’ai choisi d’orienter ma veille vers un sujet clé pour les organisations modernes :
-    <strong>les avantages du Cloud Computing pour les entreprises</strong>.
-  </div>
+        <div class="block">
+          <h3>Compétences Techniques</h3>
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-title">HTML5 & CSS3</div>
+              <div class="skill-desc">Structure sémantique, mise en page moderne (Flexbox, Grid).</div>
+            </div>
 
-  <!-- Méthode -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Comment j’ai réalisé ma veille ?</h3>
-    <ul>
-      <li><strong>Sources :</strong> ZDNet, Le Monde Informatique, AWS Blog, Microsoft Azure Blog, CNIL, journaux spécialisés.</li>
-      <li><strong>Outils :</strong> Google Alerts, Feedly, newsletters cloud, vidéos techniques.</li>
-      <li><strong>Fréquence :</strong> veille hebdomadaire, avec sélection des informations les plus pertinentes.</li>
-    </ul>
-  </div>
+            <div class="skill">
+              <div class="skill-title">JavaScript</div>
+              <div class="skill-desc">Logique d'application, gestion des événements, chargement dynamique des données.</div>
+            </div>
 
-  <!-- Contenu : Avantages du Cloud -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Les principaux avantages du Cloud Computing</h3>
-    <ul>
-      <li><strong>Élasticité et scalabilité :</strong> une entreprise peut augmenter ou réduire ses ressources en quelques secondes.</li>
-      <li><strong>Réduction des coûts :</strong> pas d’achat de serveurs, paiement à l’usage, maintenance réduite.</li>
-      <li><strong>Sécurité renforcée :</strong> sauvegardes automatiques, redondance, pare-feu avancés, IAM.</li>
-      <li><strong>Accessibilité :</strong> travail à distance, données accessibles partout.</li>
-      <li><strong>Mises à jour automatiques :</strong> moins de charge pour les équipes internes.</li>
-    </ul>
-  </div>
+            <div class="skill">
+              <div class="skill-title">API REST</div>
+              <div class="skill-desc">Utilisation de requêtes HTTP pour obtenir et exploiter des données JSON.</div>
+            </div>
 
-  <!-- Risques -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Limites et risques du Cloud</h3>
-    <ul>
-      <li>Dépendance au fournisseur (AWS, Azure, Google Cloud).</li>
-      <li>Risque de fuite de données si mauvaise configuration.</li>
-      <li>Nécessité d’une bonne connexion réseau.</li>
-    </ul>
-  </div>
+            <div class="skill">
+              <div class="skill-title">Responsive Design</div>
+              <div class="skill-desc">Adaptation du site pour mobiles et tablettes via Media Queries.</div>
+            </div>
 
-  <!-- Articles -->
-  <div class="card" style="margin-top:16px;">
-    <h3>Articles suivis dans ma veille</h3>
+            <div class="skill">
+              <div class="skill-title">Git & GitHub</div>
+              <div class="skill-desc">Versioning, sauvegarde et collaboration.</div>
+            </div>
+          </div>
+        </div>
 
-    <!-- Article 1 -->
-    <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
-      <img src="images/cloud1.jpg" alt="Article Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
-      <div>
-        <strong>Le Cloud : un levier majeur pour les entreprises</strong><br>
-        <a href="#" target="_blank" class="muted">Lire l’article</a>
+        <div class="meta-row">
+          <div>Année : 2024</div>
+          <div>•</div>
+          <div>Stack : HTML, CSS, JavaScript, API</div>
+        </div>
+
       </div>
-    </div>
+    </article>
+  </main>
 
-    <!-- Article 2 -->
-    <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
-      <img src="images/cloud2.jpg" alt="Sécurité Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
-      <div>
-        <strong>AWS et les nouvelles normes de sécurité</strong><br>
-        <a href="#" target="_blank" class="muted">Lire l’article</a>
-      </div>
-    </div>
-
-    <!-- Article 3 -->
-    <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
-      <img src="images/cloud3.jpg" alt="Impact Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
-      <div>
-        <strong>Pourquoi les PME migrent massivement vers le Cloud</strong><br>
-        <a href="#" target="_blank" class="muted">Lire l’article</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Conclusion -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Conclusion</h3>
-    Le Cloud Computing représente aujourd’hui un élément essentiel de la transformation numérique.  
-    Les entreprises gagnent en flexibilité, en sécurité et en efficacité tout en réduisant leurs coûts.
-    <br><br>
-    Cette veille m’a permis de comprendre les enjeux stratégiques du cloud et son importance pour les métiers de l’informatique et de la cybersécurité.
-  </div>
-
-</section>
-
-      </main>
-    </div>
-  </div>
-  <script src="script.js"></script>
+  <script src="media-slider.js"></script>
 </body>
 </html>
