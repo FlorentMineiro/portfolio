@@ -146,15 +146,15 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .hr { width: 100%; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); margin: 16px 0; border-radius: 2px; }
 
 /* ==========================================
-   SKILLS (Centrage corrigé)
+   SKILLS 
    ========================================== */
 .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
   gap: 16px;
-  margin: 20px auto; /* "auto" sur les côtés force le centrage */
+  margin: 20px auto; 
   width: 100%;
-  max-width: 90%; /* Garde une petite marge de sécurité */
+  max-width: 90%; 
 }
 @media (max-width: 760px) {
   .skills { grid-template-columns: 1fr; }
@@ -173,13 +173,13 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .meta-row { display: flex; gap: 10px; align-items: center; margin-top: 14px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
 
 /* ========================================
-   MEDIA SLIDER (Centrage corrigé)
+   MEDIA SLIDER
    ======================================== */
 .media-slider {
   position: relative;
   width: 100%;
-  max-width: 800px; /* Limite la largeur pour l'aspect visuel */
-  margin: 60px auto 30px auto; /* CENTRAGE DU SLIDER */
+  max-width: 800px; 
+  margin: 60px auto 30px auto; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +190,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .ms-track-wrapper {
   flex: 1;
   width: 100%;
-  overflow: hidden; /* Empêche le contenu de sortir */
+  overflow: hidden; 
   border-radius: 12px;
   position: relative;
   margin: 0 auto;
@@ -229,11 +229,12 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 }
 .media-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.6); }
 
+/* Règle GÉNÉRIQUE AJUSTÉE (elle devrait être 'auto' par défaut) */
 .media-card img,
 .media-card video {
   width: 100%;
   height: auto;
-  min-height: 300px; /* Réduit un peu pour ne pas être trop grand */
+  min-height: 250px; /* J'ai réduit à 250px pour un meilleur compromis */
   max-height: 500px;
   object-fit: contain;
   display: block;
@@ -253,7 +254,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   background: rgba(30, 144, 255, 0.15);
   border: 2px solid rgba(30, 144, 255, 0.3);
   color: var(--accent);
-  width: 44px; /* Légèrement plus petit */
+  width: 44px; 
   height: 44px;
   border-radius: 12px;
   display: inline-flex;
@@ -301,7 +302,7 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .sub-section-title {
   font-size: 14px;
   font-weight: 700;
-  color: var(--accent); /* Utilise la couleur d'accent */
+  color: var(--accent); 
   margin: 20px 0 10px 0;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -312,20 +313,20 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   border-collapse: collapse;
   margin: 10px 0;
   font-size: 14px;
-  border-radius: var(--radius); /* Coins arrondis pour le tableau */
-  overflow: hidden; /* Assure que les coins arrondis sont appliqués */
+  border-radius: var(--radius); 
+  overflow: hidden; 
 }
 
 .project-structure-table th, 
 .project-structure-table td {
-  padding: 14px 18px; /* Plus d'espace pour la lisibilité */
+  padding: 14px 18px; 
   text-align: left;
 }
 
 /* Tête du tableau (Titre) */
 .project-structure-table thead {
-    background-color: var(--accent); /* Fond accentué pour les titres */
-    color: var(--bg-900); /* Texte très sombre pour un fort contraste */
+    background-color: var(--accent); 
+    color: var(--bg-900); 
 }
 .project-structure-table th {
   font-weight: 700;
@@ -337,25 +338,25 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
 .project-structure-table td {
   color: var(--muted);
   background-color: var(--panel);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Ligne de séparation fine */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
 }
 
 /* Lignes alternées (Stripe effect) */
 .project-structure-table tbody tr:nth-child(even) td {
-  background-color: var(--card); /* Utilise la couleur card pour alterner */
+  background-color: var(--card); 
 }
 
 /* Mise en évidence des noms de sections */
 .project-structure-table td strong {
-    color: #eaf6ff; /* Texte blanc clair pour les noms de pages */
+    color: #eaf6ff; 
     font-weight: 600;
 }
 
 /* Effet au survol (Feedback visuel) */
 .project-structure-table tbody tr:hover td {
-  background-color: rgba(30, 144, 255, 0.15); /* Bleu très léger au survol */
+  background-color: rgba(30, 144, 255, 0.15); 
   color: #f8fbff;
-  transform: scale(1.005); /* Léger effet 3D */
+  transform: scale(1.005); 
   transition: all 0.2s ease-out;
 }
 
@@ -364,4 +365,24 @@ h1 { margin: 0; font-size: 20px; font-weight: 700; color: #f5fbff; }
   font-size: 12px;
   margin-top: 15px;
   color: var(--muted);
+}
+/* ================================
+   Styles spécifiques au projet Harry Potter
+   (Correction renforcée)
+   ================================ */
+
+.hp-page .media-card img,
+.hp-page .media-card video {
+  max-height: 350px !important;  /* Renforcé la hauteur max pour être plus petit */
+  height: auto !important;
+  min-height: unset !important;  /* Annulation FORCÉE de la hauteur minimale */
+  object-fit: contain;
+}
+
+/* Optionnel : empêche une slide trop grande */
+.hp-page .ms-slide {
+  max-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

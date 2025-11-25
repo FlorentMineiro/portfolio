@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="media-slider.css">
    </head>
-<body>
+<body class="hp-page"> 
   <header class="header">
   <a href="index.html#projets" class="back-button">⟵ Retour à la liste Projets</a> 
   <div>
@@ -35,8 +35,8 @@
 
         <div class="lead">
           Ce projet est un site thématique entièrement codé à la main (HTML/CSS/JS) sur l'univers de Harry Potter. 
-          L'objectif principal était de pratiquer la **consommation d'une API RESTful** pour récupérer dynamiquement des données (personnages, sorts, écoles...) et de les afficher de manière stylisée. 
-          Il m'a également permis d'approfondir l'**interactivité** avec JavaScript et le **design responsive**.
+          L'objectif principal était de pratiquer la consommation d'une API  pour récupérer dynamiquement des données (personnages, sorts, écoles...) et de les afficher de manière stylisée. 
+          Il m'a également permis d'approfondir l'interactivité avec JavaScript.
         </div>
         
         <div class="block">
@@ -51,20 +51,14 @@
             <tbody>
               <tr>
                 <td><strong>Consommation d'API</strong></td>
-                <td>Requêtes `fetch()` asynchrones pour récupérer des données externes (JSON) et les intégrer au front-end.</td>
+                <td>Requêtes `fetch()` asynchrones pour récupérer des données externes (JSON) et les intégrer au front-end, dans des barres de recherches du site ou des listes déroulantes.</td>
               </tr>
-              <tr>
-                <td>**Manipulation du DOM**</td>
-                <td>Création dynamique des éléments HTML (cartes, listes, modales) à partir des données reçues par l'API.</td>
-              </tr>
-              <tr>
-                <td>**Animations CSS**</td>
-                <td>Utilisation de transitions et d'animations (par exemple, au survol des cartes ou lors du chargement des données) pour un rendu immersif.</td>
-              </tr>
-              <tr>
-                <td>**Design Responsive**</td>
-                <td>Le site s'adapte parfaitement à toutes les tailles d'écrans (PC, tablette, mobile) grâce aux **Media Queries** CSS.</td>
-              </tr>
+             <tr>
+                <td><strong>Utilisation du HTML / CSS / JavaScript</strong></td>
+                <td>Construction d’une interface moderne et interactive : structure de la page (HTML), mise en forme visuelle (CSS) et interactions dynamiques (JavaScript).</td>
+            </tr>
+
+              
             </tbody>
           </table>
         </div>
@@ -73,9 +67,9 @@
           <h3>Galerie & Démonstration</h3>
           <div class="media-slider">
             <div class="ms-track">
-              <div class="ms-slide"><img src="images/hp_slide1.jpg" alt="Capture d'écran 1" /></div>
-              <div class="ms-slide"><img src="images/hp_slide2.jpg" alt="Capture d'écran 2" /></div>
-              <div class="ms-slide"><img src="images/hp_slide3.jpg" alt="Capture d'écran 3" /></div>
+              <div class="ms-slide"><img src="ProjetAPI-main/pageAccueil.png" alt="Capture d'écran 1" /></div>
+              <div class="ms-slide"><img src="ProjetAPI-main/pagePersonnage.png" alt="Capture d'écran 2" /></div>
+              <div class="ms-slide"><img src="ProjetAPI-main/pageSort.png" alt="Capture d'écran 3" /></div>
             </div>
             <button class="ms-prev">❮</button>
             <button class="ms-next">❯</button>
