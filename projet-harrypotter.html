@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harry Potter — Projet Web (API)</title>
+  <title>Harry Potter – Projet Web (API)</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="media-slider.css">
-   </head>
-<body class="hp-page"> 
+</head>
+<body>
   <header class="header">
-  <a href="index.html#projets" class="back-button">⟵ Retour à la liste Projets</a> 
-  <div>
-    <h1>Projet Web (HTML/CSS/JS)</h1>
-    <div class="meta">Fiche projet — Harry Potter</div>
-  </div>
-</header>
+    <a href="index.html#projets" class="back-button">⟵ Retour à la liste Projets</a> 
+    <div>
+      <h1>Projet Web (HTML/CSS/JS)</h1>
+      <div class="meta">Fiche projet – Harry Potter</div>
+    </div>
+  </header>
 
   <main class="container">
     <article class="project-card">
@@ -28,14 +28,14 @@
         <div class="project-header">
           <div class="title-block">
             <h2>Le Monde de Harry Potter</h2>
-            <div class="meta">Site fan/thématique réalisé en HTML, CSS, JavaScript — Utilisation d'une API pour les données.</div>
+            <div class="meta">Site fan/thématique réalisé en HTML, CSS, JavaScript – Utilisation d'une API pour les données.</div>
           </div>
           <a href="ProjetAPI-main/index.html" target="_blank" class="btn">Voir le site</a>
         </div>
 
         <div class="lead">
           Ce projet est un site thématique entièrement codé à la main (HTML/CSS/JS) sur l'univers de Harry Potter. 
-          L'objectif principal était de pratiquer la consommation d'une API  pour récupérer dynamiquement des données (personnages, sorts, écoles...) et de les afficher de manière stylisée. 
+          L'objectif principal était de pratiquer la consommation d'une API pour récupérer dynamiquement des données (personnages, sorts, écoles...) et de les afficher de manière stylisée. 
           Il m'a également permis d'approfondir l'interactivité avec JavaScript.
         </div>
         
@@ -51,29 +51,52 @@
             <tbody>
               <tr>
                 <td><strong>Consommation d'API</strong></td>
-                <td>Requêtes `fetch()` asynchrones pour récupérer des données externes (JSON) et les intégrer au front-end, dans des barres de recherches du site ou des listes déroulantes.</td>
+                <td>Requêtes `fetch()` asynchrones pour récupérer des données externes (JSON) et les intégrer au front-end.</td>
               </tr>
-             <tr>
-                <td><strong>Utilisation du HTML / CSS / JavaScript</strong></td>
-                <td>Construction d’une interface moderne et interactive : structure de la page (HTML), mise en forme visuelle (CSS) et interactions dynamiques (JavaScript).</td>
-            </tr>
-
-              
+              <tr>
+                <td>Manipulation du DOM</td>
+                <td>Création dynamique des éléments HTML (cartes, listes, modales) à partir des données reçues par l'API.</td>
+              </tr>
+              <tr>
+                <td>Animations CSS</td>
+                <td>Utilisation de transitions et d'animations (par exemple, au survol des cartes ou lors du chargement des données) pour un rendu immersif.</td>
+              </tr>
             </tbody>
           </table>
         </div>
 
         <div class="block">
           <h3>Galerie & Démonstration</h3>
-          <div class="media-slider">
-            <div class="ms-track">
-              <div class="ms-slide"><img src="ProjetAPI-main/pageAccueil.png" alt="Capture d'écran 1" /></div>
-              <div class="ms-slide"><img src="ProjetAPI-main/pagePersonnage.png" alt="Capture d'écran 2" /></div>
-              <div class="ms-slide"><img src="ProjetAPI-main/pageSort.png" alt="Capture d'écran 3" /></div>
+          <div class="media-slider" id="slider-harry-potter" aria-roledescription="carousel" aria-label="Galerie projet Harry Potter">
+            <button class="ms-btn ms-prev" aria-label="Slide précédent">←</button>
+
+            <div class="ms-track-wrapper">
+              <div class="ms-track" role="list">
+                <div class="ms-slide" role="listitem">
+                  <div class="media-card">
+                    <img src="ProjetAPI-main/pageAccueil.png" alt="Page d'accueil">
+                    <div class="media-caption">Page d'accueil</div>
+                  </div>
+                </div>
+
+                <div class="ms-slide" role="listitem">
+                  <div class="media-card">
+                    <img src="ProjetAPI-main/pagePersonnage.png" alt="Page Personnages">
+                    <div class="media-caption">Page Personnages</div>
+                  </div>
+                </div>
+
+                <div class="ms-slide" role="listitem">
+                  <div class="media-card">
+                    <img src="ProjetAPI-main/pageSorts.png" alt="Page Sorts">
+                    <div class="media-caption">Page Sorts</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button class="ms-prev">❮</button>
-            <button class="ms-next">❯</button>
-            <div class="ms-dots"></div>
+
+            <button class="ms-btn ms-next" aria-label="Slide suivant">→</button>
+            <div class="ms-dots" role="tablist" aria-label="Pagination"></div>
           </div>
         </div>
 
@@ -96,11 +119,6 @@
             </div>
 
             <div class="skill">
-              <div class="skill-title">Design Responsif</div>
-              <div class="skill-desc">Utilisation des Media Queries pour garantir l'affichage sur tous les appareils.</div>
-            </div>
-
-            <div class="skill">
               <div class="skill-title">Git & GitHub</div>
               <div class="skill-desc">Gestion de version et déploiement du projet.</div>
             </div>
@@ -108,7 +126,7 @@
         </div>
 
         <div class="meta-row">
-          <div>Année : 2024</div>
+          <div>Année : 2025</div>
           <div>•</div>
           <div>Stack : HTML, CSS, JavaScript, API</div>
         </div>
