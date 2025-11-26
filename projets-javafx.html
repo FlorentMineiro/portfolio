@@ -3,65 +3,229 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projets JavaFX</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Beyblade Burst – Projets JavaFX</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="media-slider.css">
 </head>
 <body>
-  <header class="header small">
-    
+  <header class="header">
     <a href="index.html" class="back-button">⟵ Retour</a>
-
-<style>
-.back-button {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 15px;
-    background: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.2s;
-}
-.back-button:hover {
-    background: #555;
-}
-</style>
-
-    <h1>Projets JavaFX</h1>
+    <div>
+      <h1>Projets JavaFX</h1>
+      <div class="meta">Fiche projet – Beyblade Burst</div>
+    </div>
   </header>
 
   <main class="container">
-    <section class="projects-list">
-      <article class="project-card full-detail">
-        <img class="thumb detail" src="images/beyblade.png" alt="Beyblade Burst">
-        <div class="project-content">
-          <h2>Beyblade Burst (JavaFX)</h2>
+    <article class="project-card">
+      <div class="thumb-wrap">
+        <img class="thumb" src="ImageJeuToupie/logoToupie.jpg" alt="Beyblade Burst – simulation">
+      </div>
 
-          <p><strong>Description :</strong> Simulation de combats de toupies inspirée de Beyblade. Interface JavaFX, systèmes de QTE, changements de modes, et mécaniques de combat avancées.</p>
+      <div class="project-content">
+        
+        <div class="project-header">
+          <div class="title-block">
+            <h2>Beyblade Burst</h2>
+            <div class="meta">Combats de toupies au tour par tour – développement JavaFX</div>
+          </div>
+          <a class="btn" href="#" onclick="alert('Lien GitHub à ajouter')" rel="noopener">Voir le code source</a>
+        </div>
 
-          <h3>Fonctionnalités techniques</h3>
-          <ul>
-            <li>Système QTE (Quick-Time Event) qui modifie les effets en combat.</li>
-            <li>Gestion des pièces : Energy Layer, Forge Disc, Performance Tip.</li>
-            <li>Intégration des systèmes GT, Sparking et DB.</li>
-            <li>Mécaniques spécifiques : changement de mode automatique, vol d'endurance, rotation steal.</li>
-            <li>Statistiques sur 100 et effets persistants appliqués après QTE.</li>
-          </ul>
+        <div class="project-section">
+          <div class="kicker">Description du projet</div>
+          <p class="lead">
+            Cette application permet des combats au tour par tour de toupies inspirés de l'univers Beyblade. Elle intègre une interface graphique JavaFX,
+            un système de QTE (Quick-Time Events), des mécaniques de combat avancées et la gestion complète des différents systèmes de toupies.
+          </p>
+          <p class="muted">Orientation : application desktop interactive avec gestion des événements en temps réel et système de combat stratégique.</p>
+        </div>
 
-          <h3>Captures d'écran</h3>
-          <div class="gallery">
-            <img src="images/beyblade-1.png" alt="Capture 1">
-            <img src="images/beyblade-2.png" alt="Capture 2">
+        <div class="hr"></div>
+
+        <div class="project-section">
+          <div class="kicker">Ma contribution</div>
+
+          <p class="lead">
+            J'ai développé ce projet pour recréer l'expérience des combats Beyblade avec des mécaniques fidèles à l'univers.
+            L'enjeu principal était de programmer un système de combat dynamique et équilibré tout en gérant les interactions utilisateur en temps réel.
+            
+          </p>
+          
+          <p class="muted">
+            L'application a été conçue pour intégrer les différents systèmes de toupies (GT, Sparking, DB) avec leurs spécificités techniques et leurs effets uniques.
+          </p>
+
+          <div class="project-section">
+            <div class="sub-section-title">Fonctionnalités Techniques :</div>
+            
+            <table class="project-structure-table">
+              <thead>
+                <tr>
+                  <th>Fonctionnalité</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+    <tr>
+        <td><strong>Système QTE</strong></td>
+        <td>Quick-Time Events qui modifient les effets et statistiques en combat selon la réactivité du joueur.</td>
+    </tr>
+    <tr>
+        <td><strong>Gestion des pièces</strong></td>
+        <td>Energy Layer, Forge Disc et Performance Tip avec leurs caractéristiques individuelles.</td>
+    </tr>
+    <tr>
+        <td><strong>Mécaniques avancées</strong></td>
+        <td>Changement de mode automatique (toupies ennemies), vol d'endurance, rotation steal et simulation d'IA.</td>
+    </tr>
+    <tr>
+        <td><strong>Statistiques</strong></td>
+        <td>Système sur 100 points avec effets persistants appliqués après réussite des QTE.</td>
+    </tr>
+    <tr>
+        <td><strong>Simulation d'IA</strong></td>
+        <td>Comportement intelligent des toupies ennemies, adaptation aux stratégies du joueur.</td>
+    </tr>
+    <tr>
+        <td><strong>Système d'invocation</strong></td>
+        <td>Possibilité d'invoquer des pièces de toupies (Energy Layer , Forge Discs et Performance Tip) via la boutique du jeu</td>
+    </tr>
+    <tr>
+        <td><strong>Bibliothèque</strong></td>
+        <td>Base de données des toupies, leurs statistiques et leurs capacités.</td>
+    </tr>
+</tbody>
+
+            </table>
           </div>
 
-          <h3>Liens</h3>
-          <p>Code source / Demo : <a href="#" onclick="alert('Ajouter lien GitHub ou jar')">Ajouter lien</a></p>
-        </div>
-      </article>
-    </section>
-  </main>
+          <div class="block">
+            <h3>Galerie & Démonstration</h3>
+            <div class="media-slider" id="slider-beyblade" aria-roledescription="carousel" aria-label="Galerie projet Beyblade">
+              <button class="ms-btn ms-prev" aria-label="Slide précédent">←</button>
 
-  <script src="script.js"></script>
+              <div class="ms-track-wrapper">
+                <div class="ms-track" role="list">
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/PageOuverture.png" alt="Interface de combat">
+                      <div class="media-caption">Page d'ouverture du jeu</div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/PageAccueil.png" alt="Sélection des toupies">
+                      <div class="media-caption">Page d'accueil du jeu </div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/PageBoutique.png" alt="Aperçu général">
+                      <div class="media-caption">Page Boutique</div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/PageInvocation.png" alt="Sélection des toupies">
+                      <div class="media-caption">Page Invocation </div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/PageDetailleToupiePersonnage.png" alt="Sélection des toupies">
+                      <div class="media-caption">Page détaillé de notre toupie </div>
+                    </div>
+                  </div>
+
+                   <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/Collection.png" alt="Sélection des toupies">
+                      <div class="media-caption">Notre Collection </div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageJeuToupie/SelectionAdversaire.png" alt="Sélection des toupies">
+                      <div class="media-caption">Sélection de notre adversaire</div>
+                    </div>
+                  </div>
+
+                   <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <video controls src="ImageJeuToupie/SelectionAdversaire_Et_QTE.mp4" aria-label="Extrait vidéo 1"></video>
+                      <div class="media-caption">Sélection de notre adversaire et du QTE</div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <video controls src="ImageJeuToupie/CombatDeToupie.mp4" aria-label="Extrait vidéo 1"></video>
+                      <div class="media-caption">Démonstration d'un Combat de Toupie</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <button class="ms-btn ms-next" aria-label="Slide suivant">→</button>
+              <div class="ms-dots" role="tablist" aria-label="Pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="project-section">
+          <div class="kicker">Compétences développées</div>
+          
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-title">Programmation JavaFX</div>
+              <div class="skill-desc">Création d'interfaces graphiques interactives avec gestion des événements et animations.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Programmation orientée objet</div>
+              <div class="skill-desc">Architecture modulaire avec héritage, polymorphisme et encapsulation pour gérer les différentes pièces.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Gestion d'événements temps réel</div>
+              <div class="skill-desc">Implémentation de Quick-Time Events avec détection précise des inputs utilisateur.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Logique de jeu</div>
+              <div class="skill-desc">Développement de mécaniques de combat équilibrées et système de statistiques complexe.</div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Implémentation IA</div>
+              <div class="skill-desc">Création de comportements automatisés chez l'adversaire afin de créer un vrai combat </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Architecture logicielle</div>
+              <div class="skill-desc">Structuration du code avec séparation des responsabilités et réutilisabilité des composants.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-row">
+          <div>Année : 2025</div>
+          <div>•</div>
+          <div>Stack : Java, JavaFX</div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+  <script src="media-slider.js" defer></script>
 </body>
 </html>
