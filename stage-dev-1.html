@@ -1,82 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stage Développement — Linge de Maison</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Stage Développement – Linge de Maison</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="media-slider.css">
 </head>
 <body>
-  <header class="header small" style="padding:18px;">
+  <header class="header">
     <a href="index.html" class="back-button">⟵ Retour</a>
-    <h1 style="display:inline-block; margin-left:12px;">Stage Développement — Linge de Maison</h1>
+    <div>
+      <h1>Stage Développement – Linge de Maison</h1>
+      
+    </div>
   </header>
 
-  <main class="frame" style="max-width:1000px; margin:28px auto; padding:20px;">
-    <section class="card">
-      <h2>Résumé du stage</h2>
-      <p class="muted">
-        Stage de fin de 1ère année : réalisation d'un site vitrine pour un commerçant de linge de maison,
-        réalisé principalement avec le CMS Wix. Intervention sur l’intégration, la personnalisation du thème,
-        la mise en place du contenu et la résolution de bugs d’affichage.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Missions réalisées</h2>
-      <ul class="muted">
-        <li>Intégration et personnalisation du template Wix pour adapter la charte graphique du client.</li>
-        <li>Création et optimisation des pages produit et catégories (SEO basique, balises meta).</li>
-        <li>Adaptation responsive : vérification et corrections sur mobile et tablette.</li>
-        <li>Rédaction de la documentation utilisateur pour la gestion du contenu par le client.</li>
-        <li>Tests, résolution de problèmes d’affichage et d’assets (images, formats).</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Technologies & outils</h2>
-      <div class="tags">
-        <span class="tag">Wix</span>
-        <span class="tag">HTML / CSS</span>
-        <span class="tag">Responsive</span>
-        <span class="tag">SEO basique</span>
-        <span class="tag">Canva</span>
-        <span class="tag">Documentation</span>
+  <main class="container">
+    <article class="project-card">
+      <div class="thumb-wrap">
+        <img class="thumb" src="ImageStage/logoEntreprise.png" alt="Logo du projet">
       </div>
-    </section>
 
-    <section class="card">
-      <h2>Captures & aperçu</h2>
-      <p class="muted">Remplace les images ci‑dessous par tes captures (chemins : images/...).</p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
-        <img src="images/stage-linge-home.png" alt="Aperçu page d'accueil" style="width:260px; height:160px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,0.04);">
-        <img src="images/stage-linge-produit.png" alt="Aperçu page produit" style="width:260px; height:160px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,0.04);">
+      <div class="project-content">
+        
+        <div class="project-header">
+          <div class="title-block">
+            <h2>Refonte Site E-commerce – Linge de Maison</h2>
+            <div class="meta">Modernisation d'un site de vente en ligne pour un commerçant retraité – Wix</div>
+          </div>
+          <a class="btn" href="https://editor.wix.com/html/editor/web/renderer/edit/e95ecef3-17fd-4367-8ed8-daa91ad48a45?metaSiteId=e7fa6ad4-afb0-46bb-9725-80fee835365f&referralInfo=dashboard-setup" target="_blank" rel="noopener">Voir le projet</a>
+        </div>
+
+        <div class="project-section">
+          <div class="kicker">Décrire le projet</div>
+          <p class="lead">
+            Ce projet consistait à moderniser le site d'un commerçant retraité souhaitant développer son activité de vente de linge de maison en ligne. 
+            L'objectif était de créer une plateforme moderne permettant aux clients de découvrir les produits, de les personnaliser et de passer commande facilement.
+          </p>
+          <p class="muted">
+            Orientation : refonte complète du design, création d'un catalogue interactif avec options de personnalisation, système de cartes cadeaux et préparation d'un tunnel de commande.
+          </p>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="project-section">
+          <div class="kicker">Ce que j'ai fait</div>
+
+          <p class="lead">
+            Ce projet a été réalisé dans le cadre de mon stage de fin de 1ère année. 
+            Ma mission était de refondre entièrement le site existant pour le rendre plus moderne et professionnel, tout en intégrant des fonctionnalités e-commerce avancées.
+          </p>
+          
+          <p class="muted">
+            J'ai développé la partie vitrine complète du site avec catalogue de produits, système de personnalisation et gestion des cartes cadeaux. 
+            La partie paiement n'a malheureusement pas pu être finalisée dans les délais impartis, mais l'ensemble du parcours client jusqu'au panier est fonctionnel.
+          </p>
+
+          <div class="project-section">
+            <div class="sub-section-title">Fonctionnalités développées :</div>
+            
+            <table class="project-structure-table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Objectif Clé</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Page d'accueil modernisée</strong></td>
+                  <td>Nouveau design attractif présentant les produits phares et les promotions en cours.</td>
+                </tr>
+                <tr>
+                  <td><strong>Catalogue interactif</strong></td>
+                  <td>Système de navigation par catégories avec fiches produits détaillées.</td>
+                </tr>
+                <tr>
+                  <td><strong>Personnalisation produits</strong></td>
+                  <td>Interface permettant aux clients de personnaliser leurs articles (broderies, couleurs, dimensions).</td>
+                </tr>
+                <tr>
+                  <td><strong>Système de cartes cadeaux</strong></td>
+                  <td>Gestion et intégration des cartes cadeaux lors du processus de commande.</td>
+                </tr>
+                <tr>
+                  <td><strong>Panier & Commande</strong></td>
+                  <td>Gestion du panier d'achat avec récapitulatif des articles sélectionnés.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="block">
+            <h3>Galerie & Démonstration</h3>
+            <div class="media-slider" id="slider-stage" aria-roledescription="carousel" aria-label="Galerie projet Stage">
+              <button class="ms-btn ms-prev" aria-label="Slide précédent">←</button>
+
+              <div class="ms-track-wrapper">
+                <div class="ms-track" role="list">
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageStage/PageAccueil.png" alt="Page d'accueil">
+                      <div class="media-caption">Page d'accueil modernisée</div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageStage/Boutique.png" alt="Catalogue">
+                      <div class="media-caption">Catalogue des produits</div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageStage/CartesCadeaux.png" alt="Catalogue">
+                      <div class="media-caption">Cartes Cadeaux </div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageStage/Personnalisation.png" alt="Personnalisation">
+                      <div class="media-caption">Interface de personnalisation</div>
+                    </div>
+                  </div>
+
+                  <div class="ms-slide" role="listitem">
+                    <div class="media-card">
+                      <img src="ImageStage/PartieContact.png" alt="Contact">
+                      <div class="media-caption">Partie Contact</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="ms-btn ms-next" aria-label="Slide suivant">→</button>
+              <div class="ms-dots" role="tablist" aria-label="Pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="project-section">
+          <div class="kicker">Compétences développées</div>
+          
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-title">Wix / E-commerce</div>
+              <div class="skill-desc">Configuration du CMS, gestion des produits, mise en place du panier et intégration des fonctionnalités marchandes.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Refonte UI/UX</div>
+              <div class="skill-desc">Modernisation complète de l'interface utilisateur pour une expérience d'achat fluide et intuitive.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Personnalisation produits</div>
+              <div class="skill-desc">Développement d'un système permettant aux clients de personnaliser leurs articles (broderies, options).</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Gestion projet client</div>
+              <div class="skill-desc">Communication régulière avec le client, adaptation aux besoins et respect des délais de livraison.</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Résolution de contraintes</div>
+              <div class="skill-desc">Adaptation du projet face à des limitations techniques (système de paiement non finalisé).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-row">
+          <div>Année : 2025</div>
+          <div>•</div>
+          <div>Stack : Wix E-commerce</div>
+          <div>•</div>
+          <div>Statut : Partie vitrine complète</div>
+        </div>
+
       </div>
-    </section>
-
-    <section class="card">
-      <h2>Liens</h2>
-      <p class="muted">
-        Aperçu en ligne : <a href="#" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none;">(ajoute le lien preview)</a><br>
-        Dépôt / ressources : <a href="#" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none;">(lien Git / dossier)</a>
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Ce que j'ai appris</h2>
-      <ul class="muted">
-        <li>Adapter un template no-code aux besoins d'un client tout en respectant la charte graphique.</li>
-        <li>Importance du responsive et des tests multi‑taille d'écran.</li>
-        <li>Rédaction de documentation simple pour les non-techniques.</li>
-        <li>Flux de travail : collecte de contenus, optimisation des images, mise en ligne.</li>
-      </ul>
-    </section>
-
-    <div style="text-align:right; margin-top:12px;">
-      <a class="back-button" href="index.html" style="text-decoration:none;">⟵ Retour vers le portfolio</a>
-    </div>
+    </article>
   </main>
 
-  <script src="script.js"></script>
+  <script src="media-slider.js" defer></script>
 </body>
 </html>
