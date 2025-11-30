@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -8,13 +7,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="intro"><div class="term"><div id="intro-lines"></div><div style="height:10px"></div><div class="muted" style="font-size:12px">Appuyez sur Entrée pour passer</div></div></div>
+  <div id="intro">
+    <div class="term">
+      <div id="intro-lines"></div>
+      <div style="height:10px"></div>
+      <div class="muted" style="font-size:12px">Appuyez sur Entrée pour passer</div>
+    </div>
+  </div>
+  
   <div class="frame" id="app" style="opacity:0;transition:all .4s ease">
     <header class="top">
       <div class="logo">FM</div>
-      <h1> 
-        Portfolio — Florent Mineiro
-      </h1>
+      <h1>Portfolio — Florent Mineiro</h1>
       <nav class="tabs">
         <button class="tab-btn active" data-tab="presentation">Présentation</button>
         <button class="tab-btn" data-tab="projets">Projets</button>
@@ -24,257 +28,291 @@
         <button class="tab-btn" data-tab="veille">Veille technologique</button>
       </nav>
     </header>
+    
     <div class="container">
       <aside class="profile">
         <div class="avatar">FM</div>
         <div><strong>Florent Mineiro</strong><br><span class="muted">Développeur / Cybersécurité</span></div>
         <div class="card" style="margin-top:16px;">
           <div style="font-weight:700;">Sujet de veille</div>
-          <div class="muted">Avantages du Cloud Computing pour les entreprises </div>
+          <div class="muted">Avantages du Cloud Computing pour les entreprises</div>
         </div>
       </aside>
+      
       <main class="content">
-       <section class="tab" id="presentation">
-  <h2>Présentation</h2>
-  <h3>Qui suis-je ?</h3>
-  <div class="card muted">
-    Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
-    au lycée Le Rebours à Paris (75013).
-    <br><br>
-    Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
-    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-      <button id="btn-bts" class="mini-btn">Présentation du BTS</button>
-      <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
-    </div>
-  </div>
+        <!-- SECTION PRÉSENTATION -->
+        <section class="tab" id="presentation">
+          <h2>Présentation</h2>
+          <h3>Qui suis-je ?</h3>
+          <div class="card muted">
+            Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
+            au lycée Le Rebours à Paris (75013).
+            <br><br>
+            Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
+            <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
+              <button id="btn-bts" class="mini-btn">Présentation du BTS</button>
+              <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
+            </div>
+          </div>
 
-  <!-- Texte BTS -->
-  <div id="bts-text" class="card muted" style="display: none; margin-top: 10px;">
-    Le BTS SIO (Services Informatiques aux Organisations) forme les étudiants aux métiers de l’informatique dans deux spécialités :
-    <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux) et
-    <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).
-    <br><br>
-    Mon option <strong>SLAM</strong> m’a permis d’approfondir mes compétences en développement, conception d’applications et sécurité logicielle.
+          <!-- Texte BTS -->
+          <div id="bts-text" class="card muted" style="display: none; margin-top: 10px;">
+            Le BTS SIO (Services Informatiques aux Organisations) forme les étudiants aux métiers de l'informatique dans deux spécialités :
+            <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux) et
+            <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).
+            <br><br>
+            Mon option <strong>SLAM</strong> m'a permis d'approfondir mes compétences en développement, conception d'applications et sécurité logicielle.
 
-    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-      <button id="btn-sisr" class="mini-btn">Option SISR</button>
-      <button id="btn-slam" class="mini-btn">Option SLAM</button>
-    </div>
+            <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
+              <button id="btn-sisr" class="mini-btn">Option SISR</button>
+              <button id="btn-slam" class="mini-btn">Option SLAM</button>
+            </div>
 
-    <div id="sisr-text" class="card muted" style="display: none; margin-top: 10px;">
-      <strong>Option SISR (Solutions d’Infrastructure, Systèmes et Réseaux)</strong>
-      <br><br>
-      Cette option forme aux métiers liés à la gestion et la sécurisation des infrastructures réseaux et systèmes :
-      <ul>
-        <li>Installation, configuration et maintenance des serveurs (Windows/Linux)</li>
-        <li>Gestion des réseaux locaux et sécurité informatique</li>
-        <li>Déploiement de solutions virtualisées ou cloud</li>
-        <li>Supervision et assistance technique</li>
-      </ul>
-      <br>
-      Projets possibles :
-      <ul>
-        <li>Création d’un serveur web ou d’une infrastructure réseau d’entreprise</li>
-        <li>Déploiement d’un VPN, pare-feu ou serveur d’authentification</li>
-        <li>Mise en place d’une supervision réseau (Zabbix, Nagios...)</li>
-      </ul>
-    </div>
+            <div id="sisr-text" class="card muted" style="display: none; margin-top: 10px;">
+              <strong>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</strong>
+              <br><br>
+              Cette option forme aux métiers liés à la gestion et la sécurisation des infrastructures réseaux et systèmes :
+              <ul>
+                <li>Installation, configuration et maintenance des serveurs (Windows/Linux)</li>
+                <li>Gestion des réseaux locaux et sécurité informatique</li>
+                <li>Déploiement de solutions virtualisées ou cloud</li>
+                <li>Supervision et assistance technique</li>
+              </ul>
+              <br>
+              Projets possibles :
+              <ul>
+                <li>Création d'un serveur web ou d'une infrastructure réseau d'entreprise</li>
+                <li>Déploiement d'un VPN, pare-feu ou serveur d'authentification</li>
+                <li>Mise en place d'une supervision réseau (Zabbix, Nagios...)</li>
+              </ul>
+            </div>
 
-    <div id="slam-text" class="card muted" style="display: none; margin-top: 10px;">
-      <strong>Option SLAM (Solutions Logicielles et Applications Métiers)</strong>
-      <br><br>
-      Cette option forme aux métiers du développement et de la programmation :
-      <ul>
-        <li>Analyse des besoins clients et conception d’applications métiers</li>
-        <li>Développement web, mobile et logiciel (HTML, CSS, JS, PHP, Java...)</li>
-        <li>Gestion de bases de données (SQL, phpMyAdmin)</li>
-        <li>Sécurisation des applications et bonnes pratiques</li>
-      </ul>
-      <br>
-      Projets possibles :
-      <ul>
-        <li>Création d’un site web dynamique pour une entreprise</li>
-        <li>Développement d’une application de gestion interne (JavaFX, Symfony...)</li>
-        <li>Intégration d’API ou d’un système d’authentification sécurisé</li>
-      </ul>
-    </div>
-  </div>
+            <div id="slam-text" class="card muted" style="display: none; margin-top: 10px;">
+              <strong>Option SLAM (Solutions Logicielles et Applications Métiers)</strong>
+              <br><br>
+              Cette option forme aux métiers du développement et de la programmation :
+              <ul>
+                <li>Analyse des besoins clients et conception d'applications métiers</li>
+                <li>Développement web, mobile et logiciel (HTML, CSS, JS, PHP, Java...)</li>
+                <li>Gestion de bases de données (SQL, phpMyAdmin)</li>
+                <li>Sécurisation des applications et bonnes pratiques</li>
+              </ul>
+              <br>
+              Projets possibles :
+              <ul>
+                <li>Création d'un site web dynamique pour une entreprise</li>
+                <li>Développement d'une application de gestion interne (JavaFX, Symfony...)</li>
+                <li>Intégration d'API ou d'un système d'authentification sécurisé</li>
+              </ul>
+            </div>
+          </div>
 
-  <!-- Texte parcours -->
-  <div id="parcours-text" class="card muted" style="display: none; margin-top: 10px;">
-    2024–2026 : BTS SIO option SLAM au lycée Le Rebours.
-    <br><br>
-    2022–2024 : Années sabbatiques durant lesquelles j’ai occupé différents emplois (hôte de caisse, vendeur indépendant, etc.) et cherché ma voie de réorientation.
-    <br><br>
-    2020–2022 : L2 Mathématiques à l’UPEC (Université Paris-Est Créteil)
-    <br><br>
-    2019–2020 : L1 Mathématiques à l’UPEC (Université Paris-Est Créteil)
-    <br><br>
-    2019 : Obtention du Baccalauréat Scientifique (S) option Mathématiques au lycée Théillard de Chardin.
-    <br><br>
-    Ce parcours m’a permis d’acquérir des bases solides en développement, logique et sécurité.
-  </div>
- </section>
+          <!-- Texte parcours -->
+          <div id="parcours-text" class="card muted" style="display: none; margin-top: 10px;">
+            2024–2026 : BTS SIO option SLAM au lycée Le Rebours.
+            <br><br>
+            2022–2024 : Années sabbatiques durant lesquelles j'ai occupé différents emplois (hôte de caisse, vendeur indépendant, etc.) et cherché ma voie de réorientation.
+            <br><br>
+            2020–2022 : L2 Mathématiques à l'UPEC (Université Paris-Est Créteil)
+            <br><br>
+            2019–2020 : L1 Mathématiques à l'UPEC (Université Paris-Est Créteil)
+            <br><br>
+            2019 : Obtention du Baccalauréat Scientifique (S) option Mathématiques au lycée Théillard de Chardin.
+            <br><br>
+            Ce parcours m'a permis d'acquérir des bases solides en développement, logique et sécurité.
+          </div>
+        </section>
 
+        <!-- SECTION PROJETS -->
+        <section class="tab" id="projets" style="display:none">
+          <h1>Mes Projets</h1>
+          <p>Présentation de mes projets — sites HTML/CSS/JS, sites CMS, et projets JavaFX.</p>
 
+          <div class="filters">
+            <button class="filter-btn" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="cms">CMS</button>
+            <button class="filter-btn" data-filter="web">Projet Web</button>
+            <button class="filter-btn" data-filter="javafx">JavaFX</button>
+          </div>
 
-<!-- Modifie chaque carte pour ajouter data-type -->
-<section class="tab" id="projets" style="display:none">
-    <h1>Mes Projets</h1>
-    <p>Présentation de mes projets — sites HTML/CSS/JS, sites CMS, et projets JavaFX.</p>
+          <div class="card muted clickable" data-type="bts" onclick="goTo('projet-immosync.html')"> 
+            Projet Oral BTS : Création d'une application pour une entreprise immobilière fictive IMMOSYNC
+          </div>
 
-   <div class="filters">
-  <button class="filter-btn" data-filter="all">Tous</button>
-  <button class="filter-btn" data-filter="cms">CMS</button>
-  <button class="filter-btn" data-filter="web">Projet Web</button>
-  <button class="filter-btn" data-filter="javafx">JavaFX</button>
-</div>
+          <div class="card muted clickable" data-type="javafx" onclick="goTo('projets-javafx.html')"> 
+            Projet en JavaFX de fin d'année : Création d'un jeu en Java/JavaFx
+          </div>
 
-<div class="card muted clickable" data-type="bts" onclick="goTo('projet-immosync.html')"> 
-  Projet Oral BTS : Création d'une application pour une entreprise immobilière fictive IMMOSYNC
-</div>
+          <div class="card muted clickable" data-type="cms" onclick="goTo('projets-cms.html')"> 
+            Site en no-code : Site Wordpress pour un client réalisant des clips de musique
+          </div>
 
-<div class="card muted clickable" data-type="javafx" onclick="goTo('projets-javafx.html')"> 
-  Projet en JavaFX de fin d'année : Création d'un jeu en Java/JavaFx
-</div>
+          <div class="card muted clickable" data-type="web" onclick="goTo('projet-harrypotter.html')">
+            Site lié à une API : Site sur l'univers d'Harry Potter en HTML/CSS/JS
+          </div>
 
-<div class="card muted clickable" data-type="cms" onclick="goTo('projets-cms.html')"> 
-  Site en no-code : Site Wordpress pour un client réalisant des clips de musique
-</div>
+          <div class="card muted clickable" data-type="web" onclick="goTo('projet-tacos.html')">
+            Site vitrine : Marque fictive vendant des tacos
+          </div>
+        </section>
 
-<div class="card muted clickable" data-type="web" onclick="goTo('projet-harrypotter.html')">
-  Site lié à une API : Site sur l'univers d'Harry Potter en HTML/CSS/JS
-</div>
-
-
-<div class="card muted clickable" data-type="web" onclick="goTo('projet-tacos.html')">
-  Site vitrine : Marque fictive vendant des tacos
-</div>
-
-</section>
-
+        <!-- SECTION STAGES -->
         <section class="tab" id="stages" style="display:none">
-  <h1>Stages</h1>
-  <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
+          <h1>Stages</h1>
+          <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
 
-  <div class="card muted clickable" data-type="dev" onclick="goTo('stage-dev-1.html')">
-    Stage développement : Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
-  </div>
+          <div class="card muted clickable" data-type="dev" onclick="goTo('stage-dev-1.html')">
+            Stage développement : Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
+          </div>
+        </section>
 
- 
-</section>
-
+        <!-- SECTION COMPÉTENCES -->
         <section class="tab" id="competences" style="display:none">
           <h2>Compétences</h2>
           <ul class="muted">
-            <li>Développement web: JavaScript, HTML ,CSS</li>
-            <li>Languages de programmation: Java/JavaFX,PHP,Python</li>
-            <li>Systèmes: Linux, Windows, commandes Shell, adressage IP,DHCP </li>
-            <li>Outils et Logiciels:Visual Studio Code, GitHub, XAMPP, Docker,
-                                    Warp, VirtualBox, VMWare Workstation, Scene Builder </li>
-            <li>Base de données: SQL et phpMyAdminet API</li>
-            <li>CMS et Framework: WordPress, Symfony,Wix</li>
+            <li>Développement web: JavaScript, HTML, CSS</li>
+            <li>Languages de programmation: Java/JavaFX, PHP, Python</li>
+            <li>Systèmes: Linux, Windows, commandes Shell, adressage IP, DHCP</li>
+            <li>Outils et Logiciels: Visual Studio Code, GitHub, XAMPP, Docker, Warp, VirtualBox, VMWare Workstation, Scene Builder</li>
+            <li>Base de données: SQL et phpMyAdmin et API</li>
+            <li>CMS et Framework: WordPress, Symfony, Wix</li>
             <li>Autres Outils: Trello, Canva</li>
           </ul>
         </section>
+
+        <!-- SECTION TABLEAU DE SYNTHÈSE -->
         <section class="tab" id="synthese" style="display:none">
           <h2>Tableau de synthèse</h2>
-          <table>
+          
+          <div class="card muted" style="text-align: center; padding: 40px 20px;">
+            <h3 style="margin-bottom: 20px; color: #fff;">Consultez mon tableau de synthèse des réalisations professionnelles</h3>
+            <p style="margin-bottom: 30px; color: #b0b0b0;">
+              Ce document présente l'ensemble de mes compétences BTS SIO, mes réalisations professionnelles et les périodes associées.
+            </p>
             
-          </table>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+              <!-- Bouton Ouvrir -->
+              <a href="Tableau de synthèse/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024.pdf" 
+                 target="_blank"
+                 style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);"
+                 onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.6)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)';">
+                <span style="font-size: 20px;">👁️</span>
+                <span>Ouvrir le PDF</span>
+              </a>
+              
+              <!-- Bouton Télécharger -->
+              <a href="Tableau de synthèse/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024.pdf" 
+                 download
+                 style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);"
+                 onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(240, 147, 251, 0.6)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(240, 147, 251, 0.4)';">
+                <span style="font-size: 20px;">📥</span>
+                <span>Télécharger le PDF</span>
+              </a>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #667eea;">
+              <p style="color: #d0d0d0; margin: 0; font-size: 14px;">
+                <strong>💡 Contenu du document :</strong><br>
+                Compétences techniques, projets académiques, stages en entreprise, et tableau récapitulatif des réalisations professionnelles.
+              </p>
+            </div>
+          </div>
         </section>
+
+        <!-- SECTION VEILLE TECHNOLOGIQUE -->
         <section class="tab" id="veille" style="display:none">
+          <h2>Veille technologique</h2>
 
-  <h2>Veille technologique</h2>
+          <!-- Définition de la veille -->
+          <div class="card muted">
+            <h3>Qu'est-ce qu'une veille technologique ?</h3>
+            La veille technologique consiste à surveiller les nouveautés, innovations et évolutions d'un domaine informatique.
+            Elle permet d'anticiper les changements, d'adapter ses compétences et d'aider une entreprise à faire de meilleurs choix stratégiques.
+            <br><br>
+            Dans mon cas, j'ai choisi d'orienter ma veille vers un sujet clé pour les organisations modernes :
+            <strong>les avantages du Cloud Computing pour les entreprises</strong>.
+          </div>
 
-  <!-- Définition de la veille -->
-  <div class="card muted">
-    <h3>Qu’est-ce qu’une veille technologique ?</h3>
-    La veille technologique consiste à surveiller les nouveautés, innovations et évolutions d’un domaine informatique.
-    Elle permet d’anticiper les changements, d’adapter ses compétences et d’aider une entreprise à faire de meilleurs choix stratégiques.
-    <br><br>
-    Dans mon cas, j’ai choisi d’orienter ma veille vers un sujet clé pour les organisations modernes :
-    <strong>les avantages du Cloud Computing pour les entreprises</strong>.
-  </div>
+          <!-- Méthode -->
+          <div class="card muted" style="margin-top:16px;">
+            <h3>Comment j'ai réalisé ma veille ?</h3>
+            <ul>
+              <li><strong>Sources :</strong> ZDNet, Le Monde Informatique, AWS Blog, Microsoft Azure Blog, CNIL, journaux spécialisés.</li>
+              <li><strong>Outils :</strong> Google Alerts, Feedly, newsletters cloud, vidéos techniques.</li>
+              <li><strong>Fréquence :</strong> veille hebdomadaire, avec sélection des informations les plus pertinentes.</li>
+            </ul>
+          </div>
 
-  <!-- Méthode -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Comment j’ai réalisé ma veille ?</h3>
-    <ul>
-      <li><strong>Sources :</strong> ZDNet, Le Monde Informatique, AWS Blog, Microsoft Azure Blog, CNIL, journaux spécialisés.</li>
-      <li><strong>Outils :</strong> Google Alerts, Feedly, newsletters cloud, vidéos techniques.</li>
-      <li><strong>Fréquence :</strong> veille hebdomadaire, avec sélection des informations les plus pertinentes.</li>
-    </ul>
-  </div>
+          <!-- Contenu : Avantages du Cloud -->
+          <div class="card muted" style="margin-top:16px;">
+            <h3>Les principaux avantages du Cloud Computing</h3>
+            <ul>
+              <li><strong>Élasticité et scalabilité :</strong> une entreprise peut augmenter ou réduire ses ressources en quelques secondes.</li>
+              <li><strong>Réduction des coûts :</strong> pas d'achat de serveurs, paiement à l'usage, maintenance réduite.</li>
+              <li><strong>Sécurité renforcée :</strong> sauvegardes automatiques, redondance, pare-feu avancés, IAM.</li>
+              <li><strong>Accessibilité :</strong> travail à distance, données accessibles partout.</li>
+              <li><strong>Mises à jour automatiques :</strong> moins de charge pour les équipes internes.</li>
+            </ul>
+          </div>
 
-  <!-- Contenu : Avantages du Cloud -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Les principaux avantages du Cloud Computing</h3>
-    <ul>
-      <li><strong>Élasticité et scalabilité :</strong> une entreprise peut augmenter ou réduire ses ressources en quelques secondes.</li>
-      <li><strong>Réduction des coûts :</strong> pas d’achat de serveurs, paiement à l’usage, maintenance réduite.</li>
-      <li><strong>Sécurité renforcée :</strong> sauvegardes automatiques, redondance, pare-feu avancés, IAM.</li>
-      <li><strong>Accessibilité :</strong> travail à distance, données accessibles partout.</li>
-      <li><strong>Mises à jour automatiques :</strong> moins de charge pour les équipes internes.</li>
-    </ul>
-  </div>
+          <!-- Risques -->
+          <div class="card muted" style="margin-top:16px;">
+            <h3>Limites et risques du Cloud</h3>
+            <ul>
+              <li>Dépendance au fournisseur (AWS, Azure, Google Cloud).</li>
+              <li>Risque de fuite de données si mauvaise configuration.</li>
+              <li>Nécessité d'une bonne connexion réseau.</li>
+            </ul>
+          </div>
 
-  <!-- Risques -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Limites et risques du Cloud</h3>
-    <ul>
-      <li>Dépendance au fournisseur (AWS, Azure, Google Cloud).</li>
-      <li>Risque de fuite de données si mauvaise configuration.</li>
-      <li>Nécessité d’une bonne connexion réseau.</li>
-    </ul>
-  </div>
+          <!-- Articles -->
+          <div class="card" style="margin-top:16px;">
+            <h3>Articles suivis dans ma veille</h3>
 
-  <!-- Articles -->
-  <div class="card" style="margin-top:16px;">
-    <h3>Articles suivis dans ma veille</h3>
+            <!-- Article 1 -->
+            <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
+              <img src="images/cloud1.jpg" alt="Article Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
+              <div>
+                <strong>Le Cloud : un levier majeur pour les entreprises</strong><br>
+                <a href="#" target="_blank" class="muted">Lire l'article</a>
+              </div>
+            </div>
 
-    <!-- Article 1 -->
-    <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
-      <img src="images/cloud1.jpg" alt="Article Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
-      <div>
-        <strong>Le Cloud : un levier majeur pour les entreprises</strong><br>
-        <a href="#" target="_blank" class="muted">Lire l’article</a>
-      </div>
-    </div>
+            <!-- Article 2 -->
+            <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
+              <img src="images/cloud2.jpg" alt="Sécurité Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
+              <div>
+                <strong>AWS et les nouvelles normes de sécurité</strong><br>
+                <a href="#" target="_blank" class="muted">Lire l'article</a>
+              </div>
+            </div>
 
-    <!-- Article 2 -->
-    <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
-      <img src="images/cloud2.jpg" alt="Sécurité Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
-      <div>
-        <strong>AWS et les nouvelles normes de sécurité</strong><br>
-        <a href="#" target="_blank" class="muted">Lire l’article</a>
-      </div>
-    </div>
+            <!-- Article 3 -->
+            <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
+              <img src="images/cloud3.jpg" alt="Impact Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
+              <div>
+                <strong>Pourquoi les PME migrent massivement vers le Cloud</strong><br>
+                <a href="#" target="_blank" class="muted">Lire l'article</a>
+              </div>
+            </div>
+          </div>
 
-    <!-- Article 3 -->
-    <div class="article-card" style="display:flex; gap:16px; margin-top:10px;">
-      <img src="images/cloud3.jpg" alt="Impact Cloud" style="width:120px; height:80px; object-fit:cover; border-radius:6px;">
-      <div>
-        <strong>Pourquoi les PME migrent massivement vers le Cloud</strong><br>
-        <a href="#" target="_blank" class="muted">Lire l’article</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Conclusion -->
-  <div class="card muted" style="margin-top:16px;">
-    <h3>Conclusion</h3>
-    Le Cloud Computing représente aujourd’hui un élément essentiel de la transformation numérique.  
-    Les entreprises gagnent en flexibilité, en sécurité et en efficacité tout en réduisant leurs coûts.
-    <br><br>
-    Cette veille m’a permis de comprendre les enjeux stratégiques du cloud et son importance pour les métiers de l’informatique et de la cybersécurité.
-  </div>
-
-</section>
+          <!-- Conclusion -->
+          <div class="card muted" style="margin-top:16px;">
+            <h3>Conclusion</h3>
+            Le Cloud Computing représente aujourd'hui un élément essentiel de la transformation numérique.  
+            Les entreprises gagnent en flexibilité, en sécurité et en efficacité tout en réduisant leurs coûts.
+            <br><br>
+            Cette veille m'a permis de comprendre les enjeux stratégiques du cloud et son importance pour les métiers de l'informatique et de la cybersécurité.
+          </div>
+        </section>
 
       </main>
     </div>
   </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
