@@ -271,6 +271,92 @@ table th { color: var(--accent-soft); }
   flex-direction: column;
   gap: 80px; /* gère automatiquement l'espace entre chaque projet */
 }
+/* Titres des catégories */
+.skill-category-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+  display: inline-block;
+}
 
+/* Grille Responsive */
+.skills-grid {
+  display: grid;
+  /* Crée des colonnes automatiques : min 130px de large, max 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* La Carte de compétence */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03); /* Fond très léger */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet au survol */
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* L'icône (Devicon) */
+.skill-icon {
+  font-size: 40px; /* Taille de l'icône */
+  margin-bottom: 15px;
+  /* Si l'icône n'a pas de couleur native, on force le blanc ou l'accent */
+  color: #e9eef5; 
+}
+/* Force les icones colorées à garder leurs couleurs originales */
+.skill-icon.colored {
+  color: inherit; 
+}
+
+/* Nom de la compétence */
+.skill-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+/* Conteneur de la barre de progression (le fond gris) */
+.skill-bar-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* La barre colorée */
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  border-radius: 10px;
+  /* Animation simple au chargement */
+  animation: fillBar 1s ease-out forwards;
+  transform-origin: left;
+}
+
+/* Keyframes pour l'animation de la barre */
+@keyframes fillBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
 
 
