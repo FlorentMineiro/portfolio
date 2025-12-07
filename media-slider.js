@@ -239,4 +239,4 @@ window.debugSlider = function() {
 };
 
 // Pour débugger dans la console : debugSlider()
-
+//comment ça se fait les versions sont aussi différentes faut que j'attende ?
