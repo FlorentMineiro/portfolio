@@ -32,97 +32,84 @@
     
     <div class="container">
       <aside class="profile">
-        <div class="avatar">FM</div>
-        <div><strong>Florent Mineiro</strong><br><span class="muted">Développeur / Cybersécurité</span></div>
-        <div class="card" style="margin-top:16px;">
-          <div style="font-weight:700;">Sujet de veille</div>
-          <div class="muted">l'IA dans le Cloud Computing</div>
-        </div>
-      </aside>
+  <img src="photo_profil_portfolio.png" alt="Florent Mineiro" class="avatar">
+  
+  <div><strong>Florent Mineiro</strong><br><span class="muted">Développeur / Cybersécurité</span></div>
+  <div class="card" style="margin-top:16px;">
+    <div style="font-weight:700;">Sujet de veille</div>
+    <div class="muted">l'IA dans le Cloud Computing</div>
+  </div>
+</aside>
       
       <main class="content">
-        <!-- SECTION PRÉSENTATION -->
-        <section class="tab" id="presentation">
-          <h2>Présentation</h2>
-          <h3>Qui suis-je ?</h3>
-          <div class="card muted">
-            Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
-            au lycée Le Rebours à Paris (75013).
-            <br><br>
-            Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
-            <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-              <button id="btn-bts" class="mini-btn">Présentation du BTS</button>
-              <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
-            </div>
-          </div>
+       <section class="tab" id="presentation">
+  <h2>Présentation</h2>
+  <h3>Qui suis-je ?</h3>
+  <div class="card muted">
+    Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
+    au lycée Le Rebours à Paris (75013).
+    <br><br>
+    Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
+    
+    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
+      <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
+    </div>
+  </div>
 
-          <!-- Texte BTS -->
-          <div id="bts-text" class="card muted" style="display: none; margin-top: 10px;">
-            Le BTS SIO (Services Informatiques aux Organisations) forme les étudiants aux métiers de l'informatique dans deux spécialités :
-            <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux) et
-            <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).
-            <br><br>
-            Mon option <strong>SLAM</strong> m'a permis d'approfondir mes compétences en développement, conception d'applications et sécurité logicielle.
+  <div id="parcours-text" class="card" style="display: none; margin-top: 10px;">
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-date">2024 – 2026</div>
+        <div class="timeline-content">
+          <h4 class="timeline-title">BTS SIO option SLAM</h4>
+          <span class="timeline-place">Lycée Le Rebours</span>
+          <p class="timeline-desc">
+            Acquisition de compétences techniques en développement, conception de bases de données et cybersécurité.
+          </p>
+        </div>
+      </div>
 
-            <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-              <button id="btn-sisr" class="mini-btn">Option SISR</button>
-              <button id="btn-slam" class="mini-btn">Option SLAM</button>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-date">2022 – 2024</div>
+        <div class="timeline-content">
+          <h4 class="timeline-title">Expériences & Réorientation</h4>
+          <span class="timeline-place">Années de césure</span>
+          <p class="timeline-desc">
+            Emplois divers (hôte de caisse, vendeur indépendant). Période de maturation du projet professionnel vers l'informatique.
+          </p>
+        </div>
+      </div>
 
-            <div id="sisr-text" class="card muted" style="display: none; margin-top: 10px;">
-              <strong>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</strong>
-              <br><br>
-              Cette option forme aux métiers liés à la gestion et la sécurisation des infrastructures réseaux et systèmes :
-              <ul>
-                <li>Installation, configuration et maintenance des serveurs (Windows/Linux)</li>
-                <li>Gestion des réseaux locaux et sécurité informatique</li>
-                <li>Déploiement de solutions virtualisées ou cloud</li>
-                <li>Supervision et assistance technique</li>
-              </ul>
-              <br>
-              Projets possibles :
-              <ul>
-                <li>Création d'un serveur web ou d'une infrastructure réseau d'entreprise</li>
-                <li>Déploiement d'un VPN, pare-feu ou serveur d'authentification</li>
-                <li>Mise en place d'une supervision réseau (Zabbix, Nagios...)</li>
-              </ul>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-date">2019 – 2022</div>
+        <div class="timeline-content">
+          <h4 class="timeline-title">Licence de Mathématiques (L1 & L2)</h4>
+          <span class="timeline-place">UPEC (Université Paris-Est Créteil)</span>
+          <p class="timeline-desc">
+            Développement de la logique algorithmique et des capacités d'analyse.
+          </p>
+        </div>
+      </div>
 
-            <div id="slam-text" class="card muted" style="display: none; margin-top: 10px;">
-              <strong>Option SLAM (Solutions Logicielles et Applications Métiers)</strong>
-              <br><br>
-              Cette option forme aux métiers du développement et de la programmation :
-              <ul>
-                <li>Analyse des besoins clients et conception d'applications métiers</li>
-                <li>Développement web, mobile et logiciel (HTML, CSS, JS, PHP, Java...)</li>
-                <li>Gestion de bases de données (SQL, phpMyAdmin)</li>
-                <li>Sécurisation des applications et bonnes pratiques</li>
-              </ul>
-              <br>
-              Projets possibles :
-              <ul>
-                <li>Création d'un site web dynamique pour une entreprise</li>
-                <li>Développement d'une application de gestion interne (JavaFX, Symfony...)</li>
-                <li>Intégration d'API ou d'un système d'authentification sécurisé</li>
-              </ul>
-            </div>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-date">2019</div>
+        <div class="timeline-content">
+          <h4 class="timeline-title">Baccalauréat Scientifique (S)</h4>
+          <span class="timeline-place">Lycée Teilhard de Chardin</span>
+          <p class="timeline-desc">
+            Option Mathématiques.
+          </p>
+        </div>
+      </div>
 
-          <!-- Texte parcours -->
-          <div id="parcours-text" class="card muted" style="display: none; margin-top: 10px;">
-            2024–2026 : BTS SIO option SLAM au lycée Le Rebours.
-            <br><br>
-            2022–2024 : Années sabbatiques durant lesquelles j'ai occupé différents emplois (hôte de caisse, vendeur indépendant, etc.) et cherché ma voie de réorientation.
-            <br><br>
-            2020–2022 : L2 Mathématiques à l'UPEC (Université Paris-Est Créteil)
-            <br><br>
-            2019–2020 : L1 Mathématiques à l'UPEC (Université Paris-Est Créteil)
-            <br><br>
-            2019 : Obtention du Baccalauréat Scientifique (S) option Mathématiques au lycée Théillard de Chardin.
-            <br><br>
-            Ce parcours m'a permis d'acquérir des bases solides en développement, logique et sécurité.
-          </div>
-        </section>
+    </div>
+  </div>
+</section>
 
         <!-- SECTION PROJETS -->
         <section class="tab" id="projets" style="display:none">
