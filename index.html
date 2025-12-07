@@ -34,7 +34,7 @@
       <aside class="profile">
   <img src="photo_profil_portfolio.png" alt="Florent Mineiro" class="avatar">
   
-  <div><strong>Florent Mineiro</strong><br><span class="muted">Développeur</span></div>
+  <div><strong>Florent Mineiro</strong><br><span class="muted">BTS SIO option SLAM , spécialisé dans le développement web et logiciel</span></div>
   <div class="card" style="margin-top:16px;">
     <div style="font-weight:700;">Sujet de veille</div>
     <div class="muted">l'IA dans le Cloud Computing</div>
@@ -141,6 +141,15 @@
 
           <div class="card muted clickable" data-type="web" onclick="goTo('projet-tacos.html')">
             Site vitrine : Marque fictive vendant des tacos
+          </div>
+        </section>
+        <!-- SECTION STAGES -->
+        <section class="tab" id="stages" style="display:none">
+          <h1>Stages</h1>
+          <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
+
+          <div class="card muted clickable" data-type="dev" onclick="goTo('stage-dev-1.html')">
+            Stage développement : Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
           </div>
         </section>
 
@@ -346,6 +355,7 @@
           </div>
         </section>
 
+        <!-- Section Veille Technologique -->
        <section class="tab" id="veille" style="display:none">
           <h2>Veille technologique</h2>
 
@@ -360,7 +370,8 @@
 
           <div class="card muted" style="margin-top:16px;">
             <h3>🤔 Pourquoi ce sujet ?</h3>
-            L'IA et le cloud sont deux technologies qui se complètent parfaitement. Le cloud offre la puissance de calcul nécessaire pour entraîner et déployer des modèles d'IA, tandis que l'IA permet d'optimiser et d'automatiser les infrastructures cloud.
+            En faisant mes recherches sur un sujet de veille technologique , je voulais me renseigner sur le cloud .
+            Je me suis rendu compte que beaucoup d'entreprises utilisait le cloud et surtout que l'IA était intégrée au Cloud pour l'améliorer .
             <br><br>
             Ce sujet est particulièrement pertinent car :
             <ul>
@@ -374,15 +385,14 @@
           <div class="card muted" style="margin-top:16px;">
             <h3>🔍 Comment j'ai réalisé ma veille ?</h3>
             <ul>
-              <li><strong>Sources spécialisées :</strong> AWS Blog, Microsoft Azure AI Blog, Google Cloud Blog, Le Monde Informatique, ZDNet</li>
-              <li><strong>Sites tech :</strong> TechCrunch, The Verge, Ars Technica, VentureBeat (section AI)</li>
-              <li><strong>Newsletters :</strong> TLDR AI, The Batch (deeplearning.ai), Import AI</li>
-              <li><strong>Outils de veille :</strong> Google Alerts (mots-clés : "AI cloud", "ML cloud", "GPT API"), Europress</li>
-              <li><strong>Documentation officielle :</strong> AWS SageMaker, Azure OpenAI Service, Google Vertex AI</li>
+               
+              <li><strong>Outils de veille :</strong> Google Alerts (mots-clés : "AI cloud", "ML cloud", "GPT API")</li>
+              <li><strong>Outils d'IA générative :</strong> Outils d'IA générative (ex: Gemini, pour la synthèse et l'affinage du plan)</li>
+              <li><strong>Navigateur de recherches d'articles :</strong>Europress(via Ecole Directe) </li>
               <li><strong>Fréquence :</strong> Veille quotidienne rapide (10-15 min), analyse approfondie hebdomadaire</li>
             </ul>
           </div>
-
+          <!-- 
           <div class="card muted" style="margin-top:16px;">
             <h3>💡 Cas d'usage concrets de l'IA dans le cloud</h3>
             <ul>
@@ -394,18 +404,20 @@
               <li><strong>Code et développement</strong> : GitHub Copilot, Amazon CodeWhisperer pour accélérer le développement</li>
               <li><strong>Analyse de sentiments</strong> : Surveillance des réseaux sociaux, avis clients (Comprehend, Text Analytics)</li>
             </ul>
-          </div>
+          </div> -->  
 
           <div class="card muted" style="margin-top:16px;">
             <h3>✅ Pourquoi utiliser l'IA dans le cloud ?</h3>
             <ul>
-              <li><strong>🚀 Pas besoin de GPU coûteux</strong> : Accès à la puissance de calcul à la demande (TPU, GPU cloud)</li>
-              <li><strong>⚡ Déploiement rapide</strong> : APIs prêtes à l'emploi, pas besoin d'entraîner soi-même</li>
-              <li><strong>💰 Coût optimisé</strong> : Paiement à l'usage, pas d'infrastructure à maintenir</li>
-              <li><strong>🔄 Scalabilité</strong> : Adaptation automatique à la charge (pic de requêtes IA)</li>
-              <li><strong>🔐 Sécurité et conformité</strong> : Respect RGPD, certifications (ISO, SOC 2...)</li>
-              <li><strong>🔧 Maintenance simplifiée</strong> : Mises à jour automatiques des modèles</li>
-              <li><strong>🌍 Disponibilité mondiale</strong> : Latence faible grâce aux datacenters répartis</li>
+              <li><strong>Accès à de matériels spécialisés rares</strong> : Donne accès à des technologies de pointes (GPU et TPU) extrêmement difficiles à acheter et maintenir en local</li>
+              <li><strong>API prêtes à l'emploi</strong> : Les fournisseurs de cloud (AWS, Azure, Google Cloud) offrent des services IA gérés (AI Services) (Reconnaissance faciale, Traduction, Analyse de sentiment, IA générative) via de simples APIs</li>
+              <li><strong> Coût optimisé</strong> : Paiement à l'usage, pas d'infrastructure à maintenir</li>
+              <li><strong> Scalabilité</strong> : Le cloud permet de faire varier la puissance à la demande.</li>
+              <li><strong> Sécurité </strong> : Les infrastructures cloud sont protégées par des équipes de cybersécurité de haut niveau, ce qui est souvent plus sûr que de tenter de sécuriser une infrastructure d'IA complexe en interne</li>
+              <li><strong> Maintenance simplifiée</strong> : Mises à jour automatiques des modèles</li>
+              <li><strong> Conformités</strong> : Les grands fournisseurs cloud offrent des certifications (RGPD, ISO, SOC 2) qui garantissent que les données traitées par les services IA respectent les normes mondiales et locales de sécurité et de confidentialité.</li>
+              <li><strong> Disponibilité mondiale</strong> : Latence faible grâce aux datacenters répartis</li>
+              <li><strong> Mise à Jour régulière</strong> : Les modèles d'IA pré-entraînés sont régulièrement mis à jour et maintenus par les fournisseurs cloud, garantissant leur performance et leur sécurité.</li>
             </ul>
           </div>
 
@@ -413,10 +425,9 @@
             <h3>⚠️ Défis et limites de l'IA cloud</h3>
             <ul>
               <li><strong>Coûts variables</strong> : Les factures peuvent exploser avec une utilisation intensive (tokens, compute)</li>
+              <li><strong>Problèmes environnementaux</strong> : Les plateformes d'IA cloud requiert énormément d'électricité pour les utilser</li>
               <li><strong>Dépendance aux fournisseurs</strong> : Vendor lock-in, difficulté de migration</li>
               <li><strong>Confidentialité des données</strong> : Envoi de données sensibles à des services externes</li>
-              <li><strong>Latence réseau</strong> : Requêtes API peuvent être plus lentes que local pour certains cas</li>
-              <li><strong>Contrôle limité</strong> : Moins de personnalisation qu'un modèle auto-hébergé</li>
               <li><strong>Conformité RGPD</strong> : Attention à la localisation des données (UE vs US)</li>
             </ul>
           </div>
@@ -470,7 +481,7 @@
                 </a>
              </div>
           </div>
-
+          <!-- 
           <div class="card muted" style="margin-top:16px;">
             <h3>🔮 Tendances et évolutions à surveiller</h3>
             <ul>
@@ -481,7 +492,7 @@
               <li><strong>Modèles open source</strong> : Llama 2/3, Mistral, disponibles dans le cloud</li>
               <li><strong>Agents IA autonomes</strong> : IA qui peut utiliser des outils et accomplir des tâches complexes</li>
             </ul>
-          </div>
+          </div>-->
 
           <div class="card muted" style="margin-top:16px;">
             <h3>📌 Conclusion</h3>
@@ -495,7 +506,7 @@
               <li>✅ L'importance de rester à jour dans un domaine qui évolue très rapidement</li>
             </ul>
             <br>
-            Cette veille m'a permis de comprendre que <strong>maîtriser l'IA et le cloud</strong> est essentiel pour tout professionnel de l'informatique moderne. C'est un atout majeur pour ma carrière en développement et cybersécurité.
+            Cette veille m'a permis de comprendre que <strong>maîtriser l'IA et le cloud</strong> est essentiel pour tout professionnel de l'informatique moderne.
           </div>
 
         </section>
