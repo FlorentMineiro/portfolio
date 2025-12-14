@@ -1,7 +1,16 @@
-// --- INTRO ANIMATION (session-aware) ---
+// ============================================================
+// 1. UTILITAIRES ET VARIABLES
+// ============================================================
+function safeGet(id) { return document.getElementById(id); }
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ============================================================
+// 2. ANIMATION INTRO (TERMINAL)
+// ============================================================
 const intro = document.getElementById('intro');
 const introLinesContainer = document.getElementById('intro-lines');
 const app = document.getElementById('app');
+
 const lines = [
   '> System startup sequence initialized...',
   '> Loading portfolio environment...',
@@ -9,10 +18,6 @@ const lines = [
   '> Role: Développeur / Cybersécurité',
   '> Environment ready ✅'
 ];
-
-// utilitaires
-function safeGet(id) { return document.getElementById(id); }
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 async function typeLine(text, container, delay = 12) {
   if (!container) return;
@@ -33,12 +38,9 @@ async function typeLine(text, container, delay = 12) {
 
 async function playIntro() {
   if (!intro || !introLinesContainer || !app) {
-    // pas d'éléments, on affiche l'app directement
-    if (app) app.style.opacity = 1;
-    if (intro) intro.style.display = 'none';
+    showAppImmediately();
     return;
   }
-
   intro.style.display = 'block';
   intro.style.opacity = '1';
   introLinesContainer.innerHTML = '';
@@ -48,6 +50,7 @@ async function playIntro() {
     await sleep(250);
   }
   await sleep(600);
+  
   intro.style.opacity = '0';
   setTimeout(() => {
     intro.style.display = 'none';
@@ -61,15 +64,13 @@ function showAppImmediately() {
   if (app) app.style.opacity = 1;
 }
 
-// Gestion du raccourci Entrée pour passer l'intro
 function setupSkipShortcut() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       if (intro && intro.style.display !== 'none') {
         intro.style.opacity = '0';
         setTimeout(() => {
-          if (intro) intro.style.display = 'none';
-          if (app) app.style.opacity = 1;
+          showAppImmediately();
           try { sessionStorage.setItem('introShown', 'true'); } catch (e) {}
         }, 200);
       }
@@ -77,108 +78,77 @@ function setupSkipShortcut() {
   });
 }
 
-// --- INIT (attendre DOMContentLoaded pour être sûr que tout est présent) ---
-document.addEventListener('DOMContentLoaded', () => {
-  setupSkipShortcut();
+// ============================================================
+// 3. NAVIGATION (Onglets du Menu Principal)
+// ============================================================
+function switchTab(targetId) {
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabs = document.querySelectorAll('.tab');
 
+  // Active le bon bouton
+  tabBtns.forEach(b => b.classList.remove('active'));
+  const targetBtn = document.querySelector(`.tab-btn[data-tab="${targetId}"]`);
+  if (targetBtn) targetBtn.classList.add('active');
+
+  // Affiche la bonne section
+  tabs.forEach(t => (t.style.display = t.id === targetId ? 'block' : 'none'));
+}
+
+// ============================================================
+// 4. INITIALISATION
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // A. Intro Logic
+  setupSkipShortcut();
   const introShown = (() => {
     try { return sessionStorage.getItem('introShown') === 'true'; } catch (e) { return false; }
   })();
 
-  if (introShown) {
-    showAppImmediately();
-  } else {
-    playIntro();
-  }
+  if (introShown) showAppImmediately();
+  else playIntro();
 
-  // --- TABS (navigation principale) ---
+  // B. Navigation Menu
   const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabs = document.querySelectorAll('.tab');
   tabBtns.forEach(btn =>
     btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      tabs.forEach(t => (t.style.display = t.id === target ? 'block' : 'none'));
+      switchTab(btn.dataset.tab);
     })
   );
 
-  // --- BOUTONS SECONDAIRES (Présentation / Parcours / SISR / SLAM) ---
-  const btnBts = safeGet('btn-bts');
-  const btnParcours = safeGet('btn-parcours');
-  const btsText = safeGet('bts-text');
-  const parcoursText = safeGet('parcours-text');
-
-  function toggleSection(button, section, others = []) {
-    if (!button || !section) return;
-    const isVisible = section.style.display === 'block';
-    section.style.display = isVisible ? 'none' : 'block';
-    button.classList.toggle('active', !isVisible);
-    others.forEach(o => {
-      if (o.section) o.section.style.display = 'none';
-      if (o.button) o.button.classList.remove('active');
-    });
-  }
-
-  if (btnBts) {
-    btnBts.addEventListener('click', () => {
-      toggleSection(btnBts, btsText, [{ button: btnParcours, section: parcoursText }]);
-    });
-  }
-
-  if (btnParcours) {
-    btnParcours.addEventListener('click', () => {
-      toggleSection(btnParcours, parcoursText, [{ button: btnBts, section: btsText }]);
-      const sisrText = safeGet('sisr-text');
-      const slamText = safeGet('slam-text');
-      if (sisrText) sisrText.style.display = 'none';
-      if (slamText) slamText.style.display = 'none';
-    });
-  }
-
-  document.addEventListener('click', e => {
-    if (e.target.id === 'btn-sisr' || e.target.id === 'btn-slam') {
-      const btnSisr = safeGet('btn-sisr');
-      const btnSlam = safeGet('btn-slam');
-      const sisrText = safeGet('sisr-text');
-      const slamText = safeGet('slam-text');
-
-      if (e.target.id === 'btn-sisr') {
-        toggleSection(btnSisr, sisrText, [{ button: btnSlam, section: slamText }]);
-      } else {
-        toggleSection(btnSlam, slamText, [{ button: btnSisr, section: sisrText }]);
-      }
-    }
-  });
-
-  // Navigation helper utilisé par les cartes
-  window.goTo = function(page) { window.location.href = page; };
-
-  // --- FILTRES PROJETS (délégué) ---
+  // C. Filtres Projets (Web, JavaFX, etc.)
   document.addEventListener('click', function(e){
     if (!e.target.matches('.filter-btn')) return;
     const filter = e.target.getAttribute('data-filter');
-    // visuel simple pour boutons
+    
+    // Visuel des boutons filtres
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === e.target));
+    
+    // Filtrage des cartes (ce sont maintenant des liens <a>)
     document.querySelectorAll('#projets .card').forEach(card => {
+      // On ignore le bouton filtre lui-même s'il est dans une card par erreur, on cible les éléments avec data-type
       const type = card.getAttribute('data-type') || '';
-      card.style.display = (filter === 'all' || type === filter) ? '' : 'none';
+      if (!type) return; 
+
+      // 'display: block' car nos liens doivent se comporter comme des blocs
+      if (filter === 'all' || type === filter) {
+        card.style.display = 'block'; 
+      } else {
+        card.style.display = 'none';
+      }
     });
   });
 
+  // D. Accordéon Parcours
+  const btnParcours = safeGet('btn-parcours');
+  const parcoursText = safeGet('parcours-text');
+
+  if (btnParcours && parcoursText) {
+    btnParcours.addEventListener('click', () => {
+      const isVisible = parcoursText.style.display === 'block';
+      parcoursText.style.display = isVisible ? 'none' : 'block';
+      btnParcours.classList.toggle('active', !isVisible);
+    });
+  }
+
 });
-
-// Récupère le paramètre dans l’URL
-const params = new URLSearchParams(window.location.search);
-const selected = params.get("projet");
-
-// Si un projet est demandé, on masque les autres
-if (selected) {
-  document.querySelectorAll(".project-card").forEach(card => {
-    if (card.id !== selected) {
-      card.style.display = "none";
-    }
-  });
-}
-
-
