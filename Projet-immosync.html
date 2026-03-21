@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GestTravaux Pro – IMMOSYNC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="media-slider.css">
+</head>
+<body>
+<header class="header">
+    <a href="index.html" class="back-button">⟵ Retour</a>
+    <div>
+        <h1>GestTravaux Pro – IMMOSYNC</h1>
+    </div>
+</header>
+
+<main class="container">
+    <article class="project-card">
+        <div class="thumb-wrap">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;height:100%;">
+                <div style="font-size:64px;">🏗️</div>
+                <div style="font-size:18px;font-weight:700;color:#eaf6ff;text-align:center;">IMMOSYNC</div>
+                <div style="font-size:13px;color:var(--muted);text-align:center;">GestTravaux Pro</div>
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <div class="project-header">
+                <div class="title-block">
+                    <h2>GestTravaux Pro – Gestion de travaux immobiliers</h2>
+                    <div class="meta">Projet BTS SIO (Groupe 7) — Java/JavaFX + Symfony 7 + MySQL — 2025/2026</div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <div class="kicker">Décrire le projet</div>
+                <p class="lead">
+                    GestTravaux Pro est une application de gestion de travaux immobiliers développée pour la société fictive <strong>IMMOSYNC</strong>,
+                    un syndic proposant des services de gérance de biens. Le projet vise à digitaliser l'intégralité du processus
+                    de gestion des chantiers : de l'inspection sur site jusqu'à la réception des travaux, en passant par la mise
+                    en concurrence des entrepreneurs.
+                </p>
+                <p class="muted">
+                    Le projet combine une <strong>application Java Desktop</strong> pour le gestionnaire et une
+                    <strong>application web Symfony</strong> accessible aux inspecteurs, entrepreneurs et propriétaires,
+                    le tout partagé sur une base de données MySQL commune.
+                </p>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="project-section">
+                <div class="kicker">Ce que j'ai fait</div>
+
+                <p class="lead">
+                    J'ai participé au développement des deux volets du projet au sein du Groupe 7,
+                    en binôme avec Yann Ouraga. Mon travail a couvert aussi bien la partie Java Desktop
+                    que la partie web Symfony.
+                </p>
+
+                <div class="project-section">
+                    <table class="project-structure-table">
+                        <thead>
+                        <tr>
+                            <th>Fonctionnalité</th>
+                            <th>Description</th>
+                            <th>Technologie</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><strong>Gestion des entités</strong></td>
+                            <td>CRUD des entrepreneurs, propriétaires, biens, prestations et catégories.</td>
+                            <td>Java / Hibernate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Création de chantiers</strong></td>
+                            <td>Création du dossier chantier, devis type et assignation d'un inspecteur.</td>
+                            <td>Java / Symfony</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interface inspecteur mobile</strong></td>
+                            <td>Consultation des chantiers assignés, saisie d'observations, upload de photos et documents.</td>
+                            <td>Symfony (PWA)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Espace entrepreneur</strong></td>
+                            <td>Dashboard, consultation des devis types, soumission de propositions avec upload PDF.</td>
+                            <td>Symfony</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comparateur de devis</strong></td>
+                            <td>Analyse multi-critères des devis (date de début + prix) pour aider à la décision.</td>
+                            <td>Java / JavaFX</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Base de données partagée</strong></td>
+                            <td>Conception et mise en place du schéma MySQL partagé entre les deux applications.</td>
+                            <td>MySQL</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="project-section">
+                <div class="kicker">Architecture du projet</div>
+                <p class="muted">
+                    Le projet repose sur deux applications distinctes communiquant via une base MySQL commune :
+                    l'application Java Desktop (gestionnaire) et l'application web Symfony (inspecteurs, entrepreneurs, propriétaires).
+                </p>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;">
+                    <div class="skill">
+                        <div class="skill-title">🖥️ Application Java Desktop</div>
+                        <div class="skill-desc">Interface gestionnaire pour le pilotage des chantiers, comparateur de devis avancé et génération de rapports. Architecture MVC avec JavaFX et Hibernate ORM.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">🌐 Application Web Symfony</div>
+                        <div class="skill-desc">Interface web responsive (PWA) pour inspecteurs terrain, entrepreneurs et propriétaires. Authentification multi-rôles, formulaires Symfony, upload de fichiers.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">🗄️ Base de données MySQL</div>
+                        <div class="skill-desc">Schéma partagé entre les deux applications, contraintes d'intégrité référentielle, index optimisés et jeu de données de test.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">👥 Travail en équipe</div>
+                        <div class="skill-desc">Développement en binôme (Groupe 7 – Florent Mineiro & Yann Ouraga), gestion du code via GitHub, respect des deadlines du cahier des charges.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="project-section">
+                <div class="kicker">Compétences développées</div>
+
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-title">Java / JavaFX</div>
+                        <div class="skill-desc">Développement d'une application desktop avec interface graphique JavaFX, architecture MVC et gestion des transactions Hibernate.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">Symfony 7</div>
+                        <div class="skill-desc">Développement web avec Doctrine ORM, système d'authentification multi-rôles, formulaires avec validation et upload de fichiers.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">MySQL / Hibernate / Doctrine</div>
+                        <div class="skill-desc">Conception du modèle de données, mapping ORM des entités, requêtes optimisées et gestion de la base partagée entre deux applications.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">GitHub / Travail en équipe</div>
+                        <div class="skill-desc">Gestion de version collaborative, organisation des branches et respect des jalons de livraison définis dans le cahier des charges.</div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">Conception & modélisation</div>
+                        <div class="skill-desc">Lecture et application d'un cahier des charges complet, modélisation des entités métier et compréhension des processus immobiliers.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meta-row">
+                <div>Année : 2025 – 2026</div>
+                <div>•</div>
+                <div>Stack : Java · JavaFX · Symfony 7 · MySQL · Hibernate · Doctrine</div>
+                <div>•</div>
+                <div>Groupe 7 — BTS SIO SLAM</div>
+            </div>
+
+        </div>
+    </article>
+</main>
+
+<script src="media-slider.js" defer></script>
+</body>
+</html>
