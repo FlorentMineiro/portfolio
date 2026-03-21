@@ -1,421 +1,426 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Florent Mineiro (Cybersécurité)</title>
-  
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  </head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Florent Mineiro (Cybersécurité)</title>
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  
-  <div id="intro">
+
+<div id="intro">
     <div class="term">
-      <div id="intro-lines"></div>
-      <div style="height:10px"></div>
-      <div class="muted" style="font-size:12px">Appuyez sur Entrée pour passer</div>
+        <div id="intro-lines"></div>
+        <div style="height:10px"></div>
+        <div class="muted" style="font-size:12px">Appuyez sur Entrée pour passer</div>
     </div>
-  </div>
-  
-  <div class="frame" id="app" style="opacity:0;transition:all .4s ease">
-    <header class="top">
-      <div class="logo">FM</div>
-      <h1>Portfolio — Florent Mineiro</h1>
-      
-      <nav class="tabs">
-        <button class="tab-btn active" data-tab="presentation">Présentation</button>
-        <button class="tab-btn" data-tab="projets">Projets</button>
-        <button class="tab-btn" data-tab="stages">Stages</button>
-        <button class="tab-btn" data-tab="competences">Compétences</button>
-        <button class="tab-btn" data-tab="synthese">Tableau synthèse</button>
-        <button class="tab-btn" data-tab="veille">Veille technologique</button>
-      </nav>
-    </header>
-    
-    <div class="container">
-      <aside class="profile">
-        <img src="photo_profil_portfolio.png" alt="Florent Mineiro" class="avatar">
-        <div><strong>Florent Mineiro</strong><br><span class="muted">BTS SIO option SLAM , spécialisé dans le développement web et logiciel</span></div>
-        <div class="card" style="margin-top:16px;">
-          <div style="font-weight:700;">Sujet de veille</div>
-          <div class="muted">l'IA dans le Cloud Computing</div>
-        </div>
-      </aside>
-      
-      <main class="content">
-        
-        <section class="tab" id="presentation">
-          <h2>Présentation</h2>
-          <h3>Qui suis-je ?</h3>
-          <div class="card muted">
-            Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
-            au lycée Le Rebours à Paris (75013).
-            <br><br>
-            Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
-            
-            <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-              <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
-            </div>
-          </div>
-
-          <div id="parcours-text" class="card" style="display: none; margin-top: 10px;">
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-date">2024 – 2026</div>
-                <div class="timeline-content">
-                  <h4 class="timeline-title">BTS SIO option SLAM</h4>
-                  <span class="timeline-place">Lycée Le Rebours</span>
-                  <p class="timeline-desc">Acquisition de compétences techniques en développement, conception de bases de données et cybersécurité.</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-date">2022 – 2024</div>
-                <div class="timeline-content">
-                  <h4 class="timeline-title">Expériences & Réorientation</h4>
-                  <span class="timeline-place">Années de césure</span>
-                  <p class="timeline-desc">Emplois divers (hôte de caisse, vendeur indépendant). Période de maturation du projet professionnel vers l'informatique.</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-date">2019 – 2022</div>
-                <div class="timeline-content">
-                  <h4 class="timeline-title">Licence de Mathématiques (L1 & L2)</h4>
-                  <span class="timeline-place">UPEC (Université Paris-Est Créteil)</span>
-                  <p class="timeline-desc">Développement de la logique algorithmique et des capacités d'analyse.</p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-date">2019</div>
-                <div class="timeline-content">
-                  <h4 class="timeline-title">Baccalauréat Scientifique (S)</h4>
-                  <span class="timeline-place">Lycée Teilhard de Chardin</span>
-                  <p class="timeline-desc">Option Mathématiques.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--Section Projets-->
-
-        <section class="tab" id="projets" style="display:none">
-          <h1>Mes Projets</h1>
-          <p>Présentation de mes projets — sites HTML/CSS/JS, sites CMS, et projets JavaFX.</p>
-
-          <div class="filters">
-            <button class="filter-btn active" data-filter="all">Tous</button>
-            <button class="filter-btn" data-filter="cms">CMS</button>
-            <button class="filter-btn" data-filter="web">Projet Web</button>
-            <button class="filter-btn" data-filter="javafx">JavaFX</button>
-          </div>
-
-          <a href="projets-javafx.html" target="_blank" class="card muted clickable project-card" data-type="javafx" style="text-decoration:none; color:inherit; display:block;"> 
-            <strong>Projet JavaFX</strong><br>
-            Projet de fin d'année : Création d'un jeu en Java/JavaFx
-          </a>
-
-          <a href="projets-cms.html" target="_blank" class="card muted clickable project-card" data-type="cms" style="text-decoration:none; color:inherit; display:block;"> 
-            <strong>Site CMS (No-code)</strong><br>
-            Site Wordpress pour un client réalisant des clips de musique
-          </a>
-
-          <a href="projet-harrypotter.html" target="_blank" class="card muted clickable project-card" data-type="web" style="text-decoration:none; color:inherit; display:block;">
-            <strong>Projet Web (API)</strong><br>
-            Site sur l'univers d'Harry Potter en HTML/CSS/JS
-          </a>
-
-          <a href="projet-tacos.html" target="_blank" class="card muted clickable project-card" data-type="web" style="text-decoration:none; color:inherit; display:block;">
-            <strong>Site Vitrine</strong><br>
-            Marque fictive vendant des tacos
-          </a>
-        </section>
-        <!--Section Stages-->
-
-        <section class="tab" id="stages" style="display:none">
-          <h1>Stages</h1>
-          <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
-
-          <a href="stage-dev-1.html" target="_blank" class="card muted clickable stage-card" data-type="dev" style="text-decoration:none; color:inherit; display:block;">
-            <strong>Stage développement</strong><br>
-            Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
-          </a>
-        </section>
-        <!--Section Compétences-->
-
-       <section class="tab" id="competences" style="display:none">
-    <h2>Compétences Techniques</h2>
-    <p class="muted" style="margin-bottom: 30px;">Mon niveau de maîtrise sur les différentes technologies.</p>
-
-    <h3 class="skill-category-title">Développement Web</h3>
-<div class="skills-grid">
-    <div class="skill-card">
-        <i class="devicon-html5-plain colored skill-icon"></i>
-        <span class="skill-name">HTML5</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 95%;"></div></div>
-    </div>
-    <div class="skill-card">
-        <i class="devicon-css3-plain colored skill-icon"></i>
-        <span class="skill-name">CSS3</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 80%;"></div></div>
-    </div>
-    <div class="skill-card">
-        <i class="devicon-javascript-plain colored skill-icon"></i>
-        <span class="skill-name">JavaScript</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 60%;"></div></div>
-    </div>
-    <div class="skill-card">
-        <i class="devicon-php-plain colored skill-icon"></i>
-        <span class="skill-name">PHP</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 75%;"></div></div>
-    </div>
-    <div class="skill-card">
-        <i class="devicon-react-original colored skill-icon"></i>
-        <span class="skill-name">React</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 25%;"></div></div>
-    </div>
-    <div class="skill-card">
-        <i class="devicon-symfony-original colored skill-icon"></i>
-        <span class="skill-name">Symfony</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
-    </div>
-    
-    <div class="skill-card">
-        <i class="devicon-wordpress-plain colored skill-icon"></i>
-        <span class="skill-name">WordPress</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 30%;"></div></div>
-    </div>
-    <div class="skill-card">
-        <img src="https://cdn.simpleicons.org/wix/000000" style="width:40px; height:40px; margin-bottom:10px;" alt="Wix">
-        <span class="skill-name">Wix</span>
-        <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
-    </div>
-    </div>
-
-    <h3 class="skill-category-title">Programmation & Data</h3>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <i class="devicon-java-plain colored skill-icon"></i>
-            <span class="skill-name">Java</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 70%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-spring-original colored skill-icon"></i>
-            <span class="skill-name">Spring Boot</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-java-plain-wordmark colored skill-icon"></i>
-            <span class="skill-name">JavaFx</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-codepen-plain colored skill-icon"></i>
-            <span class="skill-name">Scene Builder</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 60%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-python-plain colored skill-icon"></i>
-            <span class="skill-name">Python</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 65%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-mysql-plain colored skill-icon"></i>
-            <span class="skill-name">SQL</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 80%;"></div></div>
-        </div>
-    </div>
-    
-    <h3 class="skill-category-title">Systèmes, Réseaux & Virtualisation</h3>
-    <div class="skills-grid">
-        
-        <div class="skill-card">
-             <i class="devicon-network-plain colored skill-icon"></i> 
-             <span class="skill-name">Adressage IP</span>
-             <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
-        </div>
-        
-        <div class="skill-card">
-             <i class="devicon-network-plain colored skill-icon"></i> 
-             <span class="skill-name">DHCP</span>
-             <div class="skill-bar-container"><div class="skill-progress" style="width: 10%;"></div></div>
-        </div>
-        
-        <div class="skill-card">
-            <i class="devicon-linux-plain colored skill-icon"></i>
-            <span class="skill-name">Linux</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-windows8-original colored skill-icon"></i>
-            <span class="skill-name">Windows</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 90%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png" style="width:40px; height:40px; margin-bottom:10px;" alt="VirtualBox">
-            <span class="skill-name">VirtualBox</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 60%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <img src="https://cdn.simpleicons.org/vmware/607078" style="width:70px; height:70px; margin-bottom:10px;" alt="VMware">
-            <span class="skill-name">VMware</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 40%;"></div></div>
-        </div>
-        <div class="skill-card">
-          <img src="logo/logoWarp.png" style="width:40px; height:40px; margin-bottom:10px;" alt="Warp">
-    <span class="skill-name">Warp</span>
-    <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
 </div>
-        <div class="skill-card">
-            <i class="devicon-docker-plain colored skill-icon"></i>
-            <span class="skill-name">Docker</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
-        </div>
-        <div class="skill-card">
-            <i class="devicon-github-original colored skill-icon"></i>
-            <span class="skill-name">GitHub</span>
-            <div class="skill-bar-container"><div class="skill-progress" style="width: 80%;"></div></div>
-        </div>
-    </div>
-</section>
-        <!--Section Tableau de Synthèse-->
-        <section class="tab" id="synthese" style="display:none">
-          <h2>Tableau de synthèse</h2>
-          <div class="card muted" style="text-align: center; padding: 40px 20px;">
-            <h3 style="margin-bottom: 20px; color: #fff;">Consultez mon tableau de synthèse</h3>
-            <p style="margin-bottom: 30px; color: #b0b0b0;">
-              Ce document présente l'ensemble de mes compétences BTS SIO, mes réalisations professionnelles et les périodes associées.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-              <a href="Tableau-de-synthèse/Tableau_de_synthèse-Epreuve E4-BTS SIO 2024.pdf" target="_blank" class="mini-btn">👁️ Ouvrir le PDF</a>
-              <a href="Tableau-de-synthèse/Tableau_de_synthèse-Epreuve E4-BTS SIO 2024.pdf" download class="mini-btn">📥 Télécharger</a>
+
+<div class="frame" id="app" style="opacity:0;transition:all .4s ease">
+    <header class="top">
+        <div class="logo">FM</div>
+        <h1>Portfolio — Florent Mineiro</h1>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="presentation">Présentation</button>
+            <button class="tab-btn" data-tab="projets">Projets</button>
+            <button class="tab-btn" data-tab="stages">Stages</button>
+            <button class="tab-btn" data-tab="competences">Compétences</button>
+            <button class="tab-btn" data-tab="synthese">Tableau synthèse</button>
+            <button class="tab-btn" data-tab="veille">Veille technologique</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="profile">
+            <img src="photo_profil_portfolio.png" alt="Florent Mineiro" class="avatar">
+            <div><strong>Florent Mineiro</strong><br><span class="muted">BTS SIO option SLAM , spécialisé dans le développement web et logiciel</span></div>
+            <div class="card" style="margin-top:16px;">
+                <div style="font-weight:700;">Sujet de veille</div>
+                <div class="muted">l'IA dans le Cloud Computing</div>
             </div>
-          </div>
-        </section>
-        <!--Secction Veille Technologique-->
+        </aside>
 
-        <section class="tab" id="veille" style="display:none">
-  
-  <div style="display: flex; gap: 20px; align-items: stretch; margin-bottom: 20px; flex-wrap: wrap;">
-    <div class="card" style="flex: 2; min-width: 300px;">
-      <h2 style="margin-top:0;">Veille Technologique</h2>
-      <h3 style="color: #667eea; margin-bottom: 10px;">Sujet : L'IA dans le Cloud Computing</h3>
-      <p class="muted">
-        L'intégration de l'Intelligence Artificielle (GenAI, Machine Learning) au cœur des infrastructures Cloud (AWS, Azure, GCP) pour automatiser, sécuriser et optimiser les services informatiques.
-      </p>
-      <div style="margin-top: 15px;">
-        <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 5px 10px; border-radius: 4px; font-size: 13px; font-weight: bold; margin-right: 5px;">🔥 Sujet d'actualité</span>
-        <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 5px 10px; border-radius: 4px; font-size: 13px; font-weight: bold;">☁️ Cloud & DevOps</span>
-      </div>
+        <main class="content">
+
+            <section class="tab" id="presentation">
+                <h2>Présentation</h2>
+                <h3>Qui suis-je ?</h3>
+                <div class="card muted">
+                    Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
+                    au lycée Le Rebours à Paris (75013).
+                    <br><br>
+                    Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
+
+                    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
+                        <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
+                    </div>
+                </div>
+
+                <div id="parcours-text" class="card" style="display: none; margin-top: 10px;">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-date">2024 – 2026</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">BTS SIO option SLAM</h4>
+                                <span class="timeline-place">Lycée Le Rebours</span>
+                                <p class="timeline-desc">Acquisition de compétences techniques en développement, conception de bases de données et cybersécurité.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-date">2022 – 2024</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Expériences & Réorientation</h4>
+                                <span class="timeline-place">Années de césure</span>
+                                <p class="timeline-desc">Emplois divers (hôte de caisse, vendeur indépendant). Période de maturation du projet professionnel vers l'informatique.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-date">2019 – 2022</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Licence de Mathématiques (L1 & L2)</h4>
+                                <span class="timeline-place">UPEC (Université Paris-Est Créteil)</span>
+                                <p class="timeline-desc">Développement de la logique algorithmique et des capacités d'analyse.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-date">2019</div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Baccalauréat Scientifique (S)</h4>
+                                <span class="timeline-place">Lycée Teilhard de Chardin</span>
+                                <p class="timeline-desc">Option Mathématiques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section Projets-->
+
+            <section class="tab" id="projets" style="display:none">
+                <h1>Mes Projets</h1>
+                <p>Présentation de mes projets — sites HTML/CSS/JS, sites CMS, et projets JavaFX.</p>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="cms">CMS</button>
+                    <button class="filter-btn" data-filter="web">Projet Web</button>
+                    <button class="filter-btn" data-filter="javafx">JavaFX</button>
+                </div>
+
+                <a href="projets-javafx.html" target="_blank" class="card muted clickable project-card" data-type="javafx" style="text-decoration:none; color:inherit; display:block;">
+                    <strong>Projet JavaFX</strong><br>
+                    Projet de fin d'année : Création d'un jeu en Java/JavaFx
+                </a>
+
+                <a href="projets-cms.html" target="_blank" class="card muted clickable project-card" data-type="cms" style="text-decoration:none; color:inherit; display:block;">
+                    <strong>Site CMS (No-code)</strong><br>
+                    Site Wordpress pour un client réalisant des clips de musique
+                </a>
+
+                <a href="projet-harrypotter.html" target="_blank" class="card muted clickable project-card" data-type="web" style="text-decoration:none; color:inherit; display:block;">
+                    <strong>Projet Web (API)</strong><br>
+                    Site sur l'univers d'Harry Potter en HTML/CSS/JS
+                </a>
+
+                <a href="projet-tacos.html" target="_blank" class="card muted clickable project-card" data-type="web" style="text-decoration:none; color:inherit; display:block;">
+                    <strong>Site Vitrine</strong><br>
+                    Marque fictive vendant des tacos
+                </a>
+            </section>
+            <!--Section Stages-->
+
+            <section class="tab" id="stages" style="display:none">
+                <h1>Stages</h1>
+                <p>Réalisation d'un site sur la plateforme Wix sur de la lingerie maison.</p>
+
+                <a href="stage-dev-1.html" target="_blank" class="card muted clickable stage-card" data-type="dev" style="text-decoration:none; color:inherit; display:block;">
+                    <strong>Stage développement — Linge de Maison</strong><br>
+                    Réalisation d'un site web pour un client (intégration, tests, correction de bugs)
+                </a>
+
+                <a href="stage-dev-2.html" target="_blank" class="card muted clickable stage-card" data-type="dev" style="text-decoration:none; color:inherit; display:block;">
+                    <strong>Stage développement — Mototag / Lifetag</strong><br>
+                    Développement du site e-commerce Lifetag.fr : protection intelligente NFC &amp; QR Code pour motards
+                </a>
+            </section>
+            <!--Section Compétences-->
+
+            <section class="tab" id="competences" style="display:none">
+                <h2>Compétences Techniques</h2>
+                <p class="muted" style="margin-bottom: 30px;">Mon niveau de maîtrise sur les différentes technologies.</p>
+
+                <h3 class="skill-category-title">Développement Web</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="devicon-html5-plain colored skill-icon"></i>
+                        <span class="skill-name">HTML5</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-css3-plain colored skill-icon"></i>
+                        <span class="skill-name">CSS3</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-javascript-plain colored skill-icon"></i>
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 60%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-php-plain colored skill-icon"></i>
+                        <span class="skill-name">PHP</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-react-original colored skill-icon"></i>
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 25%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-symfony-original colored skill-icon"></i>
+                        <span class="skill-name">Symfony</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="devicon-wordpress-plain colored skill-icon"></i>
+                        <span class="skill-name">WordPress</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 30%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.simpleicons.org/wix/000000" style="width:40px; height:40px; margin-bottom:10px;" alt="Wix">
+                        <span class="skill-name">Wix</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
+                    </div>
+                </div>
+
+                <h3 class="skill-category-title">Programmation & Data</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="devicon-java-plain colored skill-icon"></i>
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-spring-original colored skill-icon"></i>
+                        <span class="skill-name">Spring Boot</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-java-plain-wordmark colored skill-icon"></i>
+                        <span class="skill-name">JavaFx</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-codepen-plain colored skill-icon"></i>
+                        <span class="skill-name">Scene Builder</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 60%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-python-plain colored skill-icon"></i>
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 65%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-mysql-plain colored skill-icon"></i>
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+
+                <h3 class="skill-category-title">Systèmes, Réseaux & Virtualisation</h3>
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <i class="devicon-network-plain colored skill-icon"></i>
+                        <span class="skill-name">Adressage IP</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="devicon-network-plain colored skill-icon"></i>
+                        <span class="skill-name">DHCP</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 10%;"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="devicon-linux-plain colored skill-icon"></i>
+                        <span class="skill-name">Linux</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-windows8-original colored skill-icon"></i>
+                        <span class="skill-name">Windows</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png" style="width:40px; height:40px; margin-bottom:10px;" alt="VirtualBox">
+                        <span class="skill-name">VirtualBox</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 60%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.simpleicons.org/vmware/607078" style="width:70px; height:70px; margin-bottom:10px;" alt="VMware">
+                        <span class="skill-name">VMware</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 40%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <img src="logo/logoWarp.png" style="width:40px; height:40px; margin-bottom:10px;" alt="Warp">
+                        <span class="skill-name">Warp</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-docker-plain colored skill-icon"></i>
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-github-original colored skill-icon"></i>
+                        <span class="skill-name">GitHub</span>
+                        <div class="skill-bar-container"><div class="skill-progress" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+            </section>
+            <!--Section Tableau de Synthèse-->
+            <section class="tab" id="synthese" style="display:none">
+                <h2>Tableau de synthèse</h2>
+                <div class="card muted" style="text-align: center; padding: 40px 20px;">
+                    <h3 style="margin-bottom: 20px; color: #fff;">Consultez mon tableau de synthèse</h3>
+                    <p style="margin-bottom: 30px; color: #b0b0b0;">
+                        Ce document présente l'ensemble de mes compétences BTS SIO, mes réalisations professionnelles et les périodes associées.
+                    </p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="Tableau-de-synthèse/Tableau_de_synthèse-Epreuve E4-BTS SIO 2024.pdf" target="_blank" class="mini-btn">👁️ Ouvrir le PDF</a>
+                        <a href="Tableau-de-synthèse/Tableau_de_synthèse-Epreuve E4-BTS SIO 2024.pdf" download class="mini-btn">📥 Télécharger</a>
+                    </div>
+                </div>
+            </section>
+            <!--Secction Veille Technologique-->
+
+            <section class="tab" id="veille" style="display:none">
+
+                <div style="display: flex; gap: 20px; align-items: stretch; margin-bottom: 20px; flex-wrap: wrap;">
+                    <div class="card" style="flex: 2; min-width: 300px;">
+                        <h2 style="margin-top:0;">Veille Technologique</h2>
+                        <h3 style="color: #667eea; margin-bottom: 10px;">Sujet : L'IA dans le Cloud Computing</h3>
+                        <p class="muted">
+                            L'intégration de l'Intelligence Artificielle (GenAI, Machine Learning) au cœur des infrastructures Cloud (AWS, Azure, GCP) pour automatiser, sécuriser et optimiser les services informatiques.
+                        </p>
+                        <div style="margin-top: 15px;">
+                            <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 5px 10px; border-radius: 4px; font-size: 13px; font-weight: bold; margin-right: 5px;">🔥 Sujet d'actualité</span>
+                            <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 5px 10px; border-radius: 4px; font-size: 13px; font-weight: bold;">☁️ Cloud & DevOps</span>
+                        </div>
+                    </div>
+
+                    <div class="card muted" style="flex: 1; min-width: 250px;">
+                        <h3 style="margin-top:0; font-size: 16px;">🛠️ Méthodologie & Outils</h3>
+                        <ul style="padding-left: 20px; margin-bottom: 0;">
+                            <li><strong>Flux :</strong> Google Alerts
+                                (GPU,TPU,cloud computing,Azure AI...) </li>
+                            <li><strong>Sources :</strong> Blogs Azure/AWS, TechCrunch, Europresse (Ecole Directe)</li>
+                            <li><strong>Outils IA :</strong> Gemini (Synthèse)</li>
+                            <li><strong>Fréquence :</strong> Quotidienne</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:16px; margin-bottom: 20px;">
+                    <h3>⚙️ Le Matériel Moteur de l'IA (GPU vs TPU)</h3>
+                    <p class="muted">
+                        L'explosion de l'IA dans le Cloud repose sur l'accès à des processeurs spécialisés dans le calcul parallèle et tensoriel.
+                    </p>
+
+                    <div style="display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4 style="color: #667eea; margin-top: 0;">GPU (Graphics Processing Unit)</h4>
+                            <ul style="padding-left: 20px;">
+                                <li><strong>Rôle initial :</strong> Accélérateur graphique et rendu 3D.</li>
+                                <li><strong>Avantage :</strong> Des milliers de cœurs pour traiter des données simultanément (parallélisme).</li>
+                                <li><strong>Usage IA :</strong> Entraînement et exécution des modèles, standard industriel (NVIDIA).</li>
+                            </ul>
+                        </div>
+
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4 style="color: #667eea; margin-top: 0;">TPU (Tensor Processing Unit)</h4>
+                            <ul style="padding-left: 20px;">
+                                <li><strong>Rôle initial :</strong> Puce conçue sur mesure par Google (ASIC).</li>
+                                <li><strong>Avantage :</strong> Spécialisation unique dans les calculs tensoriels (réseaux de neurones).</li>
+                                <li><strong>Usage IA :</strong> Grande efficacité pour l'apprentissage massif des grands modèles de langage.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+
+                    <div class="card" style="border-left: 4px solid #48bb78;"> <h3 style="margin-top:0; color: #48bb78;">✅ Opportunités & Avantages</h3>
+                        <ul class="muted" style="margin-bottom: 0;">
+                            <li><strong>Scalabilité IA :</strong> Accès immédiat à ces ressources puissantes (GPU ou TPU) sans investissement matériel lourd.</li>
+                            <li><strong>Services Cognitifs :</strong> Intégration facile d'API (Vision, Langage, Traduction) sans coder les modèles.</li>
+                            <li><strong>Sécurité prédictive :</strong> L'IA analyse les menaces réseau en temps réel.</li>
+                            <li><strong>Automatisation (AIOps) :</strong> Maintenance prédictive et auto-réparation des serveurs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="border-left: 4px solid #f56565;"> <h3 style="margin-top:0; color: #f56565;">⚠️ Défis & Limites</h3>
+                        <ul class="muted" style="margin-bottom: 0;">
+                            <li><strong>Explosion des coûts (FinOps) :</strong> La facturation à l'usage peut déraper (coût des tokens/calcul).</li>
+                            <li><strong>Impact Environnemental :</strong> Consommation énergétique massive des Data Centers IA.</li>
+                            <li><strong>Pénuries de composants :</strong> L'expansion des infrastructures IA va se heurter à une pénurie de composants.</li>
+                            <li><strong>Souveraineté des données :</strong> Risques liés à l'envoi de données sensibles sur des serveurs tiers (Cloud Act).</li>
+                            <li><strong>Vendor Lock-in :</strong> Difficulté de migrer ses modèles d'un cloud à l'autre.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">📰 Dernières actualités analysées</h3>
+
+                <div class="skills-grid">
+
+                    <a href="https://www.bgr.com/2044280/nvidia-graphics-cards-you-should-not-buy-bad-reviews/" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">12/12/2025</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">
+                            5 cartes graphiques Nvidia à éviter (selon les utilisateurs)
+                        </div>
+                        <div class="muted" style="font-size: 13px;">Nvidia présente 5 GPU a évité selon les utilisateurs</div>
+                    </a>
+
+                    <a href="https://www.crowdfundinsider.com/2025/12/256190-cybersecurity-experts-share-2026-ai-predictions/" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">14/12/2025</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Cybersecurity Experts Share 2026 AI Predictions</div>
+                        <div class="muted" style="font-size: 13px;">En 2026, l'infrastructure n'est plus un simple coût, mais un facteur critique de compétitivité et de sécurité. Les entreprises doivent revoir leur stratégie d'hébergement pour privilégier la résilience, l'optimisation ciblée des ressources GPU et la sécurité accrue offerte par les plateformes régionales adaptées aux exigences des charges de travail IA.</div>
+                    </a>
+
+                    <a href="https://techcommunity.microsoft.com/blog/azureinfrastructureblog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/4470793" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">NOV 2025 • MICROSOFT</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Azure Boost : L'optimisation matérielle pour l'IA</div>
+                        <div class="muted" style="font-size: 13px;">Microsoft décharge la virtualisation sur du matériel dédié pour accélérer les workloads IA.</div>
+                    </a>
+
+
+                    <a href="https://www.fool.com/investing/2025/12/05/this-ai-cloud-specialist-is-poised-for-a-decade-of/" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">DÉC 2025 • THE FOOL</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">Défis écologiques du Cloud IA</div>
+                        <div class="muted" style="font-size: 13px;">Analyse de la croissance explosive des clouds spécialisés et de leur impact énergétique critique.</div>
+                    </a>
+
+                    <a href="https://www.nature.com/articles/s41598-025-29992-2" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
+                        <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">NOV 2025 • NATURE</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">AIFS : Reconnaissance faciale Cloud</div>
+                        <div class="muted" style="font-size: 13px;">Étude scientifique sur l'efficacité et les risques éthiques des services de reconnaissance faciale hébergés.</div>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
     </div>
+</div>
 
-    <div class="card muted" style="flex: 1; min-width: 250px;">
-      <h3 style="margin-top:0; font-size: 16px;">🛠️ Méthodologie & Outils</h3>
-      <ul style="padding-left: 20px; margin-bottom: 0;">
-        <li><strong>Flux :</strong> Google Alerts
-          (GPU,TPU,cloud computing,Azure AI...) </li>
-        <li><strong>Sources :</strong> Blogs Azure/AWS, TechCrunch, Europresse (Ecole Directe)</li>
-        <li><strong>Outils IA :</strong> Gemini (Synthèse)</li>
-        <li><strong>Fréquence :</strong> Quotidienne</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="card" style="margin-top:16px; margin-bottom: 20px;">
-      <h3>⚙️ Le Matériel Moteur de l'IA (GPU vs TPU)</h3>
-      <p class="muted">
-          L'explosion de l'IA dans le Cloud repose sur l'accès à des processeurs spécialisés dans le calcul parallèle et tensoriel.
-      </p>
-      
-      <div style="display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 250px;">
-              <h4 style="color: #667eea; margin-top: 0;">GPU (Graphics Processing Unit)</h4>
-              <ul style="padding-left: 20px;">
-                  <li><strong>Rôle initial :</strong> Accélérateur graphique et rendu 3D.</li>
-                  <li><strong>Avantage :</strong> Des milliers de cœurs pour traiter des données simultanément (parallélisme).</li>
-                  <li><strong>Usage IA :</strong> Entraînement et exécution des modèles, standard industriel (NVIDIA).</li>
-              </ul>
-          </div>
-          
-          <div style="flex: 1; min-width: 250px;">
-              <h4 style="color: #667eea; margin-top: 0;">TPU (Tensor Processing Unit)</h4>
-              <ul style="padding-left: 20px;">
-                  <li><strong>Rôle initial :</strong> Puce conçue sur mesure par Google (ASIC).</li>
-                  <li><strong>Avantage :</strong> Spécialisation unique dans les calculs tensoriels (réseaux de neurones).</li>
-                  <li><strong>Usage IA :</strong> Grande efficacité pour l'apprentissage massif des grands modèles de langage.</li>
-              </ul>
-          </div>
-      </div>
-  </div>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
-    
-    <div class="card" style="border-left: 4px solid #48bb78;"> <h3 style="margin-top:0; color: #48bb78;">✅ Opportunités & Avantages</h3>
-      <ul class="muted" style="margin-bottom: 0;">
-        <li><strong>Scalabilité IA :</strong> Accès immédiat à ces ressources puissantes (GPU ou TPU) sans investissement matériel lourd.</li>
-        <li><strong>Services Cognitifs :</strong> Intégration facile d'API (Vision, Langage, Traduction) sans coder les modèles.</li>
-        <li><strong>Sécurité prédictive :</strong> L'IA analyse les menaces réseau en temps réel.</li>
-        <li><strong>Automatisation (AIOps) :</strong> Maintenance prédictive et auto-réparation des serveurs.</li>
-      </ul>
-    </div>
-
-    <div class="card" style="border-left: 4px solid #f56565;"> <h3 style="margin-top:0; color: #f56565;">⚠️ Défis & Limites</h3>
-      <ul class="muted" style="margin-bottom: 0;">
-        <li><strong>Explosion des coûts (FinOps) :</strong> La facturation à l'usage peut déraper (coût des tokens/calcul).</li>
-        <li><strong>Impact Environnemental :</strong> Consommation énergétique massive des Data Centers IA.</li>
-        <li><strong>Pénuries de composants :</strong> L'expansion des infrastructures IA va se heurter à une pénurie de composants.</li>
-        <li><strong>Souveraineté des données :</strong> Risques liés à l'envoi de données sensibles sur des serveurs tiers (Cloud Act).</li>
-        <li><strong>Vendor Lock-in :</strong> Difficulté de migrer ses modèles d'un cloud à l'autre.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">📰 Dernières actualités analysées</h3>
-
-  <div class="skills-grid"> 
-
-     <a href="https://www.bgr.com/2044280/nvidia-graphics-cards-you-should-not-buy-bad-reviews/" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
-      <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">12/12/2025</div>
-      <div style="font-weight: bold; margin-bottom: 8px;">
-        5 cartes graphiques Nvidia à éviter (selon les utilisateurs)
-      </div>
-      <div class="muted" style="font-size: 13px;">Nvidia présente 5 GPU a évité selon les utilisateurs</div>
-    </a>
-
-     <a href="https://www.crowdfundinsider.com/2025/12/256190-cybersecurity-experts-share-2026-ai-predictions/" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
-      <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">14/12/2025</div>
-      <div style="font-weight: bold; margin-bottom: 8px;">Cybersecurity Experts Share 2026 AI Predictions</div>
-      <div class="muted" style="font-size: 13px;">En 2026, l'infrastructure n'est plus un simple coût, mais un facteur critique de compétitivité et de sécurité. Les entreprises doivent revoir leur stratégie d'hébergement pour privilégier la résilience, l'optimisation ciblée des ressources GPU et la sécurité accrue offerte par les plateformes régionales adaptées aux exigences des charges de travail IA.</div>
-    </a>
-
-    <a href="https://techcommunity.microsoft.com/blog/azureinfrastructureblog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/4470793" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
-      <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">NOV 2025 • MICROSOFT</div>
-      <div style="font-weight: bold; margin-bottom: 8px;">Azure Boost : L'optimisation matérielle pour l'IA</div>
-      <div class="muted" style="font-size: 13px;">Microsoft décharge la virtualisation sur du matériel dédié pour accélérer les workloads IA.</div>
-    </a>
-
-
-    <a href="https://www.fool.com/investing/2025/12/05/this-ai-cloud-specialist-is-poised-for-a-decade-of/" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
-      <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">DÉC 2025 • THE FOOL</div>
-      <div style="font-weight: bold; margin-bottom: 8px;">Défis écologiques du Cloud IA</div>
-      <div class="muted" style="font-size: 13px;">Analyse de la croissance explosive des clouds spécialisés et de leur impact énergétique critique.</div>
-    </a>
-
-    <a href="https://www.nature.com/articles/s41598-025-29992-2" target="_blank" class="card clickable" style="text-decoration: none; color: inherit; display: block;">
-      <div style="font-size: 12px; color: #667eea; font-weight: bold; margin-bottom: 5px;">NOV 2025 • NATURE</div>
-      <div style="font-weight: bold; margin-bottom: 8px;">AIFS : Reconnaissance faciale Cloud</div>
-      <div class="muted" style="font-size: 13px;">Étude scientifique sur l'efficacité et les risques éthiques des services de reconnaissance faciale hébergés.</div>
-    </a>
-
-  </div>
-</section>
-
-      </main>
-    </div>
-  </div>
-  
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
