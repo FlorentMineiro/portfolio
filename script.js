@@ -41,7 +41,7 @@ async function playIntro() {
     showAppImmediately();
     return;
   }
-  intro.style.display = 'block';
+  intro.style.display = 'flex';
   intro.style.opacity = '1';
   introLinesContainer.innerHTML = '';
 
@@ -50,7 +50,7 @@ async function playIntro() {
     await sleep(250);
   }
   await sleep(600);
-  
+
   intro.style.opacity = '0';
   setTimeout(() => {
     intro.style.display = 'none';
@@ -85,12 +85,10 @@ function switchTab(targetId) {
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabs = document.querySelectorAll('.tab');
 
-  // Active le bon bouton
   tabBtns.forEach(b => b.classList.remove('active'));
   const targetBtn = document.querySelector(`.tab-btn[data-tab="${targetId}"]`);
   if (targetBtn) targetBtn.classList.add('active');
 
-  // Affiche la bonne section
   tabs.forEach(t => (t.style.display = t.id === targetId ? 'block' : 'none'));
 }
 
@@ -98,7 +96,7 @@ function switchTab(targetId) {
 // 4. INITIALISATION
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   // A. Intro Logic
   setupSkipShortcut();
   const introShown = (() => {
@@ -111,35 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // B. Navigation Menu
   const tabBtns = document.querySelectorAll('.tab-btn');
   tabBtns.forEach(btn =>
-    btn.addEventListener('click', () => {
-      switchTab(btn.dataset.tab);
-    })
+      btn.addEventListener('click', () => {
+        switchTab(btn.dataset.tab);
+      })
   );
 
   // C. Filtres Projets (Web, JavaFX, etc.)
   document.addEventListener('click', function(e){
     if (!e.target.matches('.filter-btn')) return;
     const filter = e.target.getAttribute('data-filter');
-    
-    // Visuel des boutons filtres
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === e.target));
-    
-    // Filtrage des cartes (ce sont maintenant des liens <a>)
-    document.querySelectorAll('#projets .card').forEach(card => {
-      // On ignore le bouton filtre lui-même s'il est dans une card par erreur, on cible les éléments avec data-type
-      const type = card.getAttribute('data-type') || '';
-      if (!type) return; 
 
-      // 'display: block' car nos liens doivent se comporter comme des blocs
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === e.target));
+
+    document.querySelectorAll('#projets .card').forEach(card => {
+      const type = card.getAttribute('data-type') || '';
+      if (!type) return;
       if (filter === 'all' || type === filter) {
-        card.style.display = 'block'; 
+        card.style.display = 'block';
       } else {
         card.style.display = 'none';
       }
     });
   });
 
-  // D. Accordéon Parcours
+  // D. Accordéon Parcours (optionnel)
   const btnParcours = safeGet('btn-parcours');
   const parcoursText = safeGet('parcours-text');
 

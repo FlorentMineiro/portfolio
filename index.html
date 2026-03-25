@@ -4,25 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Portfolio — Florent Mineiro (Cybersécurité)</title>
-
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<!--<div id="intro">-->
-<!--    <div class="term">-->
-<!--        <div id="intro-lines"></div>-->
-<!--        <div style="height:10px"></div>-->
-<!--        <div class="muted" style="font-size:12px">Appuyez sur Entrée pour passer</div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<div class="frame" id="app" style="opacity:0;transition:all .4s ease">
+<div class="frame" id="app">
     <header class="top">
         <div class="logo">FM</div>
         <h1>Portfolio — Florent Mineiro</h1>
-
         <nav class="tabs">
             <button class="tab-btn active" data-tab="presentation">Présentation</button>
             <button class="tab-btn" data-tab="projets">Projets</button>
@@ -36,71 +25,62 @@
     <div class="container">
         <aside class="profile">
             <img src="photo_profil_portfolio.png" alt="Florent Mineiro" class="avatar">
-            <div><strong>Florent Mineiro</strong><br><span class="muted">BTS SIO option SLAM , spécialisé dans le développement web et logiciel</span></div>
+            <div><strong>Florent Mineiro</strong><br><span class="muted">BTS SIO option SLAM, spécialisé en développement web et cybersécurité</span></div>
             <div class="card" style="margin-top:16px;">
                 <div style="font-weight:700;">Sujet de veille</div>
-                <div class="muted">l'IA dans le Cloud Computing</div>
+                <div class="muted">Cybersécurité et développement sécurisé</div>
             </div>
         </aside>
 
         <main class="content">
-
             <section class="tab" id="presentation">
                 <h2>Présentation</h2>
                 <h3>Qui suis-je ?</h3>
-                <div class="card muted">
-                    Je m'appelle Florent Mineiro, je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers),
-                    au lycée Le Rebours à Paris (75013).
-                    <br><br>
-                    Dans le cadre de la validation de mon BTS, je vous présente ce Portfolio, présentant mes compétences, stages et projets réalisés durant ces deux années ainsi que ma veille technologique.
-
-                    <div class="presentation-buttons" style="margin-top: 15px; text-align: center;">
-                        <button id="btn-parcours" class="mini-btn">Mon parcours scolaire</button>
-                    </div>
+                <div class="card">
+                    <p>Je suis un étudiant en BTS SIO option SLAM, passionné par le développement web et la cybersécurité. Mon objectif est de créer des solutions logicielles robustes et sécurisées.</p>
                 </div>
 
-                <div id="parcours-text" class="card" style="display: none; margin-top: 10px;">
+                <!-- PARCOURS SCOLAIRE (frise chronologique verticale, ordre ancien → récent) -->
+                <h3>📚 Parcours scolaire</h3>
+                <div class="card">
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-marker"></div>
-                            <div class="timeline-date">2024 – 2026</div>
-                            <div class="timeline-content">
-                                <h4 class="timeline-title">BTS SIO option SLAM</h4>
-                                <span class="timeline-place">Lycée Le Rebours</span>
-                                <p class="timeline-desc">Acquisition de compétences techniques en développement, conception de bases de données et cybersécurité.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-date">2022 – 2024</div>
-                            <div class="timeline-content">
-                                <h4 class="timeline-title">Expériences & Réorientation</h4>
-                                <span class="timeline-place">Années de césure</span>
-                                <p class="timeline-desc">Emplois divers (hôte de caisse, vendeur indépendant). Période de maturation du projet professionnel vers l'informatique.</p>
-                            </div>
+                            <div class="timeline-date">2019</div>
+                            <div class="timeline-title">Baccalauréat Scientifique (S)</div>
+                            <div class="timeline-place">Lycée Theillard de Chardin</div>
+                            <div class="timeline-desc">Mention (à préciser).</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-marker"></div>
                             <div class="timeline-date">2019 – 2022</div>
-                            <div class="timeline-content">
-                                <h4 class="timeline-title">Licence de Mathématiques (L1 & L2)</h4>
-                                <span class="timeline-place">UPEC (Université Paris-Est Créteil)</span>
-                                <p class="timeline-desc">Développement de la logique algorithmique et des capacités d'analyse.</p>
-                            </div>
+                            <div class="timeline-title">Licence 1 & 2 Mathématiques fondamentales</div>
+                            <div class="timeline-place">UPEC (Université Paris-Est Créteil)</div>
+                            <div class="timeline-desc">Formation en mathématiques pures et appliquées, logique, algorithmique.</div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-marker"></div>
-                            <div class="timeline-date">2019</div>
-                            <div class="timeline-content">
-                                <h4 class="timeline-title">Baccalauréat Scientifique (S)</h4>
-                                <span class="timeline-place">Lycée Teilhard de Chardin</span>
-                                <p class="timeline-desc">Option Mathématiques.</p>
-                            </div>
+                            <div class="timeline-date">2022 – 2024</div>
+                            <div class="timeline-title">Années sabbatiques</div>
+                            <div class="timeline-place">Projets personnels et renforcement des compétences</div>
+                            <div class="timeline-desc">Développement de projets en autonomie, approfondissement des connaissances en programmation et découverte de la cybersécurité.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-date">2024 – 2026</div>
+                            <div class="timeline-title">BTS SIO (Services Informatiques aux Organisations)</div>
+                            <div class="timeline-place">Lycée Le Rebours, Paris</div>
+                            <div class="timeline-desc">Option SLAM (Solutions Logicielles et Applications Métiers) – Développement web, Java, PHP, SQL, cybersécurité.</div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Projets futurs -->
+                <h3>🎯 Projets d'avenir</h3>
+                <div class="card">
+                    <p>À la rentrée 2026, je souhaite poursuivre mes études en <strong>MIAGE</strong> ou en <strong>licence en partenariat avec le CNAM</strong> au lycée Le Rebours, afin de spécialiser mes compétences en informatique de gestion et en cybersécurité.</p>
+                </div>
             </section>
-            <!--Section Projets-->
 
             <section class="tab" id="projets" style="display:none">
                 <h1>Mes Projets</h1>
@@ -139,7 +119,6 @@
                     Marque fictive vendant des tacos
                 </a>
             </section>
-            <!--Section Stages-->
 
             <section class="tab" id="stages" style="display:none">
                 <h1>Stages</h1>
@@ -155,7 +134,6 @@
                     Développement du site e-commerce Lifetag.fr : protection intelligente NFC &amp; QR Code pour motards
                 </a>
             </section>
-            <!--Section Compétences-->
 
             <section class="tab" id="competences" style="display:none">
                 <h2>Compétences Techniques</h2>
@@ -242,19 +220,16 @@
 
                 <h3 class="skill-category-title">Systèmes, Réseaux & Virtualisation</h3>
                 <div class="skills-grid">
-
                     <div class="skill-card">
                         <i class="devicon-network-plain colored skill-icon"></i>
                         <span class="skill-name">Adressage IP</span>
                         <div class="skill-bar-container"><div class="skill-progress" style="width: 20%;"></div></div>
                     </div>
-
                     <div class="skill-card">
                         <i class="devicon-network-plain colored skill-icon"></i>
                         <span class="skill-name">DHCP</span>
                         <div class="skill-bar-container"><div class="skill-progress" style="width: 10%;"></div></div>
                     </div>
-
                     <div class="skill-card">
                         <i class="devicon-linux-plain colored skill-icon"></i>
                         <span class="skill-name">Linux</span>
@@ -297,7 +272,7 @@
                     </div>
                 </div>
             </section>
-            <!--Section Tableau de Synthèse-->
+
             <section class="tab" id="synthese" style="display:none">
                 <h2>Tableau de synthèse</h2>
                 <div class="card muted" style="text-align: center; padding: 40px 20px;">
@@ -311,21 +286,19 @@
                     </div>
                 </div>
             </section>
-            <!-- Section Veille Technologique -->
-            <section class="tab" id="veille" style="display:none">
 
-                <!-- En-tête sujet + méthodologie -->
+            <section class="tab" id="veille" style="display:none">
                 <div style="display: flex; gap: 20px; align-items: stretch; margin-bottom: 24px; flex-wrap: wrap;">
                     <div class="card" style="flex: 2; min-width: 300px;">
                         <h2 style="margin-top:0;">Veille Technologique</h2>
-                        <h3 style="color: #667eea; margin-bottom: 10px;">Sujet : L'IA dans le Cloud Computing</h3>
+                        <h3 style="color: #3b82f6; margin-bottom: 10px;">Sujet : L'IA dans le Cloud Computing</h3>
                         <p class="muted" style="margin-bottom: 14px;">
                             L'intégration de l'Intelligence Artificielle (GenAI, Machine Learning) au cœur des infrastructures Cloud (AWS, Azure, GCP) pour automatiser, sécuriser et optimiser les services informatiques.
                         </p>
                         <div style="display:flex; gap: 8px; flex-wrap: wrap;">
-                            <span style="background: rgba(102,126,234,0.12); color: #667eea; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing:.4px;">🔥 Sujet d'actualité</span>
-                            <span style="background: rgba(102,126,234,0.12); color: #667eea; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing:.4px;">☁️ Cloud & DevOps</span>
-                            <span style="background: rgba(72,187,120,0.12); color: #48bb78; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing:.4px;">🤖 IA Agentique</span>
+                            <span class="veille-tag">🔥 Sujet d'actualité</span>
+                            <span class="veille-tag">☁️ Cloud & DevOps</span>
+                            <span class="veille-tag">🤖 IA Agentique</span>
                         </div>
                     </div>
 
@@ -337,200 +310,117 @@
                             <li><strong>Recherches ciblées Google :</strong> Articles de sites spécialisés ou prestigieux sur une période d'environ 6 mois </li>
                             <li><strong>Fréquence :</strong> Quotidienne</li>
                         </ul>
-                        <a href="Veille/Source-E5.pdf" target="_blank"
-                           style="display:inline-flex; align-items:center; gap:8px; background: rgba(102,126,234,0.15); color:#667eea; border:1px solid rgba(102,126,234,0.35); padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background .2s;"
-                           onmouseover="this.style.background='rgba(102,126,234,0.28)'" onmouseout="this.style.background='rgba(102,126,234,0.15)'">
-                            📄 Tableau des sources (PDF)
-                        </a>
+                        <a href="Veille/Source-E5.pdf" target="_blank" class="mini-btn">📄 Tableau des sources (PDF)</a>
                     </div>
                 </div>
 
-                <!-- Analyse thématique -->
-<!--                <div class="card" style="margin-bottom: 20px;">-->
-<!--                    <h3 style="margin-top:0;">⚙️ Le Matériel Moteur de l'IA (GPU vs TPU)</h3>-->
-<!--                    <p class="muted" style="margin-bottom: 14px;">-->
-<!--                        L'explosion de l'IA dans le Cloud repose sur l'accès à des processeurs spécialisés dans le calcul parallèle et tensoriel.-->
-<!--                    </p>-->
-<!--                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">-->
-<!--                        <div style="flex: 1; min-width: 240px;">-->
-<!--                            <h4 style="color: #667eea; margin-top: 0; font-size:14px;">GPU (Graphics Processing Unit)</h4>-->
-<!--                            <ul class="muted" style="padding-left: 18px; font-size:13px; line-height:1.7;">-->
-<!--                                <li><strong>Rôle :</strong> Accélérateur graphique repurposé pour le calcul massif.</li>-->
-<!--                                <li><strong>Avantage :</strong> Des milliers de cœurs en parallèle (NVIDIA standard).</li>-->
-<!--                                <li><strong>Usage IA :</strong> Entraînement et inférence des modèles.</li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                        <div style="flex: 1; min-width: 240px;">-->
-<!--                            <h4 style="color: #667eea; margin-top: 0; font-size:14px;">TPU (Tensor Processing Unit)</h4>-->
-<!--                            <ul class="muted" style="padding-left: 18px; font-size:13px; line-height:1.7;">-->
-<!--                                <li><strong>Rôle :</strong> Puce ASIC conçue sur mesure par Google.</li>-->
-<!--                                <li><strong>Avantage :</strong> Calculs tensoriels ultra-efficaces pour LLM.</li>-->
-<!--                                <li><strong>Usage IA :</strong> Apprentissage massif des grands modèles de langage.</li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Opportunités / Défis &ndash;&gt;-->
-<!--                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 28px;">-->
-<!--                    <div class="card" style="border-left: 4px solid #48bb78;">-->
-<!--                        <h3 style="margin-top:0; color: #48bb78; font-size:15px;">✅ Opportunités & Avantages</h3>-->
-<!--                        <ul class="muted" style="margin-bottom: 0; padding-left:18px; font-size:13px; line-height:1.7;">-->
-<!--                            <li><strong>Scalabilité IA :</strong> Accès GPU/TPU sans investissement matériel lourd.</li>-->
-<!--                            <li><strong>Services Cognitifs :</strong> Intégration d'API (Vision, Langage, Traduction).</li>-->
-<!--                            <li><strong>Sécurité prédictive :</strong> L'IA analyse les menaces réseau en temps réel.</li>-->
-<!--                            <li><strong>AIOps :</strong> Maintenance prédictive et auto-réparation des serveurs.</li>-->
-<!--                            <li><strong>IA Agentique :</strong> Agents autonomes capables d'orchestrer des flux métier.</li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="card" style="border-left: 4px solid #f56565;">-->
-<!--                        <h3 style="margin-top:0; color: #f56565; font-size:15px;">⚠️ Défis & Limites</h3>-->
-<!--                        <ul class="muted" style="margin-bottom: 0; padding-left:18px; font-size:13px; line-height:1.7;">-->
-<!--                            <li><strong>FinOps :</strong> La facturation à l'usage peut déraper rapidement.</li>-->
-<!--                            <li><strong>Impact environnemental :</strong> Consommation énergétique massive des data centers.</li>-->
-<!--                            <li><strong>Pénurie composants :</strong> L'expansion IA se heurte aux chaînes d'approvisionnement.</li>-->
-<!--                            <li><strong>Souveraineté :</strong> Risques liés au Cloud Act et données sensibles.</li>-->
-<!--                            <li><strong>Vendor Lock-in :</strong> Migration difficile entre fournisseurs cloud.</li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-                <!-- 10 articles sélectionnés -->
                 <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <h3 style="margin:0;">📰 Top 10 des articles analysés</h3>
-                    <a href="Source-E5.pdf" target="_blank"
-                       style="font-size:12px; color:#667eea; text-decoration:none; opacity:.8;">
-                        📄 Voir toutes les sources →
-                    </a>
+                    <a href="Source-E5.pdf" target="_blank" class="mini-btn" style="font-size:12px;">📄 Voir toutes les sources →</a>
                 </div>
 
-                <div class="skills-grid">
-
-                    <!-- 1 -->
-                    <a href="https://www.conseil-ia-numerique.fr/files/uploads/2026/IA%20agentique%20CIANum_all.pdf" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #667eea;">
+                <div class="skills-grid veille-grid">
+                    <a href="https://www.conseil-ia-numerique.fr/files/uploads/2026/IA%20agentique%20CIANum_all.pdf" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#667eea; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">Conseil Numérique</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Fév. 2026</span>
+                            <span style="font-size:11px; color:#3b82f6; font-weight:700; text-transform:uppercase;">Conseil Numérique</span>
+                            <span style="font-size:11px; color:#888;">Fév. 2026</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Les IA à l'heure de la vague agentique : de quoi parle-t-on ?</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Rapport officiel du gouvernement définissant l'IA agentique et ses enjeux stratégiques pour les entreprises et administrations.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(102,126,234,0.1); color:#667eea; padding:2px 8px; border-radius:10px;">IA Agentique</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Les IA à l'heure de la vague agentique : de quoi parle-t-on ?</div>
+                        <div class="muted" style="font-size:12px;">Rapport officiel du gouvernement définissant l'IA agentique et ses enjeux stratégiques.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">IA Agentique</span></div>
                     </a>
 
-                    <!-- 2 -->
-                    <a href="https://docs.aws.amazon.com/fr_fr/prescriptive-guidance/latest/agentic-ai-serverless/designing-serverless-ai-architectures.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #667eea;">
+                    <a href="https://docs.aws.amazon.com/fr_fr/prescriptive-guidance/latest/agentic-ai-serverless/designing-serverless-ai-architectures.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#667eea; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">AWS — Amazon</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Fév. 2026</span>
+                            <span style="font-size:11px; color:#3b82f6; font-weight:700;">AWS — Amazon</span>
+                            <span style="font-size:11px; color:#888;">Fév. 2026</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Designing Serverless AI Architectures</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Documentation officielle AWS sur la conception d'architectures IA serverless — source technique de référence du leader mondial du cloud.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(102,126,234,0.1); color:#667eea; padding:2px 8px; border-radius:10px;">Architecture Cloud</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Designing Serverless AI Architectures</div>
+                        <div class="muted" style="font-size:12px;">Documentation officielle AWS sur la conception d'architectures IA serverless.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Architecture Cloud</span></div>
                     </a>
 
-                    <!-- 3 -->
-                    <a href="https://learn.microsoft.com/fr-fr/azure/developer/javascript/ai/get-started-app-chat-template-llamaindex?tabs=github-codespaces" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #667eea;">
+                    <a href="https://learn.microsoft.com/fr-fr/azure/developer/javascript/ai/get-started-app-chat-template-llamaindex?tabs=github-codespaces" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#667eea; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">Microsoft Learn</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Jan. 2026</span>
+                            <span style="font-size:11px; color:#3b82f6;">Microsoft Learn</span>
+                            <span style="font-size:11px; color:#888;">Jan. 2026</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Serverless AI Chat avec LlamaIndex sur Azure</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Guide pratique Microsoft sur l'intégration d'IA générative dans des apps serverless JavaScript via Azure et LlamaIndex.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(102,126,234,0.1); color:#667eea; padding:2px 8px; border-radius:10px;">Azure / LLM</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Serverless AI Chat avec LlamaIndex sur Azure</div>
+                        <div class="muted" style="font-size:12px;">Guide pratique Microsoft sur l'intégration d'IA générative dans des apps serverless.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Azure / LLM</span></div>
                     </a>
 
-                    <!-- 4 -->
                     <a href="https://www.deloitte.com/fr/fr/Industries/tmt/perspectives/technology-media-and-telecom-predictions/2026/saas-ai-agents.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #48bb78;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#48bb78; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">Deloitte</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Déc. 2025</span>
+                            <span style="font-size:11px; color:#48bb78;">Deloitte</span>
+                            <span style="font-size:11px; color:#888;">Déc. 2025</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Le SaaS à l'ère des agents IA</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Analyse prospective de Deloitte sur la transformation du SaaS par les agents IA — écrit par un responsable TMT avec 20+ ans d'expérience.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(72,187,120,0.1); color:#48bb78; padding:2px 8px; border-radius:10px;">SaaS & Agents</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Le SaaS à l'ère des agents IA</div>
+                        <div class="muted" style="font-size:12px;">Analyse prospective de Deloitte sur la transformation du SaaS par les agents IA.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small" style="background:rgba(72,187,120,0.1); color:#48bb78;">SaaS & Agents</span></div>
                     </a>
 
-                    <!-- 5 -->
-                    <a href="https://www.cio-online.com/actualites/lire-monitoring-des-agents-ia-le-defi-qui-attend-tous-les-rssi-16924.html" target="_blank" class="veille-card" style="text-decoration:none; color:inherit;">
-                        <div style="font-weight:700; margin-bottom:8px; font-size:15px; line-height:1.4;">
-                            Monitoring des agents IA : le nouveau défi des RSSI
-                        </div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">
-                            Analyse des risques liés à l'autonomie des agents IA dans le Cloud et l'importance de mettre en place une gouvernance pour surveiller leurs actions en temps réel.
-                        </div>
-                        <div style="margin-top:10px;">
-                            <span style="font-size:11px; background:rgba(237,137,54,0.1); color:#ed8936; padding:2px 8px; border-radius:10px;">Gouvernance & Sécurité</span>
-                        </div>
+                    <a href="https://www.cio-online.com/actualites/lire-monitoring-des-agents-ia-le-defi-qui-attend-tous-les-rssi-16924.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block;">
+                        <div style="font-weight:700; margin-bottom:8px; font-size:15px;">Monitoring des agents IA : le nouveau défi des RSSI</div>
+                        <div class="muted" style="font-size:12px;">Analyse des risques liés à l'autonomie des agents IA dans le Cloud.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Gouvernance & Sécurité</span></div>
                     </a>
 
-                    <!-- 6 -->
                     <a href="https://www.wisdomtree.eu/fr-fr/blog/2026-03-20/ai-security-emerges-as-the-next-cybersecurity-theme" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f6ad55;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f6ad55; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">WisdomTree × Team8</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Mars 2026</span>
+                            <span style="font-size:11px; color:#f6ad55;">WisdomTree × Team8</span>
+                            <span style="font-size:11px; color:#888;">Mars 2026</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">AI Security : la prochaine thématique cybersécurité</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Analyse de WisdomTree et du groupe sécurité Team8 sur l'émergence de la sécurité de l'IA comme nouveau paradigme de la cybersécurité.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(246,173,85,0.1); color:#f6ad55; padding:2px 8px; border-radius:10px;">Cybersécurité IA</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">AI Security : la prochaine thématique cybersécurité</div>
+                        <div class="muted" style="font-size:12px;">Analyse sur l'émergence de la sécurité de l'IA comme nouveau paradigme.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Cybersécurité IA</span></div>
                     </a>
 
-                    <!-- 7 -->
                     <a href="https://news.sap.com/france/2026/03/sap-lance-sap-sovereign-cloud-en-france-en-partenariat-avec-bleu-2/" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f6ad55;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f6ad55; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">SAP (Presse officielle)</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Mars 2026</span>
+                            <span style="font-size:11px; color:#f6ad55;">SAP (Presse officielle)</span>
+                            <span style="font-size:11px; color:#888;">Mars 2026</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">SAP lance SAP Sovereign Cloud en France avec Bleu</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Annonce officielle de SAP sur le lancement d'une infrastructure cloud souveraine en France, en réponse aux enjeux de souveraineté numérique.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(246,173,85,0.1); color:#f6ad55; padding:2px 8px; border-radius:10px;">Cloud Souverain</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">SAP lance SAP Sovereign Cloud en France avec Bleu</div>
+                        <div class="muted" style="font-size:12px;">Annonce officielle sur le lancement d'une infrastructure cloud souveraine.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Cloud Souverain</span></div>
                     </a>
 
-                    <!-- 8 -->
                     <a href="https://www.pwc.fr/fr/espace-presse/communiques-de-presse/2025/decembre/souverainete-numerique.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f6ad55;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f6ad55; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">PwC France</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Déc. 2025</span>
+                            <span style="font-size:11px; color:#f6ad55;">PwC France</span>
+                            <span style="font-size:11px; color:#888;">Déc. 2025</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Souveraineté numérique : la France, leader européen du cloud de confiance</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Communiqué PwC (l'un des 4 plus grands cabinets d'audit) sur l'accélération de la France dans le cloud souverain à l'échelle européenne.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(246,173,85,0.1); color:#f6ad55; padding:2px 8px; border-radius:10px;">Cloud Souverain</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Souveraineté numérique : la France, leader européen du cloud de confiance</div>
+                        <div class="muted" style="font-size:12px;">Communiqué PwC sur l'accélération de la France dans le cloud souverain.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Cloud Souverain</span></div>
                     </a>
 
-                    <!-- 9 -->
                     <a href="https://www.zdnet.fr/actualites/cloud-souverain-pourquoi-lautonomie-technologique-totale-est-une-illusion-selon-capgemini-490183.htm" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f56565;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f56565; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">ZDNet × Capgemini</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Fév. 2026</span>
+                            <span style="font-size:11px; color:#f56565;">ZDNet × Capgemini</span>
+                            <span style="font-size:11px; color:#888;">Fév. 2026</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Cloud souverain : l'autonomie technologique totale est une illusion</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Analyse critique de Capgemini publiée sur ZDNet spécialisé IT : les limites réelles du cloud souverain et les compromis inévitables.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(245,101,101,0.1); color:#f56565; padding:2px 8px; border-radius:10px;">Analyse critique</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Cloud souverain : l'autonomie technologique totale est une illusion</div>
+                        <div class="muted" style="font-size:12px;">Analyse critique de Capgemini sur les limites du cloud souverain.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Analyse critique</span></div>
                     </a>
 
-                    <!-- 10 -->
-                    <a href="https://techcommunity.microsoft.com/blog/azureinfrastructureblog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/4470793" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #667eea;">
+                    <a href="https://techcommunity.microsoft.com/blog/azureinfrastructureblog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/4470793" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
                         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#667eea; font-weight:700; text-transform:uppercase; letter-spacing:.5px;">Microsoft Azure</span>
-                            <span style="font-size:11px; color:#888; background:rgba(255,255,255,0.05); padding:2px 7px; border-radius:10px;">Nov. 2025</span>
+                            <span style="font-size:11px; color:#3b82f6;">Microsoft Azure</span>
+                            <span style="font-size:11px; color:#888;">Nov. 2025</span>
                         </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px; line-height:1.4;">Azure Boost : l'optimisation matérielle au service des workloads IA</div>
-                        <div class="muted" style="font-size:12px; line-height:1.5;">Microsoft présente Azure Boost, solution de déchargement matériel pour accélérer les charges IA dans le cloud — annonce Ignite 2025.</div>
-                        <div style="margin-top:10px;"><span style="font-size:11px; background:rgba(102,126,234,0.1); color:#667eea; padding:2px 8px; border-radius:10px;">Infrastructure IA</span></div>
+                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Azure Boost : l'optimisation matérielle au service des workloads IA</div>
+                        <div class="muted" style="font-size:12px;">Présentation de la solution de déchargement matériel pour accélérer les charges IA.</div>
+                        <div style="margin-top:10px;"><span class="veille-tag-small">Infrastructure IA</span></div>
                     </a>
-
                 </div>
 
-                <!-- Bouton sources en bas -->
                 <div style="text-align:center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08);">
-                    <a href="Veille/Source-E5.pdf" target="_blank"
-                       style="display:inline-flex; align-items:center; gap:10px; background: rgba(102,126,234,0.15); color:#667eea; border:1px solid rgba(102,126,234,0.4); padding: 11px 22px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s;"
-                       onmouseover="this.style.background='rgba(102,126,234,0.3)'" onmouseout="this.style.background='rgba(102,126,234,0.15)'">
-                        📄 Consulter le tableau complet des sources (PDF)
-                    </a>
+                    <a href="Veille/Source-E5.pdf" target="_blank" class="mini-btn" style="padding: 11px 22px;">📄 Consulter le tableau complet des sources (PDF)</a>
                 </div>
-
             </section>
-
         </main>
     </div>
 </div>
