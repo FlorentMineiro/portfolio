@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sI \"https://florentmineiro.github.io/portfolio/portfolio_thumbnail.jpg\")"
+    ]
+  }
+}
