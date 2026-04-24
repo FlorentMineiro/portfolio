@@ -3,7 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Portfolio — Florent Mineiro (Cybersécurité)</title>
+    <title>Florent Mineiro — Développeur en alternance (Web, Java, IA)</title>
+    <meta name="description" content="Portfolio de Florent Mineiro, étudiant en BTS SIO option SLAM, accepté en Licence Informatique (Dév / IA / Big Data) au CNAM Paris × Le Rebours. À la recherche d'une alternance pour la rentrée 2026." />
+
+    <!-- Open Graph (LinkedIn / Facebook / partages) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Florent Mineiro — Développeur en alternance (Web, Java, IA)" />
+    <meta property="og:description" content="Étudiant en BTS SIO option SLAM, accepté en Licence Informatique (Dév / IA / Big Data) au CNAM Paris × Le Rebours. À la recherche d'une alternance pour la rentrée 2026." />
+    <meta property="og:image" content="https://florentmineiro.github.io/portfolio/photo_profil_portfolio.png" />
+    <meta property="og:url" content="https://florentmineiro.github.io/portfolio/" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Florent Mineiro — Développeur en alternance (Web, Java, IA)" />
+    <meta name="twitter:description" content="Étudiant en BTS SIO option SLAM, accepté en Licence Informatique (Dév / IA / Big Data). En recherche d'alternance rentrée 2026." />
+    <meta name="twitter:image" content="https://florentmineiro.github.io/portfolio/photo_profil_portfolio.png" />
+
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,13 +29,10 @@
         <div class="logo">FM</div>
         <h1>Portfolio — Florent Mineiro</h1>
         <nav class="tabs">
-            <!-- Ordre modifié : Présentation / Compétences / Projets / Stages / Veille / Tableau synthèse -->
             <button class="tab-btn active" data-tab="presentation">Présentation</button>
             <button class="tab-btn" data-tab="competences">Compétences</button>
             <button class="tab-btn" data-tab="projets">Projets</button>
             <button class="tab-btn" data-tab="stages">Stages</button>
-            <button class="tab-btn" data-tab="veille">Veille technologique</button>
-            <button class="tab-btn" data-tab="synthese">Tableau synthèse</button>
         </nav>
     </header>
 
@@ -27,9 +40,34 @@
         <aside class="profile">
             <img src="photo_profil_portfolio.png" alt="Florent Mineiro" class="avatar">
             <div><strong>Florent Mineiro</strong><br><span class="muted">BTS SIO option SLAM, spécialisé en développement web et logiciel</span></div>
-            <div class="card" style="margin-top:16px;">
-                <div style="font-weight:700;">Sujet de veille</div>
-                <div class="muted">L'IA dans le Cloud Computing</div>
+            <div class="availability-badge">
+                <span class="pulse-dot"></span>
+                <div>
+                    <div class="availability-label">Recherche alternance</div>
+                    <div class="availability-sub">Rentrée 2026 — Dév / IA / Data</div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h4>📬 Me contacter</h4>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/florent-mineiro-913304336/" target="_blank" rel="noopener">
+                        <i class="devicon-linkedin-plain colored"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/FlorentMineiro" target="_blank" rel="noopener">
+                        <i class="devicon-github-original" style="filter: brightness(0) invert(1);"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:florent.mineiro.93@gmail.com">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>florent.mineiro.93@gmail.com</span>
+                    </a>
+                    <a href="CV/CV-Florent-Mineiro.pdf" target="_blank" rel="noopener" download>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Télécharger mon CV</span>
+                    </a>
+                </div>
             </div>
         </aside>
 
@@ -74,13 +112,21 @@
                             <div class="timeline-place">Lycée Le Rebours, Paris</div>
                             <div class="timeline-desc">Option SLAM (Solutions Logicielles et Applications Métiers) – Développement web, Java, PHP, SQL, cybersécurité.</div>
                         </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-date">Rentrée 2026</div>
+                            <div class="timeline-title">Licence Informatique — Développement, IA & Big Data <span style="font-size:12px; color:#48bb78; font-weight:700;">(Admis)</span></div>
+                            <div class="timeline-place">Le Rebours × CNAM Paris — en alternance</div>
+                            <div class="timeline-desc">Formation en alternance axée développement logiciel, intelligence artificielle et data. Candidature également déposée en L3 MIAGE en alternance.</div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Projets futurs -->
-                <h3>🎯 Projets d'avenir</h3>
+                <h3>🎯 Projets d'avenir & recherche d'alternance</h3>
                 <div class="card">
-                    <p>Mon objectif pour la rentrée 2026 est de poursuivre en MIAGE ou en licence CNAM en partenariat avec Le Rebours. Passionné par l'évolution rapide de l'informatique, je privilégie un cursus en alternance pour allier veille technologique constante et expertise académique complète.</p>
+                    <p>Pour la rentrée 2026, j'ai été <strong>admis à la Licence Informatique — Développement, IA & Big Data</strong> (partenariat Le Rebours × CNAM Paris), en alternance. Je candidate également <strong>en parallèle à une L3 MIAGE en alternance</strong>, afin de choisir le cursus offrant le meilleur équilibre entre expertise technique et compréhension des enjeux métier.</p>
+                    <p style="margin-top:12px;">👉 Je suis actuellement <strong>à la recherche d'une entreprise d'accueil</strong> pour un contrat d'apprentissage ou de professionnalisation (développement web / logiciel / data). N'hésitez pas à me contacter.</p>
                 </div>
             </section>
 <!--            Compétences-->
@@ -291,157 +337,6 @@
                 </a>
             </section>
 
-            <!-- Section Veille technologique -->
-            <section class="tab" id="veille" style="display:none">
-                <div style="display: flex; gap: 20px; align-items: stretch; margin-bottom: 24px; flex-wrap: wrap;">
-                    <div class="card" style="flex: 2; min-width: 300px;">
-                        <h2 style="margin-top:0;">Veille Technologique</h2>
-                        <h3 style="color: #3b82f6; margin-bottom: 10px;">Sujet : L'IA dans le Cloud Computing</h3>
-                        <p class="muted" style="margin-bottom: 14px;">
-                            L'intégration de l'Intelligence Artificielle (GenAI, Machine Learning) au cœur des infrastructures Cloud (AWS, Azure, GCP) pour automatiser, sécuriser et optimiser les services informatiques.
-                        </p>
-                        <div style="display:flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="veille-tag">🔥 Sujet d'actualité</span>
-                            <span class="veille-tag">☁️ Cloud & DevOps</span>
-                            <span class="veille-tag">🤖 IA Agentique</span>
-                        </div>
-                    </div>
-
-                    <div class="card muted" style="flex: 1; min-width: 250px;">
-                        <h3 style="margin-top:0; font-size: 15px; color:#fff;">🛠️ Méthodologie & Outils</h3>
-                        <ul style="padding-left: 18px; margin-bottom: 14px; font-size: 13px; line-height: 1.7;">
-                            <li><strong>Flux :</strong> Google Alerts (GPU, TPU, cloud computing, Azure AI…), Feedly</li>
-                            <li><strong>Sources :</strong> Blogs Azure/AWS, ZDNet ,CIANum ...</li>
-                            <li><strong>Sélection et synthèse d'articles spécialisés : </strong> Via des recherches Google avancées (veille active réalisée pendant 6 mois) </li>
-<!--                            <li><strong>Fréquence :</strong> Quotidienne</li>-->
-                        </ul>
-                        <a href="Veille/Source-E5.pdf" target="_blank" class="mini-btn">📄 Tableau des sources (PDF)</a>
-                    </div>
-                </div>
-
-                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="margin:0;">📰 Top 10 des articles analysés</h3>
-                    <a href="Veille/Source-E5.pdf" target="_blank" class="mini-btn" style="font-size:12px;">📄 Voir toutes les sources →</a>
-                </div>
-
-                <div class="skills-grid veille-grid">
-                    <a href="https://www.conseil-ia-numerique.fr/files/uploads/2026/IA%20agentique%20CIANum_all.pdf" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#3b82f6; font-weight:700; text-transform:uppercase;">Conseil Numérique</span>
-                            <span style="font-size:11px; color:#888;">Fév. 2026</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Les IA à l'heure de la vague agentique : de quoi parle-t-on ?</div>
-                        <div class="muted" style="font-size:12px;">Rapport officiel du gouvernement définissant l'IA agentique et ses enjeux stratégiques.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">IA Agentique</span></div>
-                    </a>
-
-                    <a href="https://docs.aws.amazon.com/fr_fr/prescriptive-guidance/latest/agentic-ai-serverless/designing-serverless-ai-architectures.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#3b82f6; font-weight:700;">AWS — Amazon</span>
-                            <span style="font-size:11px; color:#888;">Fév. 2026</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Designing Serverless AI Architectures</div>
-                        <div class="muted" style="font-size:12px;">Documentation officielle AWS sur la conception d'architectures IA serverless.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Architecture Cloud</span></div>
-                    </a>
-
-                    <a href="https://learn.microsoft.com/fr-fr/azure/developer/javascript/ai/get-started-app-chat-template-llamaindex?tabs=github-codespaces" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#3b82f6;">Microsoft Learn</span>
-                            <span style="font-size:11px; color:#888;">Jan. 2026</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Serverless AI Chat avec LlamaIndex sur Azure</div>
-                        <div class="muted" style="font-size:12px;">Guide pratique Microsoft sur l'intégration d'IA générative dans des apps serverless.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Azure / LLM</span></div>
-                    </a>
-
-                    <a href="https://www.deloitte.com/fr/fr/Industries/tmt/perspectives/technology-media-and-telecom-predictions/2026/saas-ai-agents.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #48bb78;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#48bb78;">Deloitte</span>
-                            <span style="font-size:11px; color:#888;">Déc. 2025</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Le SaaS à l'ère des agents IA</div>
-                        <div class="muted" style="font-size:12px;">Analyse prospective de Deloitte sur la transformation du SaaS par les agents IA.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small" style="background:rgba(72,187,120,0.1); color:#48bb78;">SaaS & Agents</span></div>
-                    </a>
-
-                    <a href="https://www.cio-online.com/actualites/lire-monitoring-des-agents-ia-le-defi-qui-attend-tous-les-rssi-16924.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block;">
-                        <div style="font-weight:700; margin-bottom:8px; font-size:15px;">Monitoring des agents IA : le nouveau défi des RSSI</div>
-                        <div class="muted" style="font-size:12px;">Analyse des risques liés à l'autonomie des agents IA dans le Cloud.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Gouvernance & Sécurité</span></div>
-                    </a>
-
-                    <a href="https://www.wisdomtree.eu/fr-fr/blog/2026-03-20/ai-security-emerges-as-the-next-cybersecurity-theme" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f6ad55;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f6ad55;">WisdomTree × Team8</span>
-                            <span style="font-size:11px; color:#888;">Mars 2026</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">AI Security : la prochaine thématique cybersécurité</div>
-                        <div class="muted" style="font-size:12px;">Analyse sur l'émergence de la sécurité de l'IA comme nouveau paradigme.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Cybersécurité IA</span></div>
-                    </a>
-
-                    <a href="https://news.sap.com/france/2026/03/sap-lance-sap-sovereign-cloud-en-france-en-partenariat-avec-bleu-2/" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f6ad55;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f6ad55;">SAP (Presse officielle)</span>
-                            <span style="font-size:11px; color:#888;">Mars 2026</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">SAP lance SAP Sovereign Cloud en France avec Bleu</div>
-                        <div class="muted" style="font-size:12px;">Annonce officielle sur le lancement d'une infrastructure cloud souveraine.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Cloud Souverain</span></div>
-                    </a>
-
-                    <a href="https://www.pwc.fr/fr/espace-presse/communiques-de-presse/2025/decembre/souverainete-numerique.html" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f6ad55;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f6ad55;">PwC France</span>
-                            <span style="font-size:11px; color:#888;">Déc. 2025</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Souveraineté numérique : la France, leader européen du cloud de confiance</div>
-                        <div class="muted" style="font-size:12px;">Communiqué PwC sur l'accélération de la France dans le cloud souverain.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Cloud Souverain</span></div>
-                    </a>
-
-                    <a href="https://www.zdnet.fr/actualites/cloud-souverain-pourquoi-lautonomie-technologique-totale-est-une-illusion-selon-capgemini-490183.htm" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #f56565;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#f56565;">ZDNet × Capgemini</span>
-                            <span style="font-size:11px; color:#888;">Fév. 2026</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Cloud souverain : l'autonomie technologique totale est une illusion</div>
-                        <div class="muted" style="font-size:12px;">Analyse critique de Capgemini sur les limites du cloud souverain.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Analyse critique</span></div>
-                    </a>
-
-                    <a href="https://techcommunity.microsoft.com/blog/azureinfrastructureblog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/4470793" target="_blank" class="card clickable" style="text-decoration:none; color:inherit; display:block; border-top: 3px solid #3b82f6;">
-                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-                            <span style="font-size:11px; color:#3b82f6;">Microsoft Azure</span>
-                            <span style="font-size:11px; color:#888;">Nov. 2025</span>
-                        </div>
-                        <div style="font-weight:700; margin-bottom:7px; font-size:14px;">Azure Boost : l'optimisation matérielle au service des workloads IA</div>
-                        <div class="muted" style="font-size:12px;">Présentation de la solution de déchargement matériel pour accélérer les charges IA.</div>
-                        <div style="margin-top:10px;"><span class="veille-tag-small">Infrastructure IA</span></div>
-                    </a>
-                </div>
-
-                <div style="text-align:center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08);">
-                    <a href="Veille/Source-E5.pdf" target="_blank" class="mini-btn" style="padding: 11px 22px;">📄 Consulter le tableau complet des sources (PDF)</a>
-                </div>
-            </section>
-
-            <!-- Section Tableau de synthèse (placé en dernier) -->
-            <section class="tab" id="synthese" style="display:none">
-                <h2>Tableau de synthèse</h2>
-                <div class="card muted" style="text-align: center; padding: 40px 20px;">
-                    <h3 style="margin-bottom: 20px; color: #fff;">Consultez mes documents officiels</h3>
-                    <p style="margin-bottom: 30px; color: #b0b0b0;">
-                        Retrouvez ici mon tableau de synthèse de compétences ainsi que l'ensemble de mes justificatifs de stages.
-                    </p>
-                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                        <a href="Tableau-de-synthèse/Tableau_de_synthèse-Epreuve E4-BTS SIO 2024.pdf" target="_blank" class="mini-btn">📊 Tableau de synthèse (PDF)</a>
-
-                        <a href="Attestation-Stage/Tous-les-attestations-stages.pdf" target="_blank" class="mini-btn">📜 Attestations de stages (PDF)</a>
-                    </div>
-                </div>
-            </section>
         </main>
     </div>
 </div>
