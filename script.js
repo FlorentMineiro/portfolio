@@ -19,7 +19,7 @@ const lines = [
   '> Environment ready ✅'
 ];
 
-async function typeLine(text, container, delay = 12) {
+async function typeLine(text, container, delay = 6) {
   if (!container) return;
   return new Promise(resolve => {
     const line = document.createElement('div');
@@ -36,6 +36,16 @@ async function typeLine(text, container, delay = 12) {
   });
 }
 
+function dismissIntro() {
+  if (!intro || intro.style.display === 'none') return;
+  intro.style.opacity = '0';
+  setTimeout(() => {
+    intro.style.display = 'none';
+    if (app) app.style.opacity = 1;
+    try { sessionStorage.setItem('introShown', 'true'); } catch (e) {}
+  }, 300);
+}
+
 async function playIntro() {
   if (!intro || !introLinesContainer || !app) {
     showAppImmediately();
@@ -46,17 +56,12 @@ async function playIntro() {
   introLinesContainer.innerHTML = '';
 
   for (const l of lines) {
-    await typeLine(l, introLinesContainer, 15);
-    await sleep(250);
+    await typeLine(l, introLinesContainer, 6);
+    await sleep(80);
   }
-  await sleep(600);
+  await sleep(200);
 
-  intro.style.opacity = '0';
-  setTimeout(() => {
-    intro.style.display = 'none';
-    app.style.opacity = 1;
-    try { sessionStorage.setItem('introShown', 'true'); } catch (e) {}
-  }, 450);
+  dismissIntro();
 }
 
 function showAppImmediately() {
@@ -66,15 +71,10 @@ function showAppImmediately() {
 
 function setupSkipShortcut() {
   document.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      if (intro && intro.style.display !== 'none') {
-        intro.style.opacity = '0';
-        setTimeout(() => {
-          showAppImmediately();
-          try { sessionStorage.setItem('introShown', 'true'); } catch (e) {}
-        }, 200);
-      }
-    }
+    if (e.key === 'Enter') dismissIntro();
+  });
+  document.addEventListener('click', e => {
+    if (intro && intro.style.display !== 'none') dismissIntro();
   });
 }
 

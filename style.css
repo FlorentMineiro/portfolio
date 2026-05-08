@@ -405,7 +405,12 @@ nav.tabs {
   align-items: center;
   justify-content: center;
   font-family: 'Roboto Mono', monospace;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+#app {
+  transition: opacity 0.3s ease;
 }
 
 .terminal-box {
